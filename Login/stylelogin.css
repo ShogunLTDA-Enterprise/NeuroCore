@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL */
+.container{
+    background-color: aliceblue;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgb(57, 29, 180);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+/* TEXTOS */
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+/* BOTÕES */
+.container button{
+    background-color: rgb(140, 62, 230);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 10px 45px;
+}
+
+.container button.escondido{
+    background-color: transparent;
+    border-color: white;
+}
+
+/* FORM */
+.container form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+/* INPUTS */
+.container input{
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+/* ================= LOGIN / CADASTRO ================= */
+
+.forma-container,
+.forma-container-login{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Cadastro (esquerda) */
+.forma-container{
+    left: 0;
+    z-index: 2;
+}
+
+/* Login (inicialmente escondido) */
+.forma-container-login{
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Quando ativado (JS vai colocar .ativo no container) */
+.container.ativo .forma-container{
+    transform: translateX(100%);
+}
+
+.container.ativo .forma-container-login{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* ANIMAÇÃO */
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* ICONES */
+.iconesSite{
+    margin: 20px 0;
+}
+
+.iconesSite a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+/* ================= PAINEL LATERAL ================= */
+
+
+.ativar-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 20px;
+    z-index: 1000;  
+    margin-top: 100px;     
+}
+
+.ativar {
+    background-color: rgb(92, 78, 216);
+    color: white;
+    position: relative;
+    left: -100%;       
+    width: 200%;    
+    height: 100%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Quando ativo */
+.container.ativo .ativar-container {
+    transform: translateX(-100%);
+}
+
+.container.ativo .ativar {
+    transform: translateX(50%);
+}
+
+/* PAINEIS */
+.ativar-painel{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 30px;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Esquerda */
+.ativar-esquerda{
+    transform: translateX(-200%);
+}
+
+/* Direita */
+.ativar-direita{
+    right: 0;
+}
+
+/* Quando ativo */
+.container.ativo .ativar-esquerda{
+    transform: translateX(0);
+}
+
+.container.ativo .ativar-direita{
+    transform: translateX(200%);
+}
