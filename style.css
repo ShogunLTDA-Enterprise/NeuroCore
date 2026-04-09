@@ -1,4 +1,20 @@
-<<<<<<< HEAD
+.cabeça{
+    align-items: end;
+    box-sizing: 30px;
+    padding: 50px;
+    background-color: #121212;
+    background-attachment: fixed;
+
+}
+.logB{
+    margin: 10px;
+    box-sizing: 10px;
+    border: 10px;
+    padding: 10px;
+    background-color: #692dd8;
+    box ;
+
+}
 section{
     position: relative;
     height: 100vh;
@@ -92,5 +108,3 @@ section{
     }
 }
 
-=======
->>>>>>> 630e97cede640456d6fa9bf12639deeb82e1025d
