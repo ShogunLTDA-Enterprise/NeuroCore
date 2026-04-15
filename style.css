@@ -135,12 +135,10 @@ main span {
     min-height: 100px;
     z-index: 6;
     position: relative; 
-    background: rgba(255, 255, 255, 0.1); 
     display: flex;
-    margin-top: 20px;
-    left: 15%;
-    margin-right: 1200px;
-    margin-top: 500px;
+    left: -22%;
+    margin-top: 300px;
+    height: 100px;
 }
 
 @keyframes angle {
