@@ -1,79 +1,131 @@
-section{
-    position: relative;
-    height: 100vh;
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #121212;
+    overflow-x: hidden;
+}
+
+/* --- SEÇÃO ESCURA--- */
+.secao-escura {
+    background-color: #1a1a1a;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-
+    text-align: center;
 }
- 
-.title{
+
+.secao-escura h2 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+}
+
+/* --- SEÇÃO NEUROCORE--- */
+.secao-neurocore {
+    position: relative; /* Pai dos elementos absolutos */
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* --- ELEMENTOS DE TEXTO --- */
+main {
+    position: absolute;
+    top: 52%;
+    left: 1%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    color: white;
+    z-index: 5; /* Garante que fica acima dos blobs */
+}
+
+main h1 {
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px #e5e5e5;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+main span {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* --- BOTÃO DE LOGIN --- */
+.independente {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 10;
+}
+
+.btn-login {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.4);
+    background-color: #8a2be2;
+}
+
+/* --- ANIMAÇÃO DOS BLOBS --- */
+.blobs {
     position: absolute;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.title h1{
-  font-family: "Quicksand", sans-serif;
-  font-size: clamp(2rem, 3ww, 3.5rem);
-  letter-spacing: 2px;
-  -webkit-text-stroke: 2px #e5e5e5;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.blob:nth-child(1) {
-    --angle-delay: 0s;
-    --moving-delay: 0s;
-    --color: #4b1e5e;
-}
-
-.blob:nth-child(2) {
-    --angle-delay: -3s;
-    --moving-delay: -2s;
-    --color: #52189e;
-}
-
-.blob:nth-child(3) {
-    --angle-delay: -6s;
-    --moving-delay: -4s;
-    --color: #25196b;
-}
-
-.blob:nth-child(4) {
-    --angle-delay: -9s;
-    --moving-delay: -6s;
-    --color: #220a42;
-}
-
-.blob:nth-child(5) {
-    --angle-delay: -12s;
-    --moving-delay: -8s;
-    --color: #692dd8;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .blob {
     position: absolute;
+    top: 50%;
+    left: 50%;
     animation: angle 15s var(--angle-delay) infinite linear;
 }
 
 .blob::after {
     content: "";
     position: absolute;
-    width: 240px;
+    width: 280px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--color);
-    filter: blur(50px);
+    filter: blur(60px);
     animation: moving 10s var(--moving-delay) infinite ease-in-out alternate;
 }
+
+.blob:nth-child(1) { --angle-delay: 0s; --moving-delay: 0s; --color: #4b1e5e; }
+.blob:nth-child(2) { --angle-delay: -3s; --moving-delay: -2s; --color: #52189e; }
+.blob:nth-child(3) { --angle-delay: -6s; --moving-delay: -4s; --color: #25196b; }
+.blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
+.blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
 @keyframes angle {
     from { transform: rotate(0deg); }
@@ -81,12 +133,22 @@ section{
 }
 
 @keyframes moving {
-    from { transform: translate(-50%, -50%) translateY(-100px); }
-    to { transform: translate(-50%, -50%) translateY(100px); }
+    from { transform: translate(-50%, -50%) translateY(-120px); }
+    to { transform: translate(-50%, -50%) translateY(120px); }
 }
 
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
     .blob::after {
-        width: 160px;
+        width: 180px;
+    }
+    .independente {
+        right: 20px;
+    }
+    main {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        align-items: center;
     }
 }
