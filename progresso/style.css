@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-principal: #202020; 
+    --cor-barra: #171717;
+    --cor-texto: #ffffff;
+    --cor-de-fundo: #00030C;
+    --botao-verde: #328B1C;
+    --botao-verde-efeito: #3cb31e;
+    --botao-azul: #22B9F9;
+    --botão-azul-efeito: #127af8;
+    --fonte-principal: "Space Grotesk", sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+}
+
+.cabecaralho {
+    background-color: var(--cor-barra);
+    left: 30%;
+}
+
+.titulo_proj {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-weight: 200;
+}
+
+.botoes_selecao {
+    
+}
+
+.botao {
+    color: var(--cor-texto);
+    border-radius: 5px;
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    left: 85%;
+    font-size: var(--fonte-secundaria);
+}
+
+.verde {
+    background-color: var(--botao-verde);
+}
+
+.azul {
+    background-color: var(--botao-azul);
+}
+
+nav.barra_lateral {
+  height: 100%; /* Altura total */
+  width: 80px; /* Largura da barra */
+  position: fixed; /* Fixar na tela */
+  top: 0;
+  left: 0;
+  background-color: var(--cor-barra);
+  padding-top: 20px;
+}
+
+.expandir_menu {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.expandir_menu > i {
+    color: var(--cor-texto);
+    font-size: 24px;
+}
+
+.barra_lateral a {
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  display: block; /* Links ocupam a largura toda */
+}
+
+.conteudo {
+  margin-left: 250px; /* Mesmo valor da largura da sidebar */
+  padding: 20px;
+}
