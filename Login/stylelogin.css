@@ -163,9 +163,9 @@ body{
 
 .ativar-container {
     position: absolute;
-    top: 0;
+    top: 137px;
     left: 50%;
-    width: 50%;
+    width: 5%;
     height: 50%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
