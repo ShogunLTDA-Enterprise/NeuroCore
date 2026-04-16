@@ -156,10 +156,12 @@ main span {
     width: 20px;
 }
 
-.imagem{
+.imagemCerebro{
     height: 60px;
     width: 60px;
     left: 34%;
+    margin-top: 450px;
+    height: 100px;
 }
 
 @keyframes angle {
