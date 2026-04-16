@@ -13,15 +13,14 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    scrollbar-color: var(--cor-primaria);
-    scrool
+    background-image: linear-gradient(rgb(196, 157, 255), rgb(118, 87, 255));
 }
 
 /* CONTAINER PRINCIPAL */
 .container{
     background-color: aliceblue;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgb(57, 29, 180);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -43,7 +42,7 @@ body{
 
 /* BOTÕES */
 .container button{
-    background-color: rgb(140, 62, 230);
+    background-color: rgb(6, 0, 14);
     color: white;
     font-size: 12px;
     cursor: pointer;
@@ -163,10 +162,10 @@ body{
 
 .ativar-container {
     position: absolute;
-    top: 0;
+    top: 131px;
     left: 50%;
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 51%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
     border-radius: 20px;
@@ -175,7 +174,7 @@ body{
 }
 
 .ativar {
-    background-color: rgb(92, 78, 216);
+    background-color: rgb(22, 20, 44);
     color: white;
     position: relative;
     left: -100%;       
@@ -197,7 +196,7 @@ body{
 /* PAINEIS */
 .ativar-painel{
     position: absolute;
-    width: 50%;
+    width: 28%;
     height: 50%;
     display: flex;
     align-items: center;
@@ -205,7 +204,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 0 30px;
-    top: 0;
+    top: 127;
     transition: all 0.6s ease-in-out;
 }
 
