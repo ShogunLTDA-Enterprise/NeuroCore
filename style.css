@@ -126,14 +126,41 @@ main span {
 .blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
 .blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
-.container{
-    border: #121212;
-    border-radius: 60px;
+.container {
+    border: 1px solid white;
+    border-radius: 20px;
     padding: 20px;
-    width: 300px;
+    width: 100px;
+    min-height: 100px;
     z-index: 6;
-    position: relative;
+    position: relative; 
     display: flex;
+    left: -34%;
+    margin-top: 300px;
+    height: 60px;
+}
+
+.btn-progresso{
+    background-color: #121212;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+    left: -34%;
+    height: 20px;
+    width: 20px;
+}
+
+.imagemCerebro{
+    height: 60px;
+    width: 60px;
+    left: 34%;
+    margin-top: 450px;
+    height: 100px;
 }
 
 @keyframes angle {
