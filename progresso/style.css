@@ -28,14 +28,19 @@ body {
     left: 30%;
 }
 
-.titulo_proj {
-    text-align: center;
-    font-family: var(--fonte-principal);
-    font-weight: 200;
+.cabesa {
+    justify-content: center;
+    display: flex;
 }
 
-.botoes_selecao {
+.titulo_area {
     
+}
+
+.titulo_proj {
+    font-family: var(--fonte-principal);
+    font-weight: 200;
+    text-align: center;
 }
 
 .botao {
@@ -45,8 +50,8 @@ body {
     display: inline-block;
     text-decoration: none;
     position: relative;
-    left: 85%;
     font-size: var(--fonte-secundaria);
+    left: 36%;
 }
 
 .verde {
@@ -59,29 +64,53 @@ body {
 
 nav.barra_lateral {
   height: 100%; /* Altura total */
-  width: 80px; /* Largura da barra */
+  width: 59px; /* Largura da barra */
   position: fixed; /* Fixar na tela */
+  background-color: var(--cor-barra);
+  padding: 40px 0 40px 1%;
+
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--cor-barra);
-  padding-top: 20px;
+  overflow: hidden;
+  transition: .2s;
 }
 
-.expandir_menu {
-    width: 100%;
-    padding-left: 10px;
+nav.barra_lateral:hover{
+    width: 200px; /* Largura da barra */
 }
 
-.expandir_menu > i {
-    color: var(--cor-texto);
-    font-size: 24px;
+ul {
+    height: 100%;
+    list-style-type: none;
 }
 
-.barra_lateral a {
-  padding: 15px;
-  text-decoration: none;
+ul li.item-barra{
+    transition: .2s;
+}
+
+ul li.item-barra:hover {
+    background-color: var(--botão-azul-efeito);
+}
+
+ul li.item-barra a {
   color: white;
-  display: block; /* Links ocupam a largura toda */
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+
+ul li.item-barra a .txt-link{
+    margin-left: 20px;
+}
+
+ul li.item-barra a .icone{
+    margin-left: 12px;
+    font-size: 25px;
 }
 
 .conteudo {
