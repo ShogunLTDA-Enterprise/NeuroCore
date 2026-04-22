@@ -19,6 +19,7 @@
 }
 
 body {
+    height: 100vh;
     background-color: var(--cor-principal);
     color: var(--cor-texto);
 }
@@ -63,20 +64,20 @@ body {
 }
 
 nav.barra_lateral {
-  height: 100%; /* Altura total */
-  width: 59px; /* Largura da barra */
-  position: fixed; /* Fixar na tela */
-  background-color: var(--cor-barra);
-  padding: 40px 0 40px 1%;
+    width: 59px; /* Largura da barra */  
+    height: 100%; /* Altura total */
+    background-color: var(--cor-barra);
+    padding: 40px 0 40px 1%;
 
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: .2s;
+    position: fixed; /* Fixar na tela */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
 }
 
 nav.barra_lateral:hover{
-    width: 200px; /* Largura da barra */
+    width: 200px;
 }
 
 ul {
@@ -88,23 +89,29 @@ ul li.item-barra{
     transition: .2s;
 }
 
+ul li.ativo{
+    background-color: var(--botão-azul-efeito);
+}
+
 ul li.item-barra:hover {
     background-color: var(--botão-azul-efeito);
 }
 
 ul li.item-barra a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px 4%;
-  display: flex;
-  margin-bottom: 20px;
-  line-height: 40px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
 }
 
 
 ul li.item-barra a .txt-link{
     margin-left: 30px;
+    transition: 1s;
+    opacity: 1;
 }
 
 ul li.item-barra a .icone{
