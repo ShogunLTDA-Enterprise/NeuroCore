@@ -1,83 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
+    <title>Login NeuroCore</title>
     <link rel="stylesheet" href="stylelogin.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" type="image/x-icon">
 </head>
-<body>
+<body class="gradient">
+    <div class= 'container'>
+    <div class='card'>
+        <h1> Entrar </h1>
 
-    <div class="container" id="container">
+      <div id='msgError'></div>
 
-        <div class="forma-container">
-            <form>
-                <h1>Crie uma conta</h1>
-
-                <div class="iconesSite">
-                    <a href="#" class="icones"><i class="fa-brands fa-google"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-
-                <span>Registre-se com o Email</span>
-
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Coloque seu Email">
-                <input type="password" placeholder="Coloque sua Senha">
-
-                <button type="submit">Cadastre-se</button> 
-            </form>
+        <div class='label-float'>
+            <input type='text' id='usuario' placeholder='' required>
+            <label id='userLabel' for='usuario'>Usuário</label>
+        </div>
+      
+        <div class='label-float'>
+            <input type='password' id='senha' placeholder='' required>
+            <label id='userSenha' for='senha'>Senha</label>
         </div>
 
-        <!-- Login -->
-        <div class="forma-container-login">
-            <form>
-                <h1>Logue na sua conta</h1>
-
-                <div class="iconesSite">
-                    <a href="#" class="icones"><i class="fa-brands fa-google"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="icones"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-
-                <span>Login</span>
-
-                <input type="email" placeholder="Coloque seu Email">
-                <input type="password" placeholder="Coloque sua Senha">
-
-                <button type="submit">Login</button> 
-            </form>
+        <div class='justify-center'>
+            <button onclick='entrar()'>Entrar</button>
         </div>
+
+        <div class='justify-center'>
+            <hr>
+        </div>
+
+        <p>Não tem uma conta?
+            <a class='cadas' href='VirusPesadissimo.com'>Cadastre-se!</a>
+        </p>
 
     </div>
+</div>
 
-    <!-- Painel lateral -->
-    <div class="ativar-container">
-        <div class="ativar">
-
-            <div class="ativar-painel ativar-esquerda">
-                <h1>Bem Vindo ao <br>NeuroCore</h1>
-                <p>Logue com Email e Senha</p>
-                <button class="escondido" id="login">Login</button>
-            </div>
-
-            <div class="ativar-painel ativar-direita">
-                <h1>Olá!</h1>
-                <p>Junte-se a Nós Para Melhorar o Preparo de Seu Projeto</p>
-                <button class="escondido" id="cadastro">Cadastre-se</button>
-            </div>
-
-        </div>
-
-        
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
