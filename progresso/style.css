@@ -27,21 +27,29 @@ body {
 .cabecaralho {
     background-color: var(--cor-barra);
     left: 30%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cabesa {
     justify-content: center;
     display: flex;
+    
 }
 
 .titulo_area {
-    
+    position: relative;
+    left: -570px;
+    top: 15px;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .titulo_proj {
     font-family: var(--fonte-principal);
     font-weight: 200;
     text-align: center;
+    position: relative;
+    top: 6px;
 }
 
 .botao {
