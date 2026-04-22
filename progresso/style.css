@@ -69,7 +69,6 @@ nav.barra_lateral {
   background-color: var(--cor-barra);
   padding: 40px 0 40px 1%;
 
-  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -105,11 +104,12 @@ ul li.item-barra a {
 
 
 ul li.item-barra a .txt-link{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 ul li.item-barra a .icone{
-    margin-left: 12px;
+    align-items: center;
+    margin-left: 4px;
     font-size: 25px;
 }
 
