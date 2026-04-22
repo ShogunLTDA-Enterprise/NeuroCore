@@ -114,6 +114,6 @@ ul li.item-barra a .icone{
 }
 
 .conteudo {
-  margin-left: 250px; /* Mesmo valor da largura da sidebar */
+  margin-left: 80px; /* Mesmo valor da largura da sidebar */
   padding: 20px;
 }
