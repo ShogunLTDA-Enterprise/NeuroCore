@@ -24,6 +24,12 @@ body {
     color: var(--cor-texto);
 }
 
+.gradient {
+    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background-clip: text;
+    color: transparent;
+}
+
 .cabecaralho {
     background-color: var(--cor-barra);
     left: 30%;
@@ -41,7 +47,7 @@ body {
     position: relative;
     left: -570px;
     top: 15px;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 .titulo_proj {
@@ -88,6 +94,16 @@ nav.barra_lateral:hover{
     width: 200px;
 }
 
+.icone_site {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 20px;
+    
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
 ul {
     height: 100%;
     list-style-type: none;
@@ -131,4 +147,10 @@ ul li.item-barra a .icone{
 .conteudo {
   margin-left: 80px; /* Mesmo valor da largura da sidebar */
   padding: 20px;
+  font-family: var(--fonte-principal);
+  
+}
+
+.sif {
+    margin-left: 100px;
 }
