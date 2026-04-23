@@ -14,6 +14,7 @@
     --botao-verde-efeito: #3cb31e;
     --botao-azul: #22B9F9;
     --botão-azul-efeito: #127af8;
+    --botoes-barra-lateral: ;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
 }
@@ -87,10 +88,10 @@ nav.barra_lateral {
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: .5s;
 }
 
-nav.barra_lateral:hover{
+nav.barra_lateral.expandir{
     width: 200px;
 }
 
@@ -98,10 +99,16 @@ nav.barra_lateral:hover{
     color: var(--cor-texto);
     text-decoration: none;
     font-size: 20px;
-    
+    border-radius: 40%;
     display: flex;
     margin-bottom: 20px;
     line-height: 40px;
+    transition: .5s;
+}
+
+.icone_site:hover {
+    background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    transition: .5s;
 }
 
 ul {
@@ -113,12 +120,9 @@ ul li.item-barra{
     transition: .2s;
 }
 
-ul li.ativo{
+.ativo{
     background-color: var(--botão-azul-efeito);
-}
-
-ul li.item-barra:hover {
-    background-color: var(--botão-azul-efeito);
+    border-radius: 20%;
 }
 
 ul li.item-barra a {
@@ -126,22 +130,31 @@ ul li.item-barra a {
     text-decoration: none;
     font-size: 20px;
     padding: 20px 4%;
+
     display: flex;
     margin-bottom: 20px;
     line-height: 40px;
 }
 
-
-ul li.item-barra a .txt-link{
-    margin-left: 30px;
-    transition: 1s;
-    opacity: 1;
+.icone {
+    transition: .5s;
 }
 
-ul li.item-barra a .icone{
-    align-items: center;
-    margin-left: 4px;
-    font-size: 25px;
+.icone:hover {
+    background-color: var(--botão-azul-efeito);
+    border-width: thick;
+    border-radius: 20%;
+}
+
+ul li.item-barra a .txt-link{
+    margin-left: 50px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.barra_lateral.expandir .txt-link {
+    margin-left: 30px;
+    opacity: 1;
 }
 
 .conteudo {
@@ -152,5 +165,5 @@ ul li.item-barra a .icone{
 }
 
 .sif {
-    margin-left: 100px;
+     margin-left: 100px;
 }
