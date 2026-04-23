@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.671);
+    background-color: #000000ab;
 }
 
 .titulo {
@@ -26,30 +26,46 @@ body {
     color: aliceblue;
 }
 
-.wraper {
+/* container para dias e números */
+.wraper  {           
     max-width: 760px;
     margin: 10px auto;
-    padding: 40px;
     border: 10px;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .dias_da_semana {
     display: flex;
     width: 100%;
-    justify-content: space-between;
 
+    
 }
 
 .dias_da_semana span {
+    display: inline-block;
+    width: 14.2%;
+    color: black;
     
 
 }
 
+.mes_anterior {
+    opacity: 0.5;
+}
+/* Números dos dias */
 .num_dias {
-    display: flex;
+    display: inline-block;
     width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+
+.num_dias span{
+    display: inline-block;
+    width: 14.2%;
+    margin-bottom: 8px;
+    color: black;
+    
 }
