@@ -14,25 +14,31 @@
         <h1 class="titulo">Calendário</h1>
     </header>
 
-    <div class="wraper"></div>
+    <div class="wraper">
 
-    <div class="dias_da_semana">
-        <span>Segunda </span>
-        <span>Terça </span>
-        <span>Quarta </span>
-        <span>Quinta </span>
-        <span>Sexta </span>
-        <span>Sábado </span>
-        <span>Domingo </span>
+        <div class="dias_da_semana">
+            <span>Segunda </span>
+            <span>Terça </span>
+            <span>Quarta </span>
+            <span>Quinta </span>
+            <span>Sexta </span>
+            <span>Sábado </span>
+            <span>Domingo </span>
 
+        </div>
+
+        <div class="num_dias">
+            <span></span>
+            <span></span>
+        </div>
+
+        <script>
+            let el = document.querySelector('.num_dias');
+            for (i = 1; i < 31; i++) {
+                el.innerHTML += '<span>'+ i +'</span>';
+            }
+        </script>
     </div>
-
-    <div class="num_dias">
-        <span></span>
-        <span></span>
-    </div>
-
-
 </body>
 
 </html>

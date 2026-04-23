@@ -32,4 +32,24 @@ body {
     padding: 40px;
     border: 10px;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dias_da_semana {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.dias_da_semana span {
+    
+
+}
+
+.num_dias {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
