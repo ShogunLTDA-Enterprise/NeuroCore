@@ -24,9 +24,11 @@ body {
 .titulo {
     text-align: center;
     color: aliceblue;
+    margin:auto;
 }
 
 /* container para dias e números */
+
 .wraper  {           
     max-width: 760px;
     margin: 10px auto;
@@ -45,7 +47,7 @@ body {
 }
 
 .dias_da_semana span {
-    display: inline-block;
+    display: flex;
     width: 14.2%;
     color: black;
     
@@ -57,15 +59,15 @@ body {
 }
 /* Números dos dias */
 .num_dias {
-    display: inline-block;
     width: 100%;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    display: flex;   
 }
 
 .num_dias span{
-    display: inline-block;
     width: 14.2%;
     margin-bottom: 8px;
+    flex-wrap: wrap;
     color: black;
-    
+    cursor: pointer;
 }
