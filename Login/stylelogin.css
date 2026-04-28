@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
-body{
-
-    background-image: radial-gradient(circle, rgb(0, 0, 0), rgb(138, 75, 255));
+body {
+    background: linear-gradient(45deg, #a2a2a2, #c0c0c0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 /* CONTAINER PRINCIPAL */
@@ -69,35 +68,18 @@ body{
 /* FORM */
 .container form{
     background-color: white;
+>>>>>>> main
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
-}
-
-/* INPUTS */
-.container input{
-    background-color: white;
-    border: 1px solid #ccc;
-    margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
     width: 100%;
-    outline: none;
+    margin-top: 100px;
 }
 
-/* ================= LOGIN / CADASTRO ================= */
-
-.forma-container,
-.forma-container-login{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transition: all 0.6s ease-in-out;
+.card {
+    background-color: #383838;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 0px 0px 1px 2px #8b5dd0;
 }
 
 /* Cadastro (esquerda) */
@@ -215,26 +197,107 @@ body{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #272262;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #7d27ff;
+}
+
+.label-float label {
+    color: #7d27ff;
+    pointer-events: none;
+    position: absolute;
     top: 0;
-    transition: all 0.6s ease-in-out;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
 }
 
-/* Esquerda */
-.ativar-esquerda{
-    transform: translateX(-200%);
+.label-float input:focus + label,
+.label-float input:valid + label
+{
+  font-size: 13px;
+  margin-top: 0;
+  color: #7d27ff;
 }
 
-/* Direita */
-.ativar-direita{
-    right: 0;
+button{
+  background: #a970ff;
+  color: #000;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  height: 39px;
+  width: 85%;
 }
 
-/* Quando ativo */
-.container.ativo .ativar-esquerda{
-    transform: translateX(0);
+
+.justify-center{
+  display: flex;
+  justify-content: center;
 }
 
-.container.ativo .ativar-direita{
-    transform: translateX(200%);
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 75%;
+}
+
+p{
+  color: #000;
+  font-size: 14pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.cadas {
+  color: #7d27ff;
+}
+
+.gradient {
+    background: linear-gradient(45deg, #0a0577, #000000, #21124b, #420099);
+    background-size: 300% 300%;
+    min-height: 100vh;
+    width: 100vw;
+    animation: colors 15s infinite ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+@keyframes colors {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
