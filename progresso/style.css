@@ -92,7 +92,7 @@ nav.barra_lateral {
 }
 
 nav.barra_lateral.expandir{
-    width: 200px;
+    width: 250px;
 }
 
 .icone_site {
@@ -129,7 +129,7 @@ ul li.item-barra a {
     color: var(--cor-texto);
     text-decoration: none;
     font-size: 20px;
-    padding: 20px 4%;
+    padding: 20px 20%;
 
     display: flex;
     margin-bottom: 20px;
@@ -162,8 +162,4 @@ nav.barra_lateral.expandir .txt-link {
   padding: 20px;
   font-family: var(--fonte-principal);
   
-}
-
-.sif {
-     margin-left: 100px;
 }
