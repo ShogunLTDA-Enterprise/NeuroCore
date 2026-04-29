@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-principal: #202020;
+    --cor-barra: #171717;
+    --cor-texto: #ffffff;
+    --cor-de-fundo: #00030C;
+    --botao-verde: #328B1C;
+    --botao-verde-efeito: #3cb31e;
+    --botao-azul: #22B9F9;
+    --botão-azul-efeito: #127af8;
+    --fonte-primária: 'Archivo Black', sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+    position: relative;
+}
+
+
+.titulo {
+    text-align: center;
+    color: aliceblue;
+    margin:auto;
+}
+
+.titulo_area {
+    position: absolute;
+    left: 210px;
+    color: #6d0aa7;
+}
+
+.titulo_proje {
+    position: relative;
+    text-align: center;
+}
+/* container para dias e números */
+
+.wraper  {           
+    max-width: 760px;
+    margin: 10px auto;
+    border: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+    height: 140px;
+}
+
+.dias_da_semana {
+    display: flex;
+    width: 100%;
+    
+}
+
+.dias_da_semana span {
+    
+    width: 24.2%;
+    color: black;
+
+}
+
+.mes_anterior {
+    opacity: 0.5;
+}
+/* Números dos dias */
+.num_dias {
+    width: 100%;
+    flex-wrap: wrap; 
+    display: flex;   
+}
+
+.num_dias span{
+    width: 14.2%;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    color: black;
+    cursor: pointer;
+}
