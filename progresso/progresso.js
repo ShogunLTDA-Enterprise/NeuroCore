@@ -1,4 +1,3 @@
-
 var itemBarra = document.querySelectorAll('.icone')
 
 function selectLink(){
