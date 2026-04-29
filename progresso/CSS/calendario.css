@@ -1,4 +1,4 @@
-@
+
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 * {
     margin: 0;
@@ -19,7 +19,8 @@
 }
 
 body {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-principal);
+    position: relative;
 }
 
 
@@ -29,28 +30,42 @@ body {
     margin:auto;
 }
 
+.titulo_area {
+    position: absolute;
+    left: 210px;
+    color: #6d0aa7;
+}
+
+.titulo_proje {
+    position: relative;
+    text-align: center;
+}
 /* container para dias e números */
 
 .wraper  {           
-    max-width: 760px;
-    margin: 15px auto;
+    max-width: 380px;
+    margin: 10px auto;
     border: 10px;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    justify-content: center;
+    position: absolute;
+    left: 350px;
 }
 
 .dias_da_semana {
     display: flex;
     width: 100%;
+    
 
     
 }
 
 .dias_da_semana span {
-    display: flex;
-    width: 14.2%;
+    
+    width: 24.2%;
     color: black;
     
 

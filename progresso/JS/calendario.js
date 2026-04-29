@@ -1,6 +1,8 @@
+
+//Cria os números do mês
 let el = document.querySelector('.num_dias');
 for (i = 1; i < 31; i++) {
-    el.innerHTML += '<span>'+ i +'</span>';
+    el.innerHTML += '<span>'+ i +'</span>'; 
 }
 
 const wraper = document.querySelector('.wraper')
