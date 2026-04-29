@@ -10,3 +10,8 @@ const wraper = document.querySelector('.wraper')
 wraper.addEventListener('click', () => {
     document.body.style.backgroundColor = 'black'
 })
+
+let el = document.querySelector('.wraper');
+for (i = 1; i < 31; i++) {
+    el.innerHTML += '<span>'+ i +'</span>'; 
+}

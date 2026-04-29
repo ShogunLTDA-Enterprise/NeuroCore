@@ -38,11 +38,12 @@ body {
 .titulo_proje {
     position: relative;
     text-align: center;
+
 }
 /* container para dias e números */
 
 .wraper  {           
-    max-width: 760px;
+    max-width: 260px;
     margin: 10px auto;
     border: 10px;
     background-color: rgb(255, 255, 255);
@@ -51,7 +52,7 @@ body {
     padding: 20px;
     justify-content: center;
     position: relative;
-    left: 50px;
+    left: -530px;
     height: 140px;
 }
 
