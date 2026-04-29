@@ -74,10 +74,18 @@ body {
 
 .verde {
     background-color: var(--botao-verde);
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .azul {
     background-color: var(--botao-azul);
+    border-radius: 12px;
+    margin-right: 9px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 nav.barra_lateral {
