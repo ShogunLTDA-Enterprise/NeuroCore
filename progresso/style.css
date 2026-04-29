@@ -17,6 +17,7 @@
     --botoes-barra-lateral: ;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
 }
 
 body {
@@ -35,8 +36,13 @@ body {
     background-color: var(--cor-barra);
     left: 30%;
     display: flex;
+<<<<<<< HEAD
     flex-direction:column;
  
+=======
+    flex-direction: column;
+    box-shadow: 0 3px 0 #492486;
+>>>>>>> f9b14208c56b17a3eb9e5ff15b033fd8439c671a
 }
 
 .cabesa {
@@ -47,7 +53,7 @@ body {
 
 .titulo_area {
     position: relative;
-    left: -570px;
+    left: -30%;
     top: 15px;
     font-family: var(--fonte-principal);
 }
@@ -84,6 +90,7 @@ nav.barra_lateral {
     height: 100%; /* Altura total */
     background-color: var(--cor-barra);
     padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #492486;
 
     position: fixed; /* Fixar na tela */
     top: 0;
