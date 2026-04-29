@@ -4,55 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login NeuroCore</title>
+    
     <link rel="stylesheet" href="stylelogin.css">
+    
     <link rel="shortcut icon" href="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" type="image/x-icon">
 </head>
 <body class="gradient">
-    <div class= 'container'>
-    <div class='card'>
-        <h1> Entrar </h1>
 
-      <div id='msgError'></div>
-
-        <div class='label-float'>
-            <input type='text' id='usuario' placeholder='' required>
-            <label id='userLabel' for='usuario'>Usuário</label>
-        </div>
-      
-        <div class='label-float'>
-            <input type='password' id='senha' placeholder='' required>
-            <label id='userSenha' for='senha'>Senha</label>
-        </div>
-
-        <div class='justify-center'>
-            <button onclick='entrar()'>Entrar</button>
-        </div>
-
-        <div class='justify-center'>
-            <hr>
-        </div>
-
-        <p>Não tem uma conta?
-            <a class='cadas' href='#'>Cadastre-se!</a>
-        </p>
-
-    </div>
-</div>
-
-    <div class="container">
-  <div class="card">
-    <h2>Login</h2>
-    <form>
-      <input type="text" id="username" name="username" placeholder="Username" required>
-      <input type="password" id="password" name="password" placeholder="Password" required>
-      <p>Não tem uma Conta?
-            <a class='cadastro' href=Cadastro/cadastro.html >Cadastre-se!</a>
-        </p>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</div>
-</div>
+    <main class="container">
+        <section class="card">
+            <h2>Login</h2>
+            
+            <form action="#" method="POST">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+                
+                <p>Não tem uma conta? 
+                    <a class="cadastro" href="Cadastro/cadastro.html">Cadastre-se!</a>
+                </p>
+                
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
 
 </body>
 </html>

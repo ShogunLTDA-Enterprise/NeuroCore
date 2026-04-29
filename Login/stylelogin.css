@@ -1,301 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-}
+/* Configurações Gerais do Corpo */
 body {
-    background: linear-gradient(45deg, #a2a2a2, #c0c0c0);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vw;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Archivo Black", sans-serif;
 }
 
-/* CONTAINER PRINCIPAL */
-.container{
-    background-color: rgb(189, 200, 209);
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgb(57, 29, 180);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-}
-
-/* TEXTOS */
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-}
-
-.container span{
-    font-size: 12px;
-}
-
-/* BOTÕES */
-.container button{
-    background-color: rgb(105, 17, 199);
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    font-weight: 600;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    padding: 10px 45px;
-}
-
-.container button:hover{
-    transform: scale(1.1);
-    transition: transform 0.8s ease;
-}
-
-
-.container button.escondido{
-    background-color: transparent;
-    border-color: white;
-}
-
-/* FORM */
-.container form{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 100px;
-}
-
-.card {
-    background-color: #383838;
-    padding: 30px;
-    border-radius: 4%;
-    box-shadow: 0px 0px 1px 2px #8b5dd0;
-}
-
-/* Cadastro (esquerda) */
-.forma-container{
-    left: 0;
-    z-index: 2;
-}
-
-/* Login (inicialmente escondido) */
-.forma-container-login{
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-}
-
-/* Quando ativado (JS vai colocar .ativo no container) */
-.container.ativo .forma-container{
-    transform: translateX(100%);
-}
-
-.container.ativo .forma-container-login{
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-}
-
-/* ANIMAÇÃO */
-@keyframes move{
-    0%, 49.99%{
-        opacity: 0;
-        z-index: 1;
-    }
-    50%, 100%{
-        opacity: 1;
-        z-index: 5;
-    }
-}
-
-/* ICONES */
-
-.iconesSite {
-    margin: 20px 0;
-}
-
-
-.icones:hover{
-    transform: scaleX(1.5);
-    transition: transform 0.3s ;
-    background-color: black;
-
-    
-}
-
-.iconesSite a{
-    color: rgb(0, 69, 116);
-    border: 1px solid #ccc;
-    border-color: black;
-    border-radius: 20%;
-    display: inline-flex;
-
-body{
-  font-family: "Archivo Black", sans-serif;
-  font-family: "Times New Roman", serif;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
+/* Layout e Containers */
 .container {
-  width: 100%;
-  max-width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Tipografia e Formulários */
 h2 {
-  text-align: center;
+    text-align: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: border-color 0.3s ease-in-out;
-  outline: none;
-}
-
-.gradient {
-    background: linear-gradient(45deg, #0a0577, #10232b, #0c0935, #0d4870);
-    background-size: 300% 300%;
-    min-height: 100vh;
-    width: 100vw;
-    animation: colors 15s infinite ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-.label-float input {
-    width: 100%;
-    padding: 5px 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 2px solid #272262;
-    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 0;
-}
-
-.label-float {
-    position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.label-float input:focus {
-    border-bottom: 2px solid #7d27ff;
-}
-
-.label-float label {
-    color: #7d27ff;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transition: all .3s ease-out;
-}
-
-.label-float input:focus + label,
-.label-float input:valid + label
-{
-  font-size: 13px;
-  margin-top: 0;
-  color: #7d27ff;
+    transition: border-color 0.3s ease-in-out;
 }
 
 button{
-  background: #a970ff;
-  color: #000;
-  padding: 5px;
-  font-weight: bold;
-  font-size: 12pt;
-  margin-top: 20px;
-  border-radius: 15px;
-  cursor: pointer;
-  outline: none;
-  height: 39px;
-  width: 85%;
+    border-radius: 25px;
+    border-color: white;
 }
 
-
-.justify-center{
-  display: flex;
-  justify-content: center;
-}
-
-hr{
-  margin-top: 10%;
-  margin-bottom: 10%;
-  width: 75%;
-}
-
-p{
-  color: #000;
-  font-size: 14pt;
-  text-align: center;
-  font-weight: bold;
-}
-
-
-.cadas {
-  color: #7d27ff;
-}
-
+/* Efeito de Fundo Animado */
 .gradient {
-    background: linear-gradient(45deg, #0a0577, #000000, #21124b, #420099);
-    background-size: 300% 300%;
-    min-height: 100vh;
-    width: 100vw;
-    animation: colors 15s infinite ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: aliceblue;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0577, #10232b, #0c0935, #0d4870);
+    background-size: 300% 300%;
+    animation: colors 15s infinite ease;
 }
 
-
+/* Animação */
 @keyframes colors {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

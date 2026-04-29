@@ -41,6 +41,11 @@ input {
   outline: none;
 }
 
+button{
+    border-radius: 25px;
+    border-color: white;
+}
+
 .gradient {
     background: linear-gradient(45deg, #0a0577, #10232b, #0c0935, #0d4870);
     background-size: 300% 300%;
