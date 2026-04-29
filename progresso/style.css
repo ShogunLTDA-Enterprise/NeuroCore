@@ -36,13 +36,8 @@ body {
     background-color: var(--cor-barra);
     left: 30%;
     display: flex;
-<<<<<<< HEAD
-    flex-direction:column;
- 
-=======
     flex-direction: column;
     box-shadow: 0 3px 0 #492486;
->>>>>>> f9b14208c56b17a3eb9e5ff15b033fd8439c671a
 }
 
 .cabesa {

@@ -28,14 +28,14 @@ body {
 
 /* --- SEÇÃO NEUROCORE--- */
 .secao-neurocore {
-    position: relative; /* Pai dos elementos absolutos */
+    position: relative; 
     min-height: 100vh;
     background-color: #121212;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; /* Importante para não vazar os blobs */
 }
 
 /* --- ELEMENTOS DE TEXTO --- */
@@ -49,7 +49,7 @@ main {
     align-items: flex-start;
     gap: 12px;
     color: white;
-    z-index: 5; /* Garante que fica acima dos blobs */
+    z-index: 5; 
 }
 
 main h1 {
@@ -93,6 +93,65 @@ main span {
     background-color: #8a2be2;
 }
 
+/* --- Efeito Fotos (POSICIONADO NO CANTO INFERIOR DIREITO) --- */
+
+.wrapper {
+    perspective: 800px;
+    position: absolute;
+    bottom: -290px;      
+    right: -1370px;        
+    z-index: 10;       
+}
+
+.card-content {
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-front {
+    background: linear-gradient(#692dd8, #25196b);
+}
+
+.card-front,
+.card-back {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-content:hover {
+    transform: rotateY(180deg);
+}
+
+/* Correção do erro de sintaxe '180degf' */
+.card-content.flip {
+    transform: rotateY(180deg);
+}
+
+.imagem {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.virus{
+    height: 80px;
+    width: 80px;
+}
+
 /* --- ANIMAÇÃO DOS BLOBS --- */
 .blobs {
     position: absolute;
@@ -127,6 +186,7 @@ main span {
 .blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
 .blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
+/* --- OUTROS ELEMENTOS --- */
 .container {
     border: 1px solid rgb(77, 77, 77);
     border-radius: 20px;
@@ -140,18 +200,13 @@ main span {
     height: 60px;
 }
 
-.imagemCerebro{
+.imagemCerebro {
     height: 60px;
     width: 60px;
     margin: -28px;
     position: relative;
     left: 6.2px;
     bottom: 3px;
-}
-
-.btn-progresso{
-    background-color: black;
-    cursor: pointer;
 }
 
 @keyframes angle {
@@ -177,5 +232,14 @@ main span {
         transform: translate(-50%, -50%);
         width: 100%;
         align-items: center;
+    }
+    /* Ajuste da foto no mobile para não ocupar muito espaço */
+    .wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    .card-content {
+        width: 60px;
+        height: 60px;
     }
 }
