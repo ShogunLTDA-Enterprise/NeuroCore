@@ -129,11 +129,20 @@ ul {
 
 ul li.item-barra{
     transition: .2s;
+    border-radius: 5%;
+    
+    
+    
+}
+
+ul li.item-barra:hover {
+    background-color: #127af8;
 }
 
 .ativo{
     background-color: var(--botão-azul-efeito);
-    border-radius: 20%;
+    
+
 }
 
 ul li.item-barra a {
@@ -154,7 +163,7 @@ ul li.item-barra a {
 .icone:hover {
     background-color: var(--botão-azul-efeito);
     border-width: thick;
-    border-radius: 20%;
+    
 }
 
 ul li.item-barra a .txt-link{
