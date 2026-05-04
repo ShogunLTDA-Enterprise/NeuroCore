@@ -163,3 +163,23 @@ nav.barra_lateral.expandir .txt-link {
   font-family: var(--fonte-principal);
   
 }
+
+#modal{
+    background-color: #ffffff;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.botao2{
+    position: relative;
+    bottom: -720px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-barras{
+    position: relative;
+    left: 12px;
+}
