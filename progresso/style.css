@@ -140,10 +140,12 @@ ul li.item-barra:hover {
 }
 
 .ativo{
-    background-color: var(--botão-azul-efeito);
-    
-
+    background-color:#00030C;
+    position: absolute;
+    border-style:solid;
 }
+
+
 
 ul li.item-barra a {
     color: var(--cor-texto);
@@ -160,11 +162,7 @@ ul li.item-barra a {
     transition: .5s;
 }
 
-.icone:hover {
-    background-color: var(--botão-azul-efeito);
-    border-width: thick;
-    
-}
+
 
 ul li.item-barra a .txt-link{
     margin-left: 50px;
