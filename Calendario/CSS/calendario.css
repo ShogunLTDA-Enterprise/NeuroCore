@@ -107,7 +107,12 @@ body {
     font-weight: 600;
     text-align: center;
     font: 400;
+    
 
+}
+
+.mesAno:{
+    width: 100px;
 }
 
 .dias_da_semana {
@@ -135,6 +140,7 @@ body {
 }
 
 /* Estilo dos números do mês */
+
 .date{
     display: flex;
     align-items: center;
@@ -158,9 +164,20 @@ body {
 
 .date.off{
     color: #686868;
+    font-weight: 0;
     
 }
 
 .date.off:hover{
-    background:#000000
+    background:#000000;
+    color:#ffffff;
 }
+
+@media screen and (min-width: 300px),(min-height:160px) {
+  body{
+    width: 280px;
+    height: 140px;
+  }
+  
+}
+
