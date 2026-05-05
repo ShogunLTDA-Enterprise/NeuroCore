@@ -131,8 +131,6 @@ ul li.item-barra{
     transition: .2s;
     border-radius: 5%;
     
-    
-    
 }
 
 ul li.item-barra:hover {
@@ -140,9 +138,8 @@ ul li.item-barra:hover {
 }
 
 .ativo{
-    background-color:#00030C;
+    color: #501D63;
     position: absolute;
-    border-style:solid;
 }
 
 
