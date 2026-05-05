@@ -198,15 +198,22 @@ main span {
     left: -28%;
     bottom: -120px;
     height: 60px;
+    cursor: pointer;
 }
+
 
 .imagemCerebro {
     height: 60px;
     width: 60px;
-    margin: -28px;
-    position: relative;
-    left: 6.2px;
-    bottom: 3px;
+    margin: -6px;
+    position: absolute;
+    left: 5.2px;
+    bottom: 5px;
+}
+
+.container:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s;
 }
 
 @keyframes angle {

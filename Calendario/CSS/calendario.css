@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+
+    
 }
 
 :root {
@@ -19,9 +21,16 @@
 
 body {
     background-color: var(--cor-principal);
+    align-items: center;
+    justify-content: center;
     position: relative;
+    
 }
 
+.cabecaralho {
+    
+    
+}
 
 .titulo {
     text-align: center;
@@ -30,59 +39,145 @@ body {
 }
 
 .titulo_area {
-    position: absolute;
-    left: 210px;
+    position:absolute;
+    left: 300px;
     color: #6d0aa7;
 }
 
 .titulo_proje {
     position: relative;
     text-align: center;
+    justify-content: center;
 
 }
-/* container para dias e números */
 
-.wraper  {           
-    max-width: 260px;
-    margin: 10px auto;
-    border: 10px;
-    background-color: rgb(255, 255, 255);
+
+/* container para nome, dias e números dos dias o mês */
+
+.calendario  {           
+    width: 800px;
+    height: 350px;
+    margin: 80px;
+    left: 200px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+/* Separa as setas e coloca-as no canto */
+
+.setinhas {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilagem das setas */
+
+.calendario button {
+    align-items: center;
     justify-content: center;
-    position: relative;
-    left: -530px;
-    height: 140px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.calendario button:active {
+    background-color: #127af8;
+    transition: 0.3s;
+}
+
+/* Anos, Meses e dias da semana*/
+.mesAno {
+    color: #00030C;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    font: 400;
+    
+
+}
+
+.mesAno:{
+    width: 100px;
 }
 
 .dias_da_semana {
-    display: flex;
-    width: 100%;
-    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 18px;
+
 }
 
 .dias_da_semana span {
-    
-    width: 24.2%;
-    color: black;
+    text-align: center;
+    padding: 5px;
+    color: rgb(117, 113, 113);
 
 }
 
-.mes_anterior {
-    opacity: 0.5;
-}
-/* Números dos dias */
-.num_dias {
-    width: 100%;
-    flex-wrap: wrap; 
-    display: flex;   
+
+/* Números dos dias no mês */
+
+.datas{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    color: #00030C;
 }
 
-.num_dias span{
-    width: 14.2%;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    color: black;
+/* Estilo dos números do mês */
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
     cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
 }
+
+/* Efeito ao passar e clicar dos números do mês */
+.date:hover, .date.active {
+    background: #a200ff;
+    color: #ffffff;
+}
+
+.date.off{
+    color: #686868;
+    font-weight: 0;
+    
+}
+
+.date.off:hover{
+    background:#000000;
+    color:#ffffff;
+}
+
+@media screen and (min-width: 300px),(min-height:160px) {
+  body{
+    width: 280px;
+    height: 140px;
+  }
+  
+}
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/progresso/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/calendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,14 +20,16 @@
                 <h1 class="titulo_proje" >NeuroCore</h1>
 
             </div>
-        </header>
-    </section>
+        </header>    
+        
 
+    </section>
     <section>
 
         <nav class="barra_lateral">
-
-            <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="icone" id="btn-exp">
+            <a 
+                href="../index.html"><img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="icone" id="btn-exp">
+            </a>
 
             <ul>
                 <li class="item-barra">
@@ -64,31 +67,37 @@
 
     </section>
     
+
     <div id="calendario" class="wraper" >
 
-        <div class="dias_da_semana">
-            <span>Seg </span>
-            <span>Ter </span>
-            <span>Qua </span>
-            <span>Qui </span>
-            <span>Sex </span>
-            <span>Sab </span>
-            <span>Dom </span>
+    <section class="quadrao">
+        <div class="calendario" >
+            <div class="setinhas">
+                <button class="anteset" id="anteset">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="mesAno" id="mesAno"> </div>
+                <button class="postset" id="postset">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="dias_da_semana">
+                <span>Dom </span>
+                <span>Seg </span>
+                <span>Ter </span>
+                <span>Qua </span>
+                <span>Qui </span>
+                <span>Sex </span>
+                <span>Sab </span>
+
+            </div>
+            <div class="datas" id="datas"></div>
 
         </div>
 
-        
-        <div class="num_dias">
-            <span class="mes_anterior">30</span>
-            <span class="mes_anterior">31</span>
-        </div>
-
-        <!--  -->
         <script src="progresso.js"></script>
         <script src="JS/calendario.js"> </script>
-
-    </div>
-    
+    </section>
 </body>
 
 

@@ -74,10 +74,18 @@ body {
 
 .verde {
     background-color: var(--botao-verde);
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .azul {
     background-color: var(--botao-azul);
+    border-radius: 12px;
+    margin-right: 9px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 nav.barra_lateral {
@@ -121,12 +129,23 @@ ul {
 
 ul li.item-barra{
     transition: .2s;
+    border-radius: 5%;
+    
+    
+    
+}
+
+ul li.item-barra:hover {
+    background-color: #127af8;
 }
 
 .ativo{
-    background-color: var(--botão-azul-efeito);
-    border-radius: 20%;
+    background-color:#00030C;
+    position: absolute;
+    border-style:solid;
 }
+
+
 
 ul li.item-barra a {
     color: var(--cor-texto);
@@ -143,11 +162,7 @@ ul li.item-barra a {
     transition: .5s;
 }
 
-.icone:hover {
-    background-color: var(--botão-azul-efeito);
-    border-width: thick;
-    border-radius: 20%;
-}
+
 
 ul li.item-barra a .txt-link{
     margin-left: 50px;
