@@ -111,9 +111,6 @@ body {
 
 }
 
-.mesAno:{
-    width: 100px;
-}
 
 .dias_da_semana {
     display: grid;
@@ -171,13 +168,5 @@ body {
 .date.off:hover{
     background:#000000;
     color:#ffffff;
-}
-
-@media screen and (min-width: 300px),(min-height:160px) {
-  body{
-    width: 280px;
-    height: 140px;
-  }
-  
 }
 
