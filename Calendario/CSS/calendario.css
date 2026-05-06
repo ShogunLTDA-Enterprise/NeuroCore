@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 
-    
+
 }
 
 :root {
@@ -57,9 +57,9 @@ body {
 .calendario  {           
     width: 800px;
     height: 350px;
-    margin: 80px;
-    left: 200px;
-    padding: 10px;
+    margin: 200px;
+    left: 360px;
+    padding: 40px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
@@ -107,6 +107,8 @@ body {
     font-weight: 600;
     text-align: center;
     font: 400;
+    text-transform: capitalize;
+    
     
 
 }
