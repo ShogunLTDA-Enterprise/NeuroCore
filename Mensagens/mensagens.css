@@ -1,0 +1,17 @@
+form{
+    max-width: 600px;
+    margin: auto;
+    margin-left: 20%;
+}
+
+input{
+    margin-top: 137%;
+    width: 180%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #5a5a5a;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: 300;
+}
