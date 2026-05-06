@@ -209,6 +209,38 @@ main span {
     bottom: 3px;
 }
 
+.container2{
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 20px;
+    padding: 20px;
+    width: 60px;
+    z-index: 6;
+    position: relative; 
+    display: flex;
+    left: -700%;
+    bottom: 20px;
+    height: 60px;
+}
+
+.ImagemAdd{
+    height: 60px;
+    width: 60px;
+    margin: -28px;
+    position: relative;
+    left: 6.2px;
+    bottom: 3px;
+}
+
+.container-modelo3d{
+    width: 700px;
+    height: 700px;
+}
+
+model-viewer{
+    height: 100%;
+    width: 100%;
+}
+
 @keyframes angle {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
