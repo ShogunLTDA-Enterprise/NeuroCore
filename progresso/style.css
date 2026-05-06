@@ -134,11 +134,11 @@ ul li.item-barra{
 }
 
 ul li.item-barra:hover {
-    background-color: #127af8;
+    background-color: #492486;
 }
 
 .ativo{
-    color: #501D63;
+    color: #ffd500;
     position: absolute;
 
 }
