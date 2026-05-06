@@ -109,8 +109,6 @@ body {
     font: 400;
     text-transform: capitalize;
     
-    
-    
 }
 
 
@@ -162,7 +160,7 @@ body {
 }
 
 .date.off{
-    color: #686868;
+    color: #9b9b9b;
     font-weight: 0;
     
 }
