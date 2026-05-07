@@ -100,7 +100,7 @@ nav.barra_lateral {
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 nav.barra_lateral:hover{
@@ -115,12 +115,12 @@ nav.barra_lateral:hover{
     display: flex;
     margin-bottom: 20px;
     line-height: 40px;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 .icone_site:hover {
     background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
-    transition: .5s;
+    transition: .5s ease;
 }
 
 ul {
@@ -129,7 +129,7 @@ ul {
 }
 
 ul li.item-barra{
-    transition: .2s;
+    transition: .2s ease;
     border-radius: 5%;
     
 }
@@ -140,8 +140,6 @@ ul li.item-barra:hover {
 
 .ativo{
     color: #ffd500;
-    position: absolute;
-
 }
 
 
@@ -158,14 +156,14 @@ ul li.item-barra a {
 }
 
 .icone {
-    transition: .5s;
+    transition: .5s ease;
 }
 
 
 
 ul li.item-barra a .txt-link{
     margin-left: 50px;
-    transition: .5s;
+    transition: .5s ease;
     opacity: 0;
 }
 

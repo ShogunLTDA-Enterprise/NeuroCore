@@ -19,3 +19,16 @@ input{
 .cabecaralho {
     padding: 7px;
 }
+
+nav.barra_usuarios {
+    width: 59px; /* Largura da barra */  
+    height: 100%; /* Altura total */
+    background-color: var(--cor-barra);
+    padding: 40px 0 40px 1%;
+
+    position: fixed; /* Fixar na tela */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
