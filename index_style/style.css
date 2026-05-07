@@ -18,12 +18,17 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .secao-escura h2 {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    bottom: 200px;
 }
 
 /* --- SEÇÃO NEUROCORE--- */
@@ -35,7 +40,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Importante para não vazar os blobs */
+    overflow: hidden;
 }
 
 /* --- ELEMENTOS DE TEXTO --- */
@@ -231,14 +236,22 @@ main span {
     bottom: 3px;
 }
 
-.container-modelo3d{
-    width: 700px;
-    height: 700px;
+.container-modelo3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-model-viewer{
-    height: 100%;
+.container-modelo3d spline-viewer {
     width: 100%;
+    height: 100%;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
+    bottom: -210px;
+    position: relative;
 }
 
 @keyframes angle {
