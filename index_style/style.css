@@ -12,7 +12,7 @@ body {
 
 /* --- SEÇÃO ESCURA--- */
 .secao-escura {
-    background-color: #1a1a1a;
+    background-color: #000000;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -22,14 +22,6 @@ body {
     overflow: hidden;
 }
 
-.secao-escura h2 {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2rem;
-    position: relative;
-    z-index: 1;
-    bottom: 200px;
-}
 
 /* --- SEÇÃO NEUROCORE--- */
 .secao-neurocore {
@@ -218,13 +210,18 @@ main span {
     border: 1px solid rgb(77, 77, 77);
     border-radius: 20px;
     padding: 20px;
-    width: 60px;
+    width: 100px;
     z-index: 6;
     position: relative; 
     display: flex;
-    left: -700%;
+    left: -900%;
     bottom: 20px;
-    height: 60px;
+    height: 0px;
+    color: white;
+}
+
+.container2 p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .ImagemAdd{
@@ -250,7 +247,7 @@ main span {
     height: 100%;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
-    bottom: -210px;
+    bottom: -50px;
     position: relative;
 }
 
