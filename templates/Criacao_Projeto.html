@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Seu Projeto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="cabecaralho">
+        <div class="container">
+            <h2>INICIE SEU PROJETO</h2>
+            <form>
+                <label for="nome">Nome do projeto</label>
+                <input type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
+                
+                <label for="descricao">Descrição</label>
+                <input type="textarea" id="descricao placeholder="O que este projeto envolve? Qual o objetivo principal?">
+                
+                <label for="inicio">Data de inicio</label>
+                <input type="date" id="Inicio" placeholder="dd/mm/aaaa">
+
+                <label for="Prazo">Prazo</label>
+                <input type="date" id="Prazo" placeholder="dd/mm/aaaa">
+
+                <label>Template</label>
+                <select id="Template">
+                    <option value="Kanban">Kanban</option>
+                    <option value="Lista">Lista</option>
+                </select>
+
+                <label>Cores do projeto</label>
+                <div class="cores">
+                    {% for cor in cores %}
+                        <input type="radio" name="cor" value="{{cor.valor}}" id="cor-{{loop.index}}">
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
