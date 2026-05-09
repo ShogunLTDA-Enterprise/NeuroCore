@@ -22,6 +22,7 @@ body {
     overflow: hidden;
 }
 
+
 /* --- SEÇÃO NEUROCORE--- */
 .secao-neurocore {
     position: relative; 
@@ -209,13 +210,18 @@ main span {
     border: 1px solid rgb(77, 77, 77);
     border-radius: 20px;
     padding: 20px;
-    width: 60px;
+    width: 100px;
     z-index: 6;
     position: relative; 
     display: flex;
-    left: -700%;
+    left: -900%;
     bottom: 20px;
-    height: 60px;
+    height: 0px;
+    color: white;
+}
+
+.container2 p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .ImagemAdd{
@@ -241,6 +247,7 @@ main span {
     height: 100%;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
     bottom: -20px;
+    bottom: -50px;
     position: relative;
 }
 
