@@ -15,13 +15,16 @@
                 <input type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
                 
                 <label for="descricao">Descrição</label>
-                <input type="textarea" id="descricao placeholder="O que este projeto envolve? Qual o objetivo principal?">
+                <textarea name="descricao" id="descricao" placeholder="O que seu projeto envolve? Qual o objetivo principal"></textarea>
+                
+                <label for="membros">Convidar membros</label>
+                <input type="email" id="membros" placeholder="email@exemplo.com">
                 
                 <label for="inicio">Data de inicio</label>
-                <input type="date" id="Inicio" placeholder="dd/mm/aaaa">
+                <input type="date" id="inicio" placeholder="dd/mm/aaaa">
 
-                <label for="Prazo">Prazo</label>
-                <input type="date" id="Prazo" placeholder="dd/mm/aaaa">
+                <label for="prazo">Prazo</label>
+                <input type="date" id="prazo" placeholder="dd/mm/aaaa">
 
                 <label>Template</label>
                 <select id="Template">
@@ -36,6 +39,11 @@
                     {% endfor %}
                 </div>
             </form>
+
+            <a href="#">
+                <button class="botao">Crie o proejto</button>
+            </a>
+
         </div>
     </main>
 </body>
