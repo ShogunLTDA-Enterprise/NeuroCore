@@ -75,11 +75,3 @@ h2 {
 a{
   border-radius: 11%;
 }
-
-
-.cabecaralho {
-    min-height: 100vh;
-    background-image: url('/static/094e610e-f602-46d7-bfb1-0c1afaf90dbc.png');
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.5);          
-}
