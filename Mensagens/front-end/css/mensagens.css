@@ -38,7 +38,7 @@ form{
 
 .chat_input {
     border: none;
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     flex-grow: 1;
     background-color: #212121;

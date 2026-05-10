@@ -4,45 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login NeuroCore</title>
-    
     <link rel="stylesheet" href="stylelogin.css">
-    
     <link rel="shortcut icon" href="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" type="image/x-icon">
 </head>
 <body class="gradient">
-
-    <main class="container">
-        <section class="card">
-            <h2>Login</h2>
-            
-            <form action="#" method="POST">
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                
-                <input type="password" id="password" name="password" placeholder="Senha" required>
-                
-                <p>Não tem uma conta? 
-                    <a class="cadastro" href="/Cadastro/cadastro.html">Cadastre-se!</a>
-                </p>
-                
-                <button type="submit">Login</button>
-            </form>
-        </section>
-    </main>
-
+<section class="login">
     <div class="container">
   <div class="card">
     <h2>Login</h2>
     <img class="imagem" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="">
-    <form>
-      <input type="text" id="username" name="username" placeholder="Username" required>
-      <input type="password" id="password" name="password" placeholder="Password" required>
+    <form class="login_form">
+      <input class="login_input" type="text" id="username" name="username" placeholder="Username" required>
+      <input class="login_pass" type="password" id="password" name="password" placeholder="Password" required>
       <p>Não tem uma Conta?
             <a class='cadastro' href="/Cadastro/cadastro.html" >Cadastre-se!</a>
         </p>
       <button type="submit">Login</button>
     </form>
   </div>
+</section>
 
+  <script src="/Login/js/login.js"></script>
 </div>
 </div>
 
