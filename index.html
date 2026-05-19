@@ -14,18 +14,27 @@
         <div class="container-modelo3d">
             <div class="container-modelo3d">
                 <spline-viewer 
-                    spline-viewer url="https://prod.spline.design/wmYZtcWhvI4Gwjcs/scene.splinecode"
+                    url="https://prod.spline.design/eoxIQ5IWkzpylvAG/scene.splinecode"
                     autoplay 
                     camera-controls 
                     touch-action="pan-y" 
                     disable-zoom
                     zoom-disable>
+                </spline-viewer>
 
         </div>
             </div>
             </div>
         </div>
     </section>
+
+    <nav class="nav">
+        <a class="nav-item active" href="#">Inicio</a>
+        <a class="nav-item" href="#">Projeto</a>
+        <a class="nav-item" href="#">Contato</a>
+        <a class="nav-item" href="#">Conta</a>
+        <div class="indicator"></div>
+    </nav>
 
     <section class="secao-neurocore">
         <div class="blobs">
@@ -66,12 +75,27 @@
             </div>
         
         <div class="container2">
-            <p>Crie Seu Projeto</p>
+            <p>Crie Seu <a href="templates/Criacao_Projeto.html">Projeto</a></p>
+            
         </div>
         
         </div>
 
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.92/build/spline-viewer.js"></script>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.94/build/spline-viewer.js"></script>
+        <script>
+            const nav = document.querySelector('.nav');
+            const neuroSection = document.querySelector('.secao-neurocore');
+
+             window.addEventListener('scroll', () => {
+             const sectionTop = neuroSection.getBoundingClientRect().top;
+
+                if (sectionTop <= 0) {
+                nav.classList.add('visible');
+                } else {
+                nav.classList.remove('visible');
+                }
+            });
+        </script>           
     </section>
 </body>
 </html>
