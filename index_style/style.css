@@ -11,23 +11,20 @@ body {
 
 /* --- SEÇÃO ESCURA--- */
 .secao-escura {
-    background-color: #1a1a1a;
+    background-color: #000000;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.secao-escura h2 {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2rem;
-}
 
 /* --- SEÇÃO NEUROCORE--- */
 .secao-neurocore {
-    position: relative; /* Pai dos elementos absolutos */
+    position: relative; 
     min-height: 100vh;
     background-color: #121212;
     display: flex;
@@ -48,12 +45,12 @@ main {
     align-items: flex-start;
     gap: 12px;
     color: white;
-    z-index: 5; /* Garante que fica acima dos blobs */
+    z-index: 5; 
 }
 
 main h1 {
     font-family: "Quicksand", sans-serif;
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-size: 3.5rem;
     letter-spacing: 2px;
     -webkit-text-stroke: 2px #e5e5e5;
     -webkit-text-fill-color: transparent;
@@ -92,6 +89,65 @@ main span {
     background-color: #8a2be2;
 }
 
+/* --- Efeito Fotos --- */
+
+.wrapper {
+    perspective: 800px;
+    position: absolute;
+    bottom: -290px;      
+    right: -1370px;        
+    z-index: 10;       
+}
+
+.card-content {
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-front {
+    background: linear-gradient(#692dd8, #25196b);
+}
+
+.card-front,
+.card-back {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-content:hover {
+    transform: rotateY(180deg);
+}
+
+/* Correção do erro de sintaxe '180degf' */
+.card-content.flip {
+    transform: rotateY(180deg);
+}
+
+.imagem {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.virus{
+    height: 80px;
+    width: 80px;
+}
+
 /* --- ANIMAÇÃO DOS BLOBS --- */
 .blobs {
     position: absolute;
@@ -126,40 +182,72 @@ main span {
 .blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
 .blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
+/* --- OUTROS ELEMENTOS --- */
 .container {
-    border: 1px solid white;
+    border: 1px solid rgb(77, 77, 77);
     border-radius: 20px;
     padding: 20px;
-    width: 100px;
-    min-height: 100px;
+    width: 60px;
     z-index: 6;
     position: relative; 
     display: flex;
-    left: -34%;
-    margin-top: 300px;
+    left: -28%;
+    bottom: -120px;
     height: 60px;
 }
 
-.btn-progresso{
-    background-color: #121212;
-    color: white;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 48px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
-    left: -34%;
-    height: 20px;
-    width: 20px;
-}
-
-.imagemCerebro{
+.imagemCerebro {
     height: 60px;
     width: 60px;
     margin: -28px;
-    margin
+    position: relative;
+    left: 6.2px;
+    bottom: 3px;
+}
+
+.container2{
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100px;
+    z-index: 6;
+    position: relative; 
+    display: flex;
+    left: -900%;
+    bottom: 20px;
+    height: 0px;
+    color: white;
+}
+
+.container2 p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ImagemAdd{
+    height: 60px;
+    width: 60px;
+    margin: -28px;
+    position: relative;
+    left: 6.2px;
+    bottom: 3px;
+}
+
+.container-modelo3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.container-modelo3d spline-viewer {
+    width: 100%;
+    height: 100%;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 75%);
+    bottom: -20px;
+    bottom: -50px;
+    position: relative;
 }
 
 @keyframes angle {
@@ -185,5 +273,14 @@ main span {
         transform: translate(-50%, -50%);
         width: 100%;
         align-items: center;
+    }
+    /* Ajuste da foto no mobile para não ocupar muito espaço */
+    .wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    .card-content {
+        width: 60px;
+        height: 60px;
     }
 }

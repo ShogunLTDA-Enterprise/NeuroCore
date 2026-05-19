@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Seu Projeto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="cabecaralho">
+        <div class="container">
+            <h2>INICIE SEU PROJETO</h2>
+            <form>
+                <label for="nome">Nome do projeto</label>
+                <input type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
+                
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" placeholder="O que seu projeto envolve? Qual o objetivo principal"></textarea>
+                
+                <label for="membros">Convidar membros</label>
+                <input type="email" id="membros" placeholder="email@exemplo.com">
+                
+                <label for="inicio">Data de inicio</label>
+                <input type="date" id="inicio" placeholder="dd/mm/aaaa">
+
+                <label for="prazo">Prazo</label>
+                <input type="date" id="prazo" placeholder="dd/mm/aaaa">
+
+                <label>Template</label>
+                <select id="Template">
+                    <option value="Kanban">Kanban</option>
+                    <option value="Lista">Lista</option>
+                </select>
+
+                <label>Cores do projeto</label>
+                <div class="cores">
+                    {% for cor in cores %}
+                        <input type="radio" name="cor" value="{{ cor.valor }}" id="cor-{{ loop.index }}"
+                            style="position: absolute; opacity: 0; width: 0; height: 0;">
+                        <label for="cor-{{ loop.index }}" class="bolinha-cor" style="background-color: {{ cor.valor }};" title="{{ cor.nome }}"></label>
+                    {% endfor %}
+                </div>
+            </form>
+
+            <a href="#">
+                <button class="botao">Crie o proejto</button>
+            </a>
+
+        </div>
+    </main>
+</body>
+</html>
