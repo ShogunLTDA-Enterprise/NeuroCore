@@ -206,22 +206,29 @@ main span {
     bottom: 3px;
 }
 
-.container2{
-    border: 1px solid rgb(77, 77, 77);
-    border-radius: 20px;
-    padding: 20px;
-    width: 100px;
+.container2 {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px 24px;
+    width: 320px;
     z-index: 6;
-    position: relative; 
+    position: relative;
     display: flex;
-    left: -900%;
-    bottom: 20px;
-    height: 0px;
-    color: white;
+    left: -1560%; 
+    bottom: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.container2 p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.container2 p {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    color: #e5e5e5;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .ImagemAdd{
@@ -250,6 +257,56 @@ main span {
     bottom: -50px;
     position: relative;
 }
+
+:root {
+  --color: white;
+  --background-color: black;
+  --transition: 0.5s ease-in-out;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  gap: 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-weight: bold;
+  text-wrap: nowrap;
+  color: var(--color);
+  padding: 0.75em 1em;
+  transition: text-shadow 0.25s ease-out;
+}
+
+.nav-item:not(.active):hover {
+  text-shadow: 0 0 0.1em var(--color);
+}
+
+.indicator {
+  height: 100%;
+  border-radius: 1.25em;
+  position: absolute;
+  background-color: var(--color);
+  mix-blend-mode: difference;
+  transition: all var(--transition);
+  pointer-events: none;
+}
+
 
 @keyframes angle {
     from { transform: rotate(0deg); }
