@@ -102,7 +102,7 @@ nav.barra_lateral {
     transition: .5s ease;
 }
 
-nav.barra_lateral:hover{
+nav.barra_lateral.expandir{
     width: 250px;
 }
 
@@ -166,7 +166,7 @@ ul li.item-barra a .txt-link{
     opacity: 0;
 }
 
-nav.barra_lateral:hover .txt-link {
+nav.barra_lateral.expandir .txt-link {
     margin-left: 30px;
     opacity: 1;
 }
