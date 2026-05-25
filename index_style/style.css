@@ -321,10 +321,26 @@ main span {
 .btn-outline:hover { background: rgba(124,58,237,0.05); }
 
 .projeto{
+    position: relative;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #0d0d0d; 
     display: flex;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.projeto p{
+    margin-right: 1600px;
+}
+
+.ex{
+    position: relative;
+    right: 1600px;
+    top: 150px;
+
 }
 
 @keyframes angle {
