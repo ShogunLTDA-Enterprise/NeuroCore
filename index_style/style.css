@@ -219,6 +219,7 @@ main span {
     text-align: center;
     border-top: 1px solid #220a42;
     border-bottom: 1px solid #220a42;
+    display:block;
 }
 
 .sobre p{
@@ -231,18 +232,24 @@ main span {
 
 .crie{
     display: flex;
-    position: relative;
-    right: 800px;
-    top: 130px;
+    align-items: center;
+    justify-content: center;
+}
+
+.crie button{
+    cursor: pointer;
 }
 
 .butao{
     background-color: #7c3aed;
     color: white;
+    padding: 17px;
+    
 }
 
 .butao:hover{
-    color: #6d28d9;
+    
+    
 }
 
 .navbar {
@@ -326,6 +333,7 @@ main span {
     background-color: #0d0d0d; 
     display: flex;
 }
+
 
 @keyframes angle {
     from { transform: rotate(0deg); }
