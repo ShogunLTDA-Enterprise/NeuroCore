@@ -230,13 +230,17 @@ main span {
     color: #ffffff;
 }
 
+.sobre a{
+    text-decoration: none;
+}
+
 .crie{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.crie button{
+.sobre button{
     cursor: pointer;
 }
 
