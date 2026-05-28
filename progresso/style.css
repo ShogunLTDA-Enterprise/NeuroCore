@@ -34,7 +34,7 @@ body {
 .cabecaralho {
     background-color: var(--cor-barra);
     flex-direction: column;
-    z-index: 5;
+    z-index: 10;
     box-shadow: 0 3px 0 var(--cor-das-sombras);
     position: relative;
 }
