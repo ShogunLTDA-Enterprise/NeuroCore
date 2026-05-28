@@ -10,10 +10,8 @@
     --cor-barra: #171717;
     --cor-texto: #ffffff;
     --cor-de-fundo: #00030C;
-    --botao-verde: #355e3b;
-    --botao-verde-efeito: #4f9658;
-    --botao-azul: #22B9F9;
-    --botão-azul-efeito: #127af8;
+    --cor-do-icone: #ffd500;
+    --cor-das-sombras: #492486;
     --botoes-barra-lateral: ;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
@@ -35,9 +33,10 @@ body {
 
 .cabecaralho {
     background-color: var(--cor-barra);
-    left: 30%;
     flex-direction: column;
-    box-shadow: 0 3px 0 #492486;
+    z-index: 5;
+    box-shadow: 0 3px 0 var(--cor-das-sombras);
+    position: relative;
 }
 
 .cabesa {
@@ -72,25 +71,10 @@ body {
     left: 36%;
 }
 
-.verde {
-    background-color: var(--botao-verde);
-    border-radius: 12px;
-    margin-right: 5px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-.azul {
-    background-color: var(--botao-azul);
-    border-radius: 12px;
-    margin-right: 9px;
-    margin-bottom: 4px;
-    margin-top: 4px;
-}
-
 nav.barra_lateral {
     width: 59px; /* Largura da barra */  
     height: 100%; /* Altura total */
+    z-index: 10;
     background-color: var(--cor-barra);
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 #492486;
@@ -134,11 +118,11 @@ ul li.item-barra{
 }
 
 ul li.item-barra:hover {
-    background-color: #492486;
+    background-color: var(--cor-das-sombras);
 }
 
 .ativo{
-    color: #ffd500;
+    color: var(--cor-do-icone);
 }
 
 

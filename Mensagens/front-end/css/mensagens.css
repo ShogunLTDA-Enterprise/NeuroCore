@@ -1,7 +1,7 @@
 form{
     max-width: 600px;
-    margin: auto;
-    margin-left: 20%;
+    margin: 0;
+    margin-left: 5%;
 }
 
 .cabecaralho {
@@ -26,9 +26,8 @@ form{
 
 .chat_form {
     background-color: #2e2e2e;
-    padding: 15px 20px;
+    padding: 15px 500px;
     display: flex;
-    align-items: center;
     gap: 10px;
     position: fixed;
     bottom: 0;
@@ -38,7 +37,7 @@ form{
 
 .chat_input {
     border: none;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border-radius: 8px;
     flex-grow: 1;
     background-color: #212121;
@@ -85,4 +84,61 @@ form{
     margin-bottom: 15px;
     font-weight: 700;
     color: cadetblue;
+}
+
+.barra_lateral_direita {
+    width: 59px; /* Largura da barra */  
+    height: 100%; /* Altura total */
+    z-index: 0;
+    margin-top: 20px;
+    background-color: var(--cor-barra);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #492486;
+
+    position: fixed; /* Fixar na tela */
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+nav.barra_lateral_direita:hover {
+    width: 300px;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.icone-usuario{
+    transition: .2s ease;
+    border-radius: 5%;
+    
+}
+
+ul li.icone-usuario a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 20%;
+
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.icone {
+    transition: .5s ease;
+}
+
+ul li.icone-usuario a .txt{
+    margin-left: 50px;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+nav.barra_lateral_direita:hover .txt {
+    margin-left: 30px;
+    opacity: 1;
 }
