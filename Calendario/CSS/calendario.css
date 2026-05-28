@@ -35,8 +35,8 @@ body {
 
 .titulo {
     text-align: center;
-    color: aliceblue;
     margin:auto;
+    font-family: var(--fonte-primária);
 }
 
 .titulo_area {
@@ -57,8 +57,8 @@ body {
 
 .calendario  {           
     min-width: 172vh;
-    min-height: 90vh;
-    margin: 9vh;
+    min-height: 0vh;
+    margin: 5vh;
     top: 2px;
     left: 190px;
     background: #ffffff;
@@ -103,7 +103,7 @@ body {
 /* Anos, Meses e dias da semana*/
 .mesAno {
     color: #00030C;
-    font-size: 75px;
+    font-size: 60px;
     font-weight: 600;
     text-align: center;
     font: 400;
