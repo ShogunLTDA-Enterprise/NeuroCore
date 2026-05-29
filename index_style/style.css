@@ -274,6 +274,7 @@ main span {
   font-weight: 700;
   color: #7c3aed;
   text-decoration: none;
+  margin-bottom: 12px;
 }
 
 .navbar-logo img {
