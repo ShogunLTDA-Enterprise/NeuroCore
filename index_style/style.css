@@ -1,4 +1,10 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -289,6 +295,7 @@ main span {
 .navbar-links a {
   font-size: 0.95rem;
   font-weight: 500;
+  font-family: 'Nunito', sans-serif;
   color: #333;
   text-decoration: none;
 }
@@ -301,6 +308,7 @@ main span {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .btn-entrar {
