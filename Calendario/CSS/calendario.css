@@ -20,6 +20,7 @@
 }
 
 body {
+    width: 200vh;
     background-color: var(--cor-principal);
     align-items: center;
     justify-content: center;
@@ -34,8 +35,8 @@ body {
 
 .titulo {
     text-align: center;
-    color: aliceblue;
     margin:auto;
+    font-family: var(--fonte-primária);
 }
 
 .titulo_area {
@@ -55,18 +56,17 @@ body {
 /* container para nome, dias e números dos dias o mês */
 
 .calendario  {           
-    width: 800px;
-    height: 350px;
-    margin: 200px;
-    left: 360px;
-    padding: 20px;
+    min-width: 172vh;
+    min-height: 0vh;
+    margin: 5vh;
+    top: 2px;
+    left: 190px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
-    
 
 }
 
@@ -90,24 +90,25 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     display: flex;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    
+    width: 5vh;
+    height: 5vh;
+    font-size: 4vh;
 }
 
 .calendario button:active {
-    background-color: #127af8;
+    background-color: #ffee00;
     transition: 0.3s;
 }
 
 /* Anos, Meses e dias da semana*/
 .mesAno {
     color: #00030C;
-    font-size: 35px;
+    font-size: 60px;
     font-weight: 600;
     text-align: center;
     font: 400;
     text-transform: capitalize;
+    font-family: var(--fonte-primária);
     
 }
 
@@ -115,7 +116,7 @@ body {
 .dias_da_semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 18px;
+    font-size: 40px;
 
 }
 
@@ -143,14 +144,15 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px;
+    padding: 5vh;
     margin: auto;
     cursor: pointer;
     font-weight: 600;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     transition: 0.2s;
+    font-size: 40px;
 }
 
 /* Efeito ao passar e clicar dos números do mês */
@@ -169,4 +171,3 @@ body {
     background:#000000;
     color:#ffffff;
 }
-

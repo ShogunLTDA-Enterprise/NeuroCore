@@ -177,6 +177,12 @@ nav.barra_lateral.expandir .txt-link {
     color: var(--cor-texto);
     font-family: var(--fonte-principal);
     text-align: center;
+    
+}
+
+#modal a{
+    text-decoration: none;
+
 }
 
 #modal h2 {
@@ -201,3 +207,4 @@ nav.barra_lateral.expandir .txt-link {
 .botao-modal:hover {
     transform: translateY(-10px);
 }
+

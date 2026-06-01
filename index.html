@@ -12,22 +12,27 @@
 
   </head>
   <body>
-    <section class="secao-escura">
-        <div class="container-modelo3d">
-            <div class="container-modelo3d">
-                <spline-viewer 
-                    spline-viewer url="https://prod.spline.design/wmYZtcWhvI4Gwjcs/scene.splinecode"
-                    autoplay 
-                    camera-controls 
-                    touch-action="pan-y" 
-                    disable-zoom
-                    zoom-disable>
 
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#">
+                <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Neurocore">
+            </a>
+            <a class="textologo" href="#">NeuroCore</a>
         </div>
-            </div>
-            </div>
+
+        <div class="navbar-links">
+            <a href="#">Projetos</a>
+            <a href="#sobre">Quem Somos</a>
+            <a href="#">Contato</a>
         </div>
-    </section>
+
+        <div class="navbar-acoes">
+            <a href="#" class="btn-entrar">Entrar</a>
+            <a href="#" class="btn-criar">Criar conta</a>
+        </div>
+    </nav>
+
 
     <section class="secao-neurocore">
         <div class="blobs">
@@ -38,22 +43,10 @@
             <div class="blob"></div>
         </div>
 
-        <div class="independente">
-            <a href="Login/login.html" class="Link-Botao">
-                <button class="btn-login">Login</button>
-            </a>
-        </div>
-
         <main>
             <h1>NeuroCore</h1>
             <span>Planeje Seus Projetos de Forma Simples</span>
         </main>
-
-        <div class="container">
-            <a class="Link-Botao" href="/progresso/progresso.html">
-                <img class="imagemCerebro" src="imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="cerebro">
-            </a>
-    
             <div class="wrapper">
                 <div class="card-content">
                     <div class="card-front">
@@ -68,12 +61,44 @@
             </div>
         
         <div class="container2">
-            <p>Crie Seu Projeto</p>
+            <p>Crie Seu <a href="templates/Criacao_Projeto.html">Projeto</a></p>
+            
         </div>
         
         </div>
 
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.92/build/spline-viewer.js"></script>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.94/build/spline-viewer.js"></script>
     </section>
+
+    <section class="sobrenos">
+        <div class="sobre" id="sobre">
+            <h1>Quem Somos?</h1>
+            <p>A NeuroCore é um projeto de TCC do curso técnico em Análise e Desenvolvimento 
+            de Sistemas, desenvolvido com o objetivo de tornar a gestão de projetos mais 
+            eficaz e ágil. A plataforma foi pensada para atender tanto empresas de grande 
+            porte quanto startups, oferecendo ferramentas que simplificam o planejamento, 
+            o acompanhamento e a organização de projetos em um só lugar.</p>
+       
+
+            <div>
+                <a class="crie" href="#">
+                    <button class="butao">Crie o seu projeto</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projeto">
+        <div>
+            <h3>Planeje. Crie. Faça o seu projeto acontecer</h3>
+            <p>Faça de forma agil e prática o seu projeto <br> sem complicações</p>
+        </div>
+
+        <div class="ex">
+            <input type="text" placeholder="Nome Projeto">
+        </div>
+
+    </section>
+
 </body>
 </html>
