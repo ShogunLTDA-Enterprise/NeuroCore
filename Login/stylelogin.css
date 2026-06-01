@@ -71,6 +71,7 @@ button{
     animation: colors 15s infinite ease;
 }
 
+
 /* Animação */
 .imagem{
   position: relative;
@@ -79,6 +80,7 @@ button{
   margin-top: -10px;
   margin-bottom: 9px;
 }
+
 
 @keyframes colors {
     0% {
