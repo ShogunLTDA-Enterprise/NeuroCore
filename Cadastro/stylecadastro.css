@@ -31,6 +31,9 @@ form {
   display: flex;
   flex-direction: column;
 }
+label{
+  text-align: left;
+}
 
 input {
   padding: 10px;
@@ -39,11 +42,17 @@ input {
   border-radius: 4px;
   transition: border-color 0.3s ease-in-out;
   outline: none;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+input:focus{
+  border-color: #000000;
 }
 
 button{
-    border-radius: 25px;
-    border-color: white;
+    padding: 12px;
+    border-radius: 8px;
 }
 
 .gradient {
