@@ -35,7 +35,9 @@
                 <label>Cores do projeto</label>
                 <div class="cores">
                     {% for cor in cores %}
-                        <input type="radio" name="cor" value="{{cor.valor}}" id="cor-{{loop.index}}">
+                        <input type="radio" name="cor" value="{{ cor.valor }}" id="cor-{{ loop.index }}"
+                            style="position: absolute; opacity: 0; width: 0; height: 0;">
+                        <label for="cor-{{ loop.index }}" class="bolinha-cor" style="background-color: {{ cor.valor }};" title="{{ cor.nome }}"></label>
                     {% endfor %}
                 </div>
             </form>
