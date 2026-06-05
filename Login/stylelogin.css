@@ -23,6 +23,10 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#card1{
+  overflow: hidden;
+  display: none;
+}
 h2 {
   text-align: center;
 }
@@ -30,6 +34,9 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+}
+label{
+  text-align: left;
 }
 
 input {
@@ -39,6 +46,20 @@ input {
   border-radius: 4px;
   transition: border-color 0.3s ease-in-out;
   outline: none;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+input:focus{
+  border-color: #000000;
+}
+
+button{
+    width: 362px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .gradient {
@@ -54,15 +75,9 @@ input {
     text-align: center;
 }
 
-/* Animação */
-.imagem{
-  position: relative;
-  display: flex;
-  left: 152px;
-  margin-top: -10px;
-  margin-bottom: 9px;
+.cadastro{
+  text-decoration: none;
 }
-
 
 @keyframes colors {
     0% { background-position: 0% 50%; }

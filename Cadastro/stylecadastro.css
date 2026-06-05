@@ -51,8 +51,11 @@ input:focus{
 }
 
 button{
+    width: 362px;
     padding: 12px;
     border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .gradient {
@@ -66,6 +69,10 @@ button{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.cadastro{
+  text-decoration: none;
 }
 
 @keyframes colors {
