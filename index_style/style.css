@@ -282,9 +282,10 @@ main span {
   text-decoration: none;
 }
 
-.navbar-logo img {
-  margin-top: 13px;
-  margin-left: 10px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .navbar-links {
@@ -338,29 +339,72 @@ main span {
 .btn-criar:hover { background: #6d28d9; }
 .btn-outline:hover { background: rgba(124,58,237,0.05); }
 
-.projeto{
-    position: relative;
+.projeto {
     min-height: 100vh;
-    min-width: 100vw;
-    background-color: #0d0d0d; 
+    width: 100%;
+    background-color: #0d0d0d;
     display: flex;
     color: white;
     font-family: "Quicksand", sans-serif;
     justify-content: center;
     align-items: center;
+    gap: 80px;
+    padding: 60px 80px;
+    box-sizing: border-box;
 }
 
-.projeto p{
-    margin-right: 1600px;
+.projeto > div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 420px;
 }
 
-.ex{
-    position: relative;
-    right: 1600px;
-    top: 150px;
-
+.projeto h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
+.projeto p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    max-width: 500px;
+}
+
+.ex input[type="text"] {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.ex input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+
+.ex video {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
 
 @keyframes angle {
     from { transform: rotate(0deg); }
