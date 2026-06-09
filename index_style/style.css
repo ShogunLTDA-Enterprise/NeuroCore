@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #0d0d0d;
     overflow-x: hidden;
 }
 
@@ -404,6 +404,71 @@ main span {
     width: 100%;
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.contato {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #0d0d0d;
+    border-radius: 12px;
+    font-family: "Quicksand", sans-serif;
+    color: #e5e5e5;
+    border: 1px solid #25196b;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.inputs {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05); 
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
+    border-color: #7c3aed;
+}
+
+.btn-enviar {
+    border-radius: 6px;
+    background-color: #7c3aed;
+    border: 0px;
+    color: white;
+    padding: 12px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    background-color: #6d28d9;
+}
+
+.copyrights{
+    background-color: #0d0d0d;
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding-top: 55px;
 }
 
 @keyframes angle {
