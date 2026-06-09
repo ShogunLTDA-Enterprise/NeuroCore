@@ -1,0 +1,23 @@
+.caixa_proj {
+    border: 1px 0 solid;
+    width: 280px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.text_proj {
+    color: #000;
+    
+}
+
+.botao {
+    color: var(--cor-texto);
+    border-radius: 5px;
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    font-size: var(--fonte-secundaria);
+    left: 36%;
+}
