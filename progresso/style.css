@@ -67,6 +67,7 @@ body {
     display: inline-block;
     text-decoration: none;
     position: relative;
+    background-color: var(--cor-das-sombras);
     font-size: var(--fonte-secundaria);
     left: 36%;
 }

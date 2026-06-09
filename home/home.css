@@ -8,16 +8,9 @@
 
 .text_proj {
     color: #000;
-    
+    padding: 10px;
 }
 
-.botao {
-    color: var(--cor-texto);
-    border-radius: 5px;
-    padding: 1em;
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    font-size: var(--fonte-secundaria);
-    left: 36%;
+.nomeProj {
+    font-weight: bold;
 }
