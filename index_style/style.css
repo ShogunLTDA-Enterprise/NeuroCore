@@ -30,16 +30,14 @@ body {
 
 /* --- ELEMENTOS DE TEXTO --- */
 main {
-    position: absolute;
-    top: 20%;
-    left: 1%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
     color: white;
     z-index: 5; 
+    justify-content: center;
+    align-items: center;
 }
 
 main h1 {
@@ -52,11 +50,53 @@ main h1 {
 }
 
 main span {
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.2rem;
-    opacity: 0.8;
+    font-size: 1.1rem;
+    font-family: 'Archivo Black', sans-serif;
+    color: #8b7ea8;   
+    line-height: 1.7;
+    max-width: 480px;
 }
 
+.btn-projeto{
+    position: relative;
+    left: -120px;
+    padding: 12px;
+    font-family: 'Archivo Black', sans-serif;
+    background-color: #7c3aed;
+    margin-top: 24px;
+    color: white;
+    border: none;
+    border-top: 60px;
+    border-radius: 6px;
+    border-bottom: 2px solid #333;
+    transition: ease-in-out 0.2s;
+}
+
+.btn-projeto:hover{
+    transform: translateY(-2px);
+}
+
+.btn-ver{
+    position: relative;
+    right: -120px;
+    bottom: 80px;
+    padding: 12px;
+    font-family: 'Archivo Black', sans-serif;
+    background-color: #7c3aed0e;
+    margin-top: 24px;
+    color: white;
+    border: 2px solid #692dd8;
+    border-radius: 6px;
+    transition: ease-in-out 0.2s;
+}
+
+.btn-ver:hover{
+    border: 2px solid #7c3aed;
+}
+
+main button:hover{
+    transform: translateY(-2px);
+}
 
 /* --- ANIMAÇÃO DOS BLOBS --- */
 .blobs {
@@ -239,7 +279,7 @@ main span {
 .btn-outline:hover { background: rgba(124,58,237,0.05); }
 
 .projeto {
-    min-height: 100vh;
+    padding: 100px 80px;
     width: 100%;
     background-color: #0d0d0d;
     display: flex;
@@ -248,8 +288,8 @@ main span {
     justify-content: center;
     align-items: center;
     gap: 80px;
-    padding: 60px 80px;
     box-sizing: border-box;
+    border-bottom: 2px solid #4b1e5e;
 }
 
 .projeto > div:first-child {
@@ -305,6 +345,40 @@ main span {
     border: 1px solid rgba(255,255,255,0.08);
 }
 
+.Gemini{
+    width: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    gap: 80px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+}
+
+.gemini-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.gemini-info p{
+    padding-top: 15px;
+    color: #a0a0a0;
+}
+
+.gemini-video{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 500px;
+    height: 300px;
+    width: 90px;
+    border-bottom: 2px solid #52189e;
+    border-top: 2px solid #52189e;
+    border-right: 2px solid #52189e;
+}
 
 .contato {
     min-height: 100vh;
@@ -433,26 +507,6 @@ main span {
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 600px) {
-    .blob::after {
-        width: 180px;
-    }
-    .independente {
-        right: 20px;
-    }
-    main {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        align-items: center;
-    }
-    /* Ajuste da foto no mobile para não ocupar muito espaço */
-    .wrapper {
-        bottom: 20px;
-        right: 20px;
-    }
-    .card-content {
-        width: 60px;
-        height: 60px;
-    }
+*::-webkit-scrollbar {
+  display: none;
 }
