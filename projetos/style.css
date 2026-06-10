@@ -1,3 +1,20 @@
 .titulo_aleatorio {
     font-weight: bold;
 }
+
+.caixas {
+    border: 2px solid;
+    border-color: #000;
+    border-radius: 5%;
+    background-color: #303030;
+    width: 850px;
+    height: 380px;
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+    
+}
+
+.textosss {
+    margin-top: 170px;
+    text-align: center;
+}
