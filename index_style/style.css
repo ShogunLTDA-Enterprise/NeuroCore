@@ -13,6 +13,7 @@
 body {
     background-color: #0d0d0d;
     overflow-x: hidden;
+    font-size: 16px
 }
 
 /* --- SEÇÃO NEUROCORE--- */
@@ -200,17 +201,21 @@ main button:hover{
     display: block;
 }
 
-.Gustavo{
-    display: flex;
-    flex-direction: column;
+.nos{
+    display: inline-block;
     border-radius: 50px;
-    border: 4px solid rgba(43, 7, 65, 0.329);
+    border: 2px solid rgba(58, 0, 94, 0.473);
     text-align: center;
     background: rgba(255,255,255,0.05);
-    width: 80px;
+    width: 90px;
     padding: 12px;
+    margin: 10px 12px;
 }
 
+.nos:hover{
+    transform: scale(1.2);
+    transition: 0.4s ;
+}
 
 
 .sobre p{
