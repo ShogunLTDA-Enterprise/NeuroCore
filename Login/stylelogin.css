@@ -24,10 +24,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#card1{
-  overflow: hidden;
-  display: none;
-}
 h2 {
   text-align: center;
 }
@@ -64,13 +60,12 @@ button{
 }
 
 .gradient {
-    background: linear-gradient(45deg, #0a0577, #10232b, #0c0935, #0d4870);
-    background-size: 300% 300%;
+    background: linear-gradient(18deg, #050504, #4a444ebe, #3f3c42b6, #0c0c0c);
+    background-size:3500% 3500%;
     min-height: 100vh;
     width: 100vw;
-    animation: colors 15s infinite ease;
+    animation: colors 15s infinite;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -78,10 +73,4 @@ button{
 
 .cadastro{
   text-decoration: none;
-}
-
-@keyframes colors {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
