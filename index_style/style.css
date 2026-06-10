@@ -196,8 +196,7 @@ main button:hover{
     max-width: 500px;
     font-family: "Quicksand", sans-serif;
     margin: 0;  
-    text-align: left; 
-    padding-left: 80px;   
+    text-align: left;  
     display: block;
 }
 
@@ -523,6 +522,21 @@ main button:hover{
     color: #fff;
     text-align: center;
     padding-top: 55px;
+}
+
+.info-projeto{
+    width: 12vw;
+    height: 24vh;
+    border: 2px solid #FFE863;
+    position: relative;
+    left: 1100px;
+    color: white;
+    border-radius: 8px;
+}
+
+.info-projeto h3{
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
 }
 
 @keyframes angle {
