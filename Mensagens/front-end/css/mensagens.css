@@ -112,6 +112,8 @@ img {
 .textos {
     font-size: 18px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .text_arquivo {
@@ -119,10 +121,8 @@ img {
 }
 
 .download {
-    display: block;
-    position: relative;
+    align-self: flex-end; /* joga para a direita */
     font-size: 24px;
-    margin-left: auto;
     color: #fff;
 }
 
