@@ -50,11 +50,35 @@ main h1 {
 }
 
 main span {
-    font-size: 1.1rem;
-    font-family: 'Archivo Black', sans-serif;
-    color: #8b7ea8;   
-    line-height: 1.7;
-    max-width: 480px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* --- BOTÃO DE LOGIN --- */
+.independente {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 10;
+}
+
+.btn-login {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.4);
+    background-color: #8a2be2;
 }
 
 .btn-projeto{
