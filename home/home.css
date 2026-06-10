@@ -1,0 +1,32 @@
+.caixa_proj {
+    border: 1px 0 solid;
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    
+    
+}
+
+.text_proj {
+    color: #000;
+    padding: 10px;
+}
+
+.nome_proj {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.abrir_proj {
+    border: 2px solid;
+    border-color: #000;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    height: auto;
+    text-decoration: none;
+    background-color: #ffd500;
+    color: #000;
+}
