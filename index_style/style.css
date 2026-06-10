@@ -2,18 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #0d0d0d;
     overflow-x: hidden;
-    font-size: 16px
+    font-size: 16px;
 }
 
 /* --- SEÇÃO NEUROCORE--- */
