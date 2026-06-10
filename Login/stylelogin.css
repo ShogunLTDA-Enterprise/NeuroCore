@@ -25,6 +25,7 @@ body {
 }
 
 #card1{
+  overflow: hidden;
   display: none;
 }
 h2 {
