@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>NeuroCore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@300;400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/index_style/style.css" />
     <link rel="shortcut icon" href="imagens/58e34500-eae7-460e-8223-71d9a443fb6e.ico" type="image/x-icon">
-
   </head>
   <body>
 
     <nav class="navbar">
         <div class="navbar-logo">
             <a href="#">
-                <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Neurocore">
+                <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Neurocore Logo">
             </a>
             <a class="textologo" href="#">NeuroCore</a>
         </div>
@@ -30,7 +33,6 @@
         </div>
     </nav>
 
-
     <section class="secao-neurocore">
         <div class="blobs">
             <div class="blob"></div>
@@ -40,41 +42,34 @@
             <div class="blob"></div>
         </div>
 
-        <main>
+        <main class="Inicio">
             <h1>NeuroCore</h1>
             <span>NeuroCore reúne planejamento, cronogramas inteligentes e IA em uma plataforma simples para quem quer tirar projetos do papel.</span>
-            <a href="/templates/Criacao_Projeto.html">
-                <button class="btn-projeto">Criar meu Projeto</button>
-            </a>
-            <a href="#projeto">
-                <button class="btn-ver">Veja Como Funciona</button>
-            </a>
+            <div class="Inicio-botoes">
+                <a href="/templates/Criacao_Projeto.html" class="btn-projeto">Criar meu Projeto</a>
+                <a href="#projeto" class="btn-ver">Veja Como Funciona</a>
+            </div>
         </main>
-
     </section>
 
     <section class="projeto" id="projeto">
-        <div>
+        <div class="projeto-texto">
             <h3>Planeje. Crie. Faça o seu projeto acontecer</h3>
-            <p>Faça de forma agil e prática o seu projeto <br> sem complicações</p>
+            <p>Faça de forma ágil e prática o seu projeto, sem complicações ou dores de cabeça.</p>
         </div>
 
         <div class="ex">
             <input type="text" placeholder="Nome Projeto">
-
             <video autoplay loop muted playsinline>
                 <source src="imagens/2026-06-07 17-19-03.mp4" type="video/mp4">
             </video>
-
         </div>
-
     </section>
-
 
     <section class="Gemini">
         <div class="gemini-info">
             <h2>Projeto Integrado com o Gemini</h2>
-            <p>Automatize tarefas, crie cronogramas inteligentes e centralize suas ideias em <br> um só lugar com o poder da inteligência artificial do Gemini 3.5 Flash. <br> Ideal para equipes e desenvolvedores que buscam máxima produtividade</p>
+            <p>Automatize tarefas, crie cronogramas inteligentes e centralize suas ideias em um só lugar com o poder da inteligência artificial do Gemini 3.5 Flash. Ideal para equipes e desenvolvedores que buscam máxima produtividade.</p>
         </div>
 
         <div class="gemini-video">
@@ -84,52 +79,38 @@
         </div>
     </section>
 
-
     <section class="sobrenos" id="sobre">
-
-        <div class="info-projeto">
-            <h3>Alinhe o trabalho às metas</h3>
-            <p>Alinhe projetos estratégicos às metas para que o trabalho de todos contribua para o impacto do projeto</p>
-        </div>    
+        <div class="cards-container">
+            <div class="info-projeto">
+                <h3>Alinhe o trabalho às metas</h3>
+                <p>Alinhe projetos estratégicos às metas para que o trabalho de todos contribua para o impacto do projeto.</p>
+            </div>
+            
+            <div class="info-projeto">
+                <h3>Planeje seu projeto</h3>
+                <p>Use o Gemini junto de sua equipe e agilize o processo com uma criação de ponta.</p>
+            </div>
+        </div>
 
         <div class="sobre">
-            <h1>Um TCC feito para quem quer organizar melhor seus projetos</h1>
-            <p>A NeuroCore é um projeto de TCC do curso técnico em Análise e Desenvolvimento 
-            de Sistemas, desenvolvido com o objetivo de tornar a gestão de projetos mais 
-            eficaz e ágil. Nossa proposta é uma plataforma simples, focada e eficiente — desenvolvida como trabalho de conclusão de curso em Análise e Desenvolvimento de Sistemas.</p>
+            <h2>Um TCC feito para quem quer organizar melhor seus projetos</h2>
+            <p>A NeuroCore é um projeto de TCC do curso técnico em Análise e Desenvolvimento de Sistemas, desenvolvido com o objetivo de tornar a gestão de projetos mais eficaz e ágil. Nossa proposta é uma plataforma simples, focada e eficiente.</p>
 
-
-            <div class="nos">
-                <p>
-                    Gustavo L. 
-                </p>
-            </div>
-
-            <div class="nos">
-                <p>
-                    Vinicius H. 
-                </p>
-            </div>
-
-            <div class="nos">
-                <p>
-                    Leonardo
-                </p>
+            <div class="integrantes">
+                <div class="nos"><p>Gustavo L.</p></div>
+                <div class="nos"><p>Vinicius H.</p></div>
+                <div class="nos"><p>Leonardo</p></div>
             </div>
         </div>
     </section>
 
-
-   <section class="contato" id="contato">
-
+    <section class="contato" id="contato">
         <div class="contato-info">
             <span class="tag-contato">Contato</span>
             <h2>Tem interesse ou sugestões?</h2>
             <p>Estamos abertos a feedbacks, parcerias acadêmicas ou simplesmente para conversar sobre o projeto. Preencha o formulário ou fale diretamente.</p>
-            <div class="info-contato">
+            <div class="info-contato-links">
                 <span>neurocore.tcc@email.com</span>
-            </div>
-            <div class="info-contato">
                 <span>github.com/ShogunLTDA-Enterprise</span>
             </div>
         </div>
@@ -144,20 +125,17 @@
                 <input type="text" id="assunto" name="assunto" placeholder="Ex: Sugestão, Dúvida" required>
             </div>
             <div class="inputs">
-            <label for="mensagem">Mensagem</label>
+                <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
             </div>
             <button type="submit" class="btn-enviar">Enviar Mensagem</button>
         </div>
-
     </section>
 
-    <section class="copyrights">
-        <footer>
-            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="">
-            <p>&copy; 2026 Neurocore. Todos os direitos reservados.</p>
-        </footer>
-    </section>
+    <footer class="copyrights">
+        <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="NeuroCore Mini Logo" width="40">
+        <p>&copy; 2026 Neurocore. Todos os direitos reservados.</p>
+    </footer>
 
-</body>
+  </body>
 </html>
