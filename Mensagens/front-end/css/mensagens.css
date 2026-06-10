@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: fit-content;
     padding: 0;
 }
 
@@ -14,7 +14,7 @@ form{
 }
 
 .chat {
-    width: 180%;
+    width: 100%;
     height: 100%;
     display: flex;
     font-family: var(--fonte-principal);
@@ -34,7 +34,7 @@ form{
 
 .chat_form {
     background-color: #2e2e2e;
-    padding: 15px 600px;
+    padding: 15px 565px;
     display: flex;
     gap: 10px;
     position: fixed;
@@ -94,6 +94,38 @@ form{
     color: cadetblue;
 }
 
+img {
+    margin-top: 15px;
+    max-width: 480px;
+    height: auto;
+}
+
+.caixa_arquivo {
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #121212;
+    background-color: #492486;
+    width: fit-content;
+    height: auto;
+}
+
+.textos {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.text_arquivo {
+    color: #a1a1a1;
+}
+
+.download {
+    display: block;
+    position: relative;
+    font-size: 24px;
+    margin-left: auto;
+    color: #fff;
+}
+
 .barra_lateral_direita {
     width: 60px; /* Largura da barra */  
     height: 100%; /* Altura total */
@@ -134,7 +166,7 @@ ul li.icone-usuario a {
 }
 
 .card-content {
-    
+    margin-right: 12px;
     transform-style: preserve-3d;
     position: relative;
     transition: transform 0.5s ease-in-out;
@@ -144,7 +176,7 @@ ul li.icone-usuario a {
     width: 100%; 
     height: 100%;
     position: absolute;
-    backface-visibility: hidden;
+    
     border-radius: 100%;
     display: flex;
     align-items: center;
