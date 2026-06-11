@@ -16,6 +16,7 @@
     --botao-verde-efeito: #3cb31e;
     --botao-azul: #22B9F9;
     --botão-azul-efeito: #127af8;
+    --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-primária: 'Archivo Black', sans-serif;
 }
 
@@ -37,13 +38,14 @@ body {
     background: linear-gradient(90deg, #A13BC9, #501D63);
     background-clip: text;
     color: transparent;
+    font-family: var(--fonte-principal);
 }
 
 .titulo_proje {
     position: relative;
     text-align: center;
     justify-content: center;
-    font-family: var(--fonte-primária);
+    font-family: var(--fonte-principal);
     font-weight: 200;
 
 }
@@ -53,7 +55,7 @@ body {
 
 .calendario  {           
     min-width: 22vh;
-    min-height: 14vh;
+    min-height: 72.2vh;
     margin: 8vh;
     top: 2px;
     align-items: center;
@@ -65,6 +67,8 @@ body {
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 
 }
 
@@ -143,7 +147,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 50px;
-    margin: 10px;
+    margin: 4px;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 0 0 1px;
@@ -155,7 +159,7 @@ body {
 }
 
 /* Efeito ao passar e clicar dos números do mês */
-.date:hover, .date.active {
+.date:hover{
     background: #8eabc7;
     color: #ffffff;
 }
@@ -182,7 +186,7 @@ body {
     color: #00030C;
     border-bottom-left-radius: 10px ;
     border-bottom-right-radius: 10px;
-    position: fixed; /* Fixar na tela */
+    display:unset; /* Fixar na tela */
     top: 40px;
     right: 10px;
     transition: .5s ease;

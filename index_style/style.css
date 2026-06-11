@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cor-principal: #202020; 
+    --cor-barra: #171717;
+    --cor-texto: #ffffff;
+    --cor-de-fundo: #00030C;
+    --cor-do-icone: #ffd500;
+    --cor-das-sombras: #492486;
+    --fonte-primária: 'Archivo Black', sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -15,7 +27,7 @@ body {
     background-color: #0d0d0d;
     overflow-x: hidden;
     font-size: 16px;
-    font-family: 'Quicksand', sans-serif;
+    font-family:var(--fonte-primária);
     color: #fff;
 }
 
