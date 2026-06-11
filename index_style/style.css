@@ -11,10 +11,6 @@ html {
     scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
     background-color: #0d0d0d;
     overflow-x: hidden;
@@ -23,7 +19,7 @@ body {
     color: #fff;
 }
 
-/* --- NAVBAR CUSTOMIZADA (DARK GLASS) --- */
+/* --- NAVBAR CUSTOMIZADA --- */
 .navbar {
     display: flex;
     align-items: center;
