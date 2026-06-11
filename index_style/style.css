@@ -11,10 +11,6 @@ html {
     scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
     background-color: #0d0d0d;
     overflow-x: hidden;
@@ -162,14 +158,14 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    box-shadow: 0 4px 15px #7c3aed66;
     transition: all 0.3s ease;
 }
 
 .btn-projeto:hover {
     transform: translateY(-3px);
     background-color: #6d28d9;
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 6px 20px #7c3aed99;
 }
 
 .btn-ver {
@@ -352,10 +348,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    animation: reverse;
+    transition: all 0.5s ease;
 }
 .info-projeto:hover{
-    transform: translateY(2);
+    transform: translateY(-4px);
 }
 
 .info-projeto h3 {

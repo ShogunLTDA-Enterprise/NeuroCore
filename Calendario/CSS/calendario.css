@@ -33,22 +33,18 @@ body {
     
 }
 
-.titulo {
-    text-align: center;
-    margin:auto;
-    font-family: var(--fonte-primária);
-}
-
 .titulo_area {
-    position:absolute;
-    left: 300px;
-    color: #6d0aa7;
+    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background-clip: text;
+    color: transparent;
 }
 
 .titulo_proje {
     position: relative;
     text-align: center;
     justify-content: center;
+    font-family: var(--fonte-primária);
+    font-weight: 200;
 
 }
 
@@ -56,11 +52,13 @@ body {
 /* container para nome, dias e números dos dias o mês */
 
 .calendario  {           
-    min-width: 172vh;
-    min-height: 0vh;
-    margin: 5vh;
+    min-width: 22vh;
+    min-height: 14vh;
+    margin: 8vh;
     top: 2px;
-    left: 190px;
+    align-items: center;
+    justify-content: center;
+    left: 500px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
@@ -103,7 +101,7 @@ body {
 /* Anos, Meses e dias da semana*/
 .mesAno {
     color: #00030C;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     text-align: center;
     font: 400;
@@ -116,7 +114,8 @@ body {
 .dias_da_semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 40px;
+    font-size: 35px;
+    font-family: var(--fonte-primária);
 
 }
 
@@ -133,7 +132,6 @@ body {
 .datas{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
     color: #00030C;
 }
 
@@ -144,20 +142,21 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5vh;
-    margin: auto;
+    padding: 50px;
+    margin: 10px;
     cursor: pointer;
     font-weight: 600;
-    border-radius: 50%;
-    width: 2vh;
-    height: 2vh;
+    box-shadow: 0 0 0 1px;
+    width: 2px;
+    height: 2px;
     transition: 0.2s;
-    font-size: 40px;
+    font-size: 24px;
+    font-family: var(--fonte-primária);
 }
 
 /* Efeito ao passar e clicar dos números do mês */
 .date:hover, .date.active {
-    background: #a200ff;
+    background: #8eabc7;
     color: #ffffff;
 }
 
@@ -168,6 +167,29 @@ body {
 }
 
 .date.off:hover{
-    background:#000000;
+    background:#000000b9;
     color:#ffffff;
+}
+
+.barra_lateral_direita {
+    width: 100px; /* Largura da barra */  
+    height: 60%; /* Altura total */
+    z-index: 3;
+    margin-top: 20px;
+    background-color:#ffffff;
+    padding: 25px;
+    border-top: 5px solid #ffee00;
+    color: #00030C;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    position: fixed; /* Fixar na tela */
+    top: 40px;
+    right: 10px;
+    transition: .5s ease;
+    font-size: 20px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.barra_lateral_direita p{
+    text-decoration:dashed
 }
