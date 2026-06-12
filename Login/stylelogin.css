@@ -31,6 +31,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  background-color:#33333300
 }
 label{
   text-align: left;
