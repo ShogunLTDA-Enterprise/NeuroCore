@@ -7,6 +7,93 @@ body {
   background-color: #1d1d1d;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 70px;
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #7c3aed33;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-weight: 100;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-logo img {
+    height: 35px;
+    width: auto;
+}
+
+.textologo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7c3aed;
+    text-decoration: none;
+    font-family: 'Archivo Black', sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navbar-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #7c3aed;
+}
+
+.navbar-acoes {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-entrar {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.btn-entrar:hover {
+    opacity: 0.8;
+}
+
+.btn-criar {
+    padding: 0.6rem 1.4rem;
+    background: #7c3aed;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-criar:hover { 
+    background: #6d28d9; 
+    transform: translateY(-1px);
+}
+
 .container{
     align-items: center;
     justify-content: center;
