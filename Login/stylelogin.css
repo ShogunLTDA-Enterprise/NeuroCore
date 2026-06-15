@@ -12,67 +12,68 @@ body {
   overflow: hidden;
 }
 
-.container {
-  width: 100%;
-  max-width: 400px;
+.gradient{
+  background: #7c3aed05;
+  background-color: #333;
 }
 
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-label{
-  text-align: left;
-}
-
-input {
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: border-color 0.3s ease-in-out;
-  outline: none;
-  font-size: 15px;
-  font-weight: 100;
-}
-
-input:focus{
-  border-color: #000000;
-}
-
-input:hover{
-  border-color: #333333b0;
-}
-
-button{
-    width: 362px;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.gradient {
-    background: linear-gradient(18deg, #050504, #4a444ebe, #3f3c42b6, #0c0c0c);
-    background-size:3500% 3500%;
-    min-height: 100vh;
-    width: 100vw;
-    animation: colors 15s infinite;
+.login-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 40px;
+    border: 1px solid #7c3aed4d;
+    border-radius: 16px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 15px 35px #00000066;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputs label {
+    font-size: 14px;
+    color: #cdcdcd;
+    font-weight: 600;
+}
+
+.inputs input,
+.inputs textarea {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #7c3aed4d;
+    background: #0d0d0d99;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.inputs input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 10px #7c3aed4d;
+}
+
+.btn-enviar {
+    border-radius: 8px;
+    padding: 14px;
+    background-color: #7c3aed;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #6d28d9;
+    transform: translateY(-4px);
 }
 
 .cadastro{

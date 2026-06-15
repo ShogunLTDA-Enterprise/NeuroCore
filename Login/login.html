@@ -10,21 +10,22 @@
     
 </head>
 <body class="gradient">
-<div class="container">
-  <div class="card" href="/Login/login.html">
-    <form>
-      <h2>Login</h2>
-      <label>Nome</label>
-      <input type="text" id="username" name="username" placeholder="Digite seu nome" required>
-      <label>Senha</label>
-      <input type="password" id="password" name="password" placeholder="Coloque sua senha" required>
-      <button type="submit">Entrar</button>
-      <p>Precisa de uma conta?
-        <a class='cadastro' href="../Cadastro/cadastro.html" >Cadastre-se!</a>
-      </p>
-    </form>
-  </div>
-  </div>
+        <div class="login-form">
+            <div class="inputs">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+            </div>
+            <div class="inputs">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="inputs">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha" placeholder="Confirme Senha" required>
+            </div>
+            <button type="submit" class="btn-enviar">Login</button>
+            <a class='cadastro' href="../Cadastro/cadastro.html" >Cadastre-se!</a>
+        </div>
 
   <script src="js/login.js"></script>
 </body>
