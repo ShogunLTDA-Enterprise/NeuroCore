@@ -8,17 +8,17 @@
 }
 
 :root {
-    --cor-principal: #202020;
+    --cor-principal: #202020; 
     --cor-barra: #171717;
     --cor-texto: #ffffff;
     --cor-de-fundo: #00030C;
-    --botao-verde: #328B1C;
-    --botao-verde-efeito: #3cb31e;
-    --botao-azul: #22B9F9;
-    --botão-azul-efeito: #127af8;
-    --fonte-principal: "Space Grotesk", sans-serif;
+    --cor-do-icone: #ffd500;
+    --cor-das-sombras: #492486;
     --fonte-primária: 'Archivo Black', sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
 }
+
 
 body {
     width: 200vh;
@@ -38,14 +38,14 @@ body {
     background: linear-gradient(90deg, #A13BC9, #501D63);
     background-clip: text;
     color: transparent;
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-primária);
 }
 
 .titulo_proje {
     position: relative;
     text-align: center;
     justify-content: center;
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-primária);
     font-weight: 200;
 
 }
@@ -110,7 +110,7 @@ body {
     text-align: center;
     font: 400;
     text-transform: capitalize;
-    font-family: var(--fonte-primária);
+    font-family: var(--fonte-secundaria);
     
 }
 
@@ -119,7 +119,7 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-size: 35px;
-    font-family: var(--fonte-primária);
+    font-family: var(--fonte-secundaria);
 
 }
 
@@ -155,7 +155,7 @@ body {
     height: 5px;
     transition: 0.2s;
     font-size: 24px;
-    font-family: var(--fonte-primária);
+    font-family: var(--fonte-secundaria);
 }
 
 /* Efeito ao passar e clicar dos números do mês */

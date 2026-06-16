@@ -7,8 +7,20 @@
     padding: 0;
 }
 
+:root {
+    --cor-principal: #202020; 
+    --cor-barra: #171717;
+    --cor-texto: #ffffff;
+    --cor-de-fundo: #00030C;
+    --cor-do-icone: #ffd500;
+    --cor-das-sombras: #492486;
+    --fonte-primária: 'Archivo Black', sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--fonte-primária);
     background-color: #131417; /* O cinza escuro clássico do CodePen */
     color: #FFFFFF;
     min-height: 100vh;
@@ -65,11 +77,19 @@ body {
 }
 
 /* Cores oficiais dos botões do CodePen */
-.btn-github { background-color: #444857; }
-.btn-github:hover { background-color: #5a5f73; }
+.btn-github { 
+    background-color: #444857; 
+}
+.btn-github:hover{
+    background-color: #5a5f73;
+}
 
-.btn-google { background-color:  #444857; }
-.btn-google:hover { background-color: #303030; }
+.btn-google { 
+    background-color:  #444857; 
+}
+.btn-google:hover { 
+    background-color: #303030; 
+}
 
 .btn-social:active {
     transform: scale(0.98);
@@ -130,7 +150,7 @@ body {
 
 /* Borda verde oficial do CodePen ao focar no campo */
 .inputs input:focus {
-    border-color: #47cf73;
+    border-color: #ffd500b6;
 }
 
 /* Botão de Enviar (Verde CodePen) */
@@ -138,7 +158,7 @@ body {
     width: 100%;
     padding: 16px;
     border-radius: 4px;
-    background-color: #47cf73;
+    background-color: #7c3aedb6;
     border: none;
     color: #000000;
     font-weight: 700;
@@ -149,7 +169,7 @@ body {
 }
 
 .btn-enviar:hover {
-    background-color: #24bd56;
+    background-color: #7c3aed;
 }
 
 /* Links do Rodapé */
@@ -159,10 +179,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    color: #a4a6b5;
 }
 
 .link-footer {
-    color: #a4a6b5;
+    
     text-decoration: underline;
     font-size: 0.95rem;
     transition: color 0.2s;
