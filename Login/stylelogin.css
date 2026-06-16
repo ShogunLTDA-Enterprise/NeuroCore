@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -21,13 +21,14 @@
 
 body {
     font-family: var(--fonte-primária);
-    background-color: #131417; /* O cinza escuro clássico do CodePen */
+    background-color: #131417; 
     color: #FFFFFF;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    overflow: hidden
 }
 
 /* Container centralizado da página */
@@ -42,11 +43,6 @@ body {
 .logo-container {
     text-align: center;
     margin-bottom: 35px;
-}
-
-.codepen-logo {
-    width: 160px;
-    height: auto;
 }
 
 /* Layout dos Botões Sociais */
@@ -76,12 +72,11 @@ body {
     font-size: 1.2rem;
 }
 
-/* Cores oficiais dos botões do CodePen */
 .btn-github { 
     background-color: #444857; 
 }
 .btn-github:hover{
-    background-color: #5a5f73;
+    background-color: #303030;
 }
 
 .btn-google { 
@@ -95,24 +90,24 @@ body {
     transform: scale(0.98);
 }
 
-/* Divisor "OR" */
-.separator {
+/* Divisor "OU" */
+.divisor {
     display: flex;
     align-items: center;
     text-align: center;
     color: #9b9dad;
-    font-size: 0.85rem;
+    font-size: 14.5px;
     font-weight: 700;
     margin: 30px 0;
 }
 
-.separator::before, .separator::after {
+.divisor::before, .divisor::after {
     content: '';
     flex: 1;
     border-bottom: 2px solid #2c303d;
 }
 
-.separator span {
+.divisor span {
     padding: 0 15px;
 }
 
@@ -130,7 +125,7 @@ body {
 }
 
 .inputs label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #a4a6b5;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -157,7 +152,7 @@ body {
 .btn-enviar {
     width: 100%;
     padding: 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: #7c3aedb6;
     border: none;
     color: #000000;
@@ -171,6 +166,11 @@ body {
 .btn-enviar:hover {
     background-color: #7c3aed;
 }
+.btn-enviar:active{
+    transform: scale(0.983);
+    transition: 0.1s;
+    font-size: 1.134rem
+}
 
 /* Links do Rodapé */
 .footer-links {
@@ -178,7 +178,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     
 }
 
@@ -190,5 +190,5 @@ body {
 }
 
 .link-footer:hover {
-    color: #fff;
+    color: #ffd500;
 }

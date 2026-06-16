@@ -1,35 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro NeuroCore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="stylecadastro.css">
-    <link rel="shortcut icon" href="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" type="image/x-icon">
 </head>
-<body class="gradient">
-    <div class="container">
-  <div class="card" id="card1">
-    <h2>Cadastro</h2>
-    <form>
-      <label >Email</label>
-      <input type="text" id="email" name="email" placeholder="Escreva seu E-mail" required>
-      <label>Nome</label>
-      <input type="text" id="username" name="username" placeholder="Digite seu nome" required>
-      <label>Senha</label>
-      <input type="password" id="password" name="password" placeholder="Coloque sua senha" required>
-      <label>Confirmar senha</label>
-      <input type="password" placeholder="Confirme sua Senha" id="consenha" required>
-      <a href="../home/home.html"><button type="submit">Cadastre-se</button></a>
-      <p>Já tem uma conta?
-        <a class='cadastro' href="/Login/login.html" >Logue!</a>
-      </p>
-    </form>
+<body>
 
-    
-  </div>
-</div>
-</div>
+    <div class="login-container">
+        <div>
+          <h1 class="titulo">Bem vindo ao NeuroCore</h1>
+        </div>
+        <div class="logo-container">
+            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="">
+        </div>
+        <form class="login-form">
+            <div class="inputs">
+                <label id="label-user" for="username">Nome do usuário</label>
+                <input type="text" id="user" required placeholder="Escreva seu nome">
+            </div>
+
+            <div class="inputs">
+                <label id="label-senha" for="password">Senha</label>
+                <input type="password" id="senha" required placeholder="Crie sua senha">
+            </div>
+
+            <div class="inputs">
+                <label id="label-senha" for="password">Confirmar senha</label>
+                <input type="password" id="senha" required placeholder="Confirme sua senha">
+            </div>
+
+            <button type="submit" class="btn-enviar">Cadastrar</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Já tem uma conta? <a href="../Login/login.html" class="link-footer">Login aqui!</a></p>
+        </div>
+    </div>
 
 </body>
 </html>
