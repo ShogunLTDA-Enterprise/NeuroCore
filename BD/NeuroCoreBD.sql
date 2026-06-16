@@ -39,5 +39,4 @@ INSERT INTO Usuarios (id_usuarios, nome, email, senha) VALUES
 (3, 'Vinicius', 'Vinicius@gmail.com', 'Homossexual'),
 (4, 'Elon Moska', 'ElonMusk@gmail.com', 'SerjaoFoguetesAmante');
 
-
 SELECT * FROM Usuarios

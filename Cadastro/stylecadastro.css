@@ -1,5 +1,5 @@
-/* Importação das fontes nativas que o CodePen utiliza (System Fonts + Monospace / Sans-serif robustas) */
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -41,12 +41,20 @@ body {
 
 .titulo{
   text-align: center;
-  font-size: 1.7rem;
-  color: #ffd500d5;
+  font-size: 3rem;
+  color: #ffffffd5;
   letter-spacing: 0.5px;
   font-family: var(--fonte-primária);
-  height: 50px;
 }
+
+.subtitulo{
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffffd5;
+  letter-spacing: 0.5px;
+  font-family: var(--fonte-primária);
+}
+
 /* Espaçamento da Logo */
 .logo-container {
   text-align: center;
@@ -85,12 +93,12 @@ body {
   transition: border-color 0.2s;
 }
 
-/* Borda verde oficial do CodePen ao focar no campo */
+
 .inputs input:focus {
-  border-color: #ffffffa9;
+  border-color: #4a008f3b;
 }
 
-/* Botão de Enviar (Verde CodePen) */
+
 .btn-enviar {
   width: 100%;
   padding: 16px;
