@@ -41,10 +41,11 @@ body {
 
 .titulo{
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #ffd500d5;
   letter-spacing: 0.5px;
   font-family: var(--fonte-primária);
+  height: 50px;
 }
 /* Espaçamento da Logo */
 .logo-container {
