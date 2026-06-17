@@ -121,7 +121,9 @@ ul li.item-barra:hover {
     color: var(--cor-do-icone);
 }
 
-
+.item-barra{
+    padding-top: 20px;
+}
 
 ul li.item-barra a {
     color: var(--cor-texto);
