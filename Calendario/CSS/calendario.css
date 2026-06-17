@@ -8,30 +8,76 @@
 }
 
 :root {
-    --cor-principal: #202020; 
-    --cor-barra: #171717;
-    --cor-texto: #ffffff;
-    --cor-de-fundo: #00030C;
+    --cor-principal: #ffffff; 
+    --cor-barra: #ffffff;
+    --cor-texto: #5f5f74;
+    --cor-de-fundo: #ffffff;
     --cor-do-icone: #ffd500;
     --cor-das-sombras: #492486;
-    --fonte-primária: 'Archivo Black', sans-serif;
+    --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
     --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
 }
 
-
 body {
-    width: 200vh;
+    height: 100vh;
     background-color: var(--cor-principal);
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    
+    color: var(--cor-texto);
+    overflow: hidden;
 }
 
-.cabecaralho {
-    
-    
+.gradient {
+    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background-clip: text;
+    color: transparent;
+}
+
+nav.barra_lateral {
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+    background-color: var(--cor-barra);
+    padding: 0 2%;
+    box-shadow: 0 3px 0 var(--cor-das-sombras);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav.barra_lateral.expandir {
+    width: 100%;
+}
+
+
+ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-barra {
+    transition: .2s ease;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul li.item-barra:hover {
+    background-color: var(--cor-das-sombras);
+}
+
+ul li.item-barra a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .titulo_area {
