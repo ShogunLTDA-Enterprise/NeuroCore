@@ -7,15 +7,15 @@
 }
 
 :root {
-    --cor-principal: #ffffff; 
-    --cor-barra: #ffffff;
-    --cor-texto: #b3b8db;
-    --cor-de-fundo: #0a0d1a;
-    --cor-do-icone: #ffd500;
-    --cor-das-sombras: #492486;
+    --cor-principal: #0D1117;
+    --cor-barra: #161B22;
+    --cor-texto: #E6EDF3;
+    --cor-de-fundo: #0D1117;
+    --cor-do-icone: #A78BFA;
+    --cor-das-sombras: #21262D;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
-    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
 }
 
 .cabecaralho{
@@ -30,13 +30,13 @@ body {
 }
 
 .gradient {
-    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background: linear-gradient(90deg, #A78BFA, #8B5CF6);
     background-clip: text;
     color: transparent;
 }
 
 .ativo {
-    color: var(--cor-do-icone);
+    color: #A78BFA;
 }
 
 .icone {
@@ -56,7 +56,7 @@ body {
 }
 
 .icone_site:hover {
-    background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    background: #8B5CF6;
     transition: .5s ease;
 }
 
@@ -66,12 +66,13 @@ nav.barra_lateral {
     position: fixed;
     top: 40px;
     left: 0;
-    background-color: #050814;
+    background-color: #0D1117;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     padding: 0 20px;
     z-index: 999;
+    border-bottom: 1px solid #21262D;
 }
 
 ul {
@@ -125,8 +126,8 @@ ul li.item-barra a .txt-link{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #050814;
-    border: 1px; 
+    background: #161B22;
+    border: 1px solid #21262D;
     border-radius: 20px;
     width: 400px;
     max-width: 90%;
@@ -135,6 +136,7 @@ ul li.item-barra a .txt-link{
     color: var(--cor-texto);
     font-family: var(--fonte-principal);
     text-align: center;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 #modal a{
@@ -146,19 +148,21 @@ ul li.item-barra a .txt-link{
     margin-bottom: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
+    color: #E6EDF3;
 }
 
 .botao-modal {
-    background-color: var(--botao-azul);
+    background: linear-gradient(90deg, #A78BFA, #8B5CF6);
     color: white;
     border: none;
     padding: 10px 25px;
     border-radius: 8px;
     cursor: pointer;
     font-family: var(--fonte-secundaria);
-    transition: transform 0.3s ease
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .botao-modal:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
 }

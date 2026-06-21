@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +7,26 @@
 }
 
 :root {
-    --cor-principal: #ffffff; 
-    --cor-barra: #ffffff;
-    --cor-texto: #b3b8db;
-    --cor-de-fundo: #0a0d1a;
-    --cor-do-icone: #ffd500;
-    --cor-das-sombras: #492486;
+    --cor-principal: #0D1117;
+    --cor-barra: #FFFFFF;
+    --cor-texto: #E6EDF3;
+    --cor-de-fundo: #0D1117;
+    --cor-do-icone: #A78BFA;
+    --cor-das-sombras: #21262D;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
-    --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    --gradiente: linear-gradient(to bottom, #161B22, #21262D);
 }
 
-.cabecaralho{
+.Parte-cima {
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-bottom: 1px solid #21262D;
+}
+
+.cabecaralho {
     box-shadow: 1px #050814;
 }
 
@@ -28,7 +37,7 @@ body {
 }
 
 .gradient {
-    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background: linear-gradient(90deg, #A78BFA, #8B5CF6);
     background-clip: text;
     color: transparent;
 }
@@ -50,7 +59,7 @@ body {
 }
 
 .icone_site:hover {
-    background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    background: var(--cor-do-icone);
     transition: .5s ease;
 }
 
@@ -60,7 +69,7 @@ nav.barra_lateral {
     position: fixed;
     top: 40px;
     left: 0;
-    background-color: #050814;
+    background-color: #0D1117;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
@@ -76,7 +85,7 @@ ul {
     margin-left: 20px;
 }
 
-ul li.item-barra{
+ul li.item-barra {
     transition: .2s ease;
     border-radius: 5px;
     height: 100%;
@@ -98,15 +107,14 @@ ul li.item-barra a {
     height: 100%;
 }
 
-ul li.item-barra a .txt-link{
+ul li.item-barra a .txt-link {
     margin-left: 8px;
     transition: .5s ease;
     opacity: 1;
 }
 
-
 .titulo_area {
-    background: linear-gradient(90deg, #A13BC9, #501D63);
+    background: linear-gradient(90deg, #A78BFA, #8B5CF6);
     background-clip: text;
     color: transparent;
     font-family: var(--fonte-principal);
@@ -120,22 +128,20 @@ ul li.item-barra a .txt-link{
     font-weight: 200;
 }
 
-.calendario {           
+.calendario {
     min-width: 22vh;
     min-height: 72.2vh;
     margin: 8vh;
-    top: 100px;                   
+    top: 100px;
     align-items: center;
     justify-content: center;
     left: 500px;
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 0 5px black;
+    background: #161B22;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px #30363D;
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
 }
 
 .setinhas {
@@ -148,28 +154,33 @@ ul li.item-barra a .txt-link{
 .calendario button {
     align-items: center;
     justify-content: center;
-    background: #ffffff;
-    border: none;
+    background: #21262D;
+    border: 1px solid #30363D;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     display: flex;
     cursor: pointer;
     width: 5vh;
     height: 5vh;
     font-size: 4vh;
+    color: #8B949E;
+    transition: 0.2s;
+}
+
+.calendario button:hover {
+    border-color: #A78BFA;
+    color: #A78BFA;
 }
 
 .calendario button:active {
-    background-color: #ffee00;
-    transition: 0.3s;
+    background: #A78BFA;
+    color: #0D1117;
 }
 
 .mesAno {
-    color: #00030C;
-    font-size: 40px;
+    color: #E6EDF3;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
-    font: 400;
     text-transform: capitalize;
     font-family: var(--fonte-secundaria);
 }
@@ -177,7 +188,7 @@ ul li.item-barra a .txt-link{
 .dias_da_semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 35px;
+    font-size: 14px;
     font-family: var(--fonte-secundaria);
     justify-items: center;
 }
@@ -185,13 +196,12 @@ ul li.item-barra a .txt-link{
 .dias_da_semana span {
     text-align: center;
     padding: 5px;
-    color: rgb(117, 113, 113);
+    color: #8B949E;
 }
 
-.datas{
+.datas {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    color: #00030C;
     justify-items: center;
 }
 
@@ -200,30 +210,31 @@ ul li.item-barra a .txt-link{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 15px;
-    margin: 4px;
+    padding: 10px;
+    margin: 2px;
     cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 0 0 0.8px;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
+    font-weight: 500;
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
     transition: 0.2s;
-    font-size: 24px;
+    font-size: 16px;
     font-family: var(--fonte-secundaria);
+    color: #E6EDF3;
 }
 
-.date:hover, .date.active {
-    background: #8eabc7;
-    color: #ffffff;
+.date:hover,
+.date.active {
+    background: #8B5CF6;
+    color: #FFFFFF;
 }
 
 .date.off {
-    color: #9b9b9b;
-    font-weight: 0;
+    color: #484F58;
+    font-weight: 300;
 }
 
 .date.off:hover {
-    background: #000000b9;
-    color: #ffffff;
+    background: #1C2128;
+    color: #8B949E;
 }
