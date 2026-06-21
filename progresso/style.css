@@ -17,6 +17,10 @@
     --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
 }
 
+.cabecaralho{
+    box-shadow: 1px #050814;
+}
+
 body {
     height: 100vh;
     background-color: var(--cor-principal);
