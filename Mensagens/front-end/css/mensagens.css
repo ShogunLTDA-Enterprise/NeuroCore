@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+:root {
+    --cor-principal: #ffffff; 
+    --cor-barra: #ffffff;
+    --cor-texto: #b3b8db;
+    --cor-de-fundo: #0a0d1a;
+    --cor-do-icone: #ffd500;
+    --cor-das-sombras: #492486;
+    --fonte-principal: "Space Grotesk", sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: background-image: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
 form{
     max-width: 600px;
     margin: 0;

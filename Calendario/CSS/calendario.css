@@ -7,9 +7,9 @@
 
 :root {
     --cor-principal: #ffffff; 
-    --cor-barra: #050814;
-    --cor-texto: #5f5f74;
-    --cor-de-fundo: #ffffff;
+    --cor-barra: #ffffff;
+    --cor-texto: #b3b8db;
+    --cor-de-fundo: #0a0d1a;
     --cor-do-icone: #ffd500;
     --cor-das-sombras: #492486;
     --fonte-principal: "Space Grotesk", sans-serif;
@@ -23,7 +23,7 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
 }
 
