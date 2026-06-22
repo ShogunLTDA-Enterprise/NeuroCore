@@ -166,3 +166,12 @@ ul li.item-barra a .txt-link{
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
 }
+
+.kanban1{
+    height: 700px;
+    width: 480px;
+    display: flex;
+    margin-top: 60px;
+    border-radius: 13px;
+    border: 2px solid #8B5CF6;
+}
