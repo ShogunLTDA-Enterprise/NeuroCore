@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade</title>
-    <link rel="stylesheet" href="/progresso/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="CSS/calendario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,7 +33,7 @@
                 <li class="item-barra">
                     <a href="/projetos/projetos.html">
                         <span class="icone"><i class="bi bi-house"></i></span>
-                        <p>Projeto</p>
+                        
                         <span class="txt-link">Projeto</span>
                     </a>
                 </li>
@@ -42,28 +41,28 @@
                     <a href="#">
                     <a href="../progresso/progresso.html">
                         <span class="icone ativo"><i class="bi bi-table"></i></span>
-                        <p>Progresso</p>
+                        
                         <span class="txt-link">Progresso</span>
                     </a>
                 </li>
                 <li class="item-barra">
                     <a href="/Mensagens/front-end/Mensagens.html">
                         <span class="icone"><i class="bi bi-envelope"></i></span>
-                        <p>Mensagens</p>
+                        
                         <span class="txt-link">Mensagem</span>
                     </a>
                 </li>
                 <li class="item-barra">
                     <a href="/Calendario/calendario.html">
                         <span class="icone"><i class="bi bi-clock"></i></span>
-                        <p>Calendário</p>
+                        
                         <span class="txt-link">Atividade</span>
                     </a>
                 </li>
                 <li class="item-barra">
                     <a href="#l">
                         <span class="icone"><i class="bi bi-gear"></i></span>
-                        <p>Configurações</p>
+                        
                         <span class="txt-link">Configurações</span>
                     </a>
                 </li>
@@ -74,16 +73,14 @@
     </section>
 
     <div id="calendario" class="wraper" >
-
-    <section class="quadrao">
         <div class="calendario" >
             <div class="setinhas">
                 <button class="anteset" id="anteset">
-                    <i>&lt;</i>
+                    <p>&lt;</p>
                 </button>
                 <div class="mesAno" id="mesAno"> <input type="month"> </div>
                 <button class="postset" id="postset">
-                    <i>&gt;</i>
+                    <p>&gt;</p>
                 </button>
             </div>
             <div class="dias_da_semana">
@@ -99,10 +96,9 @@
             <div class="datas" id="datas"></div>
 
         </div>
-
-        <script src="progresso.js"></script>
-        <script src="JS/calendario.js"> </script>
-    </section>
+    </div>
+        
+    <script src="../progresso/progresso.js"></script>
+    <script src="JS/calendario.js"> </script>    
 </body>
-
 </html>
