@@ -16,7 +16,7 @@
 }
 
 body{
-    padding-top: 50px;
+    padding-top: 120px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
     overflow-x: hidden;
@@ -25,7 +25,7 @@ body{
 form{
     max-width: 600px;
     margin: 0;
-    margin-left: 5%;
+    margin-left: 50px;
 }
 
 .icone_site {
@@ -45,7 +45,7 @@ form{
 
 .chat_messages {
     flex-grow: 1;
-    padding: 30px 30px 130px 100px;
+    padding: 30px 30px 130px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -53,7 +53,7 @@ form{
 
 .chat_form {
     background-color: #161B22;
-    padding: 15px 856px;
+    padding: 15px 851px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +173,6 @@ img {
     top: 0;
     right: 0;
     overflow: hidden;
-    transition: .5s ease;
 }
 
 .barra_lateral_direita:hover {
