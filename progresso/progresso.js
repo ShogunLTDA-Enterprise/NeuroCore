@@ -1,12 +1,27 @@
-var itemBarra = document.querySelectorAll('.icone')
+document.querySelectorAll('.nada').forEach(nada => {
+    nada.addEventListener('dragstart', e => {
+        e.currentTarget.classList.add('dragging'); 
+    })
 
-function selectLink(){
-    itemBarra.forEach((item) =>
-        item.classList.remove('ativo') //remove o botão ativado anteriormente
-    )
-    this.classList.add('ativo') //ativa o botão atual
-}
+    nada.addEventListener('dragend', e => {
+        e.currentTarget.classList.remove('dragging');
+    })
+})
 
-itemBarra.forEach((item)=>
-    item.addEventListener('click', selectLink)
-)
+document.querySelectorAll('.kanban1').forEach(column => {
+    column.addEventListener('dragover', e => {
+        e.preventDefault();
+        e.currentTarget.classList.add('nada-hover');
+    })
+
+    column.addEventListener('dragleave', e => {
+        e.currentTarget.classList.remove('nada-hover');
+    })
+
+    column.addEventListener('drop', e =>{
+        e.currentTarget.classList.remove('nada-hover');
+
+        const dragNada = document.querySelector('.nada.dragging');
+        e.currentTarget.appendChild(dragNada);
+    })
+})
