@@ -18,6 +18,7 @@
 body{
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
+    overflow-x: hidden;
 }
 
 form{
@@ -26,8 +27,8 @@ form{
     margin-left: 5%;
 }
 
-.cabecaralho {
-    box-shadow: 1px #050814;
+.icone_site {
+    margin-bottom: 13px;
 }
 
 .chat {
@@ -160,7 +161,7 @@ img {
 }
 
 .barra_lateral_direita {
-    width: 60px;
+    width: 80px;
     height: 100%;
     z-index: 3;
     margin-top: 20px;
@@ -180,6 +181,7 @@ img {
 
 .icone-usuario {
     margin-top: 40px;
+    margin-left: 13px;
     gap: 40px;
     display: grid;
     gap: 10px;
