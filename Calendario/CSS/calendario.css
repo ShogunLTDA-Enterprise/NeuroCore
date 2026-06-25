@@ -58,6 +58,7 @@ body {
     max-height: 80.2vh;
     margin: 7vh;
     top: 100px;
+    left: 500px;
     align-items: center;
     justify-content: center;
     background: #161B22;
@@ -66,14 +67,13 @@ body {
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4px
+    padding: 1px
 }
 
 .setinhas {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px;
 }
 
 .calendario button {
@@ -110,6 +110,7 @@ body {
     text-align: center;
     text-transform: capitalize;
     font-family: var(--fonte-secundaria);
+    letter-spacing: 2px;
 }
 
 .dias_da_semana {
@@ -168,14 +169,14 @@ body {
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column; /* Barra lateral vai para o topo, calendário para baixo */
+        flex-direction: column;
         overflow: hidden; 
     }
 
     .barra_lateral {
         width: 100%;
         height: auto;
-        position: relative;
+        
         flex-direction: row;
         align-items: center;
         
@@ -196,23 +197,28 @@ body {
     }
     
     .Parte-cima {
-        display: none; /* Opcional: esconde fotos de perfil secundárias no mobile se faltar espaço */
+        display: none; 
     }
 
     .calendario {
-        max-width: 100%; /* O calendário ocupa a largura total disponível */
-        padding: 10px;
+        max-width: 100%; 
+        padding: 1px;
+        left: -20px;
+
         
     }
 
     .calendario button{
-        font-size: 20px;
-        box-shadow: 0 0 0 1px #A78BFA;
+        font-size: 17px;
+        box-shadow: 0 0 0 1px ;
         color: #8B949E;
+        margin: 2px;
+        
     }
 
-    .mesano{
-        font-size: 8px;
+    .mesAno{
+        font-size: 18px;
+        letter-spacing: 1.5px;
     }
 
     .date{
