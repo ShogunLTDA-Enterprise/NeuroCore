@@ -22,7 +22,6 @@
 }
 
 body {
-    padding-top: 50px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
     font-family: var(--fonte-principal); 
