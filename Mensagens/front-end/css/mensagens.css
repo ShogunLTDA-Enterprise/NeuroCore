@@ -51,8 +51,10 @@ form{
 
 .chat_form {
     background-color: #161B22;
-    padding: 15px 565px;
+    padding: 15px 856px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     position: fixed;
     bottom: 0;
@@ -63,8 +65,8 @@ form{
 
 .chat_input {
     border: none;
-    padding: 10px 10px 10px 10px;
     border-radius: 8px;
+    padding: 10px 10px 10px 10px;
     flex-grow: 1;
     background-color: #21262D;
     outline: none;
@@ -179,8 +181,8 @@ img {
 .icone-usuario {
     margin-top: 40px;
     gap: 40px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 10px;
     align-items: center;
 }
 
