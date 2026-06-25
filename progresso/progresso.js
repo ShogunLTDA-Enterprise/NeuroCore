@@ -1,14 +1,14 @@
-document.querySelectorAll('.kanban1').forEach(nada => {
+document.querySelectorAll('.nada').forEach(nada => {
     nada.addEventListener('dragstart', e => {
         e.currentTarget.classList.add('dragging'); 
     })
 
-    nada.addEventListener('dragstart', e => {
+    nada.addEventListener('dragend', e => {
         e.currentTarget.classList.remove('dragging');
     })
 })
 
-document.querySelectorAll('.coluna-kanban').forEach(column => {
+document.querySelectorAll('.kanban1').forEach(column => {
     column.addEventListener('dragover', e => {
         e.preventDefault();
         e.currentTarget.classList.add('nada-hover');
@@ -21,7 +21,7 @@ document.querySelectorAll('.coluna-kanban').forEach(column => {
     column.addEventListener('drop', e =>{
         e.currentTarget.classList.remove('nada-hover');
 
-        const dragNada = document.querySelector('.coluna-kanban.dragging');
+        const dragNada = document.querySelector('.nada.dragging');
         e.currentTarget.appendChild(dragNada);
     })
 })
