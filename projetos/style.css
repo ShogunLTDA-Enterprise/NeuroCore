@@ -135,3 +135,33 @@ ul li.item-barra a .txt-link{
     text-align: center;
     color: #E6EDF3;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        overflow: hidden; 
+    }
+
+    .barra_lateral {
+        width: 100%;
+        height: auto;
+        
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .barra_lateral ul {
+        display: flex; 
+        margin-top: 0;
+    }
+
+    .barra_lateral .txt-link {
+        display: none; 
+    }
+
+    .barra_lateral .icone {
+        margin-right: 60;
+        font-size: 1.5rem; 
+    }
+}

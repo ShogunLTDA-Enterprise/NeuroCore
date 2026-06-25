@@ -224,3 +224,33 @@ ul li.icone-usuario a:hover {
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        overflow: hidden; 
+    }
+
+    .barra_lateral {
+        width: 100%;
+        height: auto;
+        
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .barra_lateral ul {
+        display: flex; 
+        margin-top: 0;
+    }
+
+    .barra_lateral .txt-link {
+        display: none; 
+    }
+
+    .barra_lateral .icone {
+        margin-right: 60;
+        font-size: 1.5rem; 
+    }
+}
