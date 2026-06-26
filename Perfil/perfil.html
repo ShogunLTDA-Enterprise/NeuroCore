@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Perfil/style.css">
+    <title>Perfil</title>
+</head>
+<body>
+    
+    <header class="header-topo">
+        <div class="header-esquerda">
+            <div class="logo-container">
+                <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="icone" id="btn-exp">
+                <span class="logo-texto">Neuro<strong>Core</strong></span>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <ul>
+                    <li class="item-barra">
+                        <a href="/projetos/projetos.html">
+                            <span class="icone"><i class="bi bi-house"></i></span>
+                            <span class="txt-link">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/progresso/progresso.html">
+                            <span class="icone"><i class="bi bi-table"></i></span>
+                            <span class="txt-link">Kanban</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Mensagens/front-end/Mensagens.html">
+                            <span class="icone"><i class="bi bi-envelope"></i></span>
+                            <span class="txt-link">Mensagens</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Calendario/calendario.html">
+                            <span class="icone ativo"><i class="bi bi-clock"></i></span>
+                            <span class="txt-link">Atividades</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="header-direita">
+            <div class="usuario-topo">
+                <a href="#">
+                    <i class="bi bi-person-circle icone-usuario-branco" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                </a>
+
+                <ul class="dropdown-menu" id="menuUsuario">
+                    <li><a href="/Perfil/perfil.html"><i class="bi bi-person"></i> Meu Perfil</a></li>
+                    <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                    <li><a href="/Logout/logout.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </header>
+
+
+
+    <script src="/Perfil/perfil.js"></script>
+</body>
+</html>

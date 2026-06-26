@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #0D1117;
+    --cor-barra: #161B22;
+    --cor-texto: #E6EDF3;
+    --cor-de-fundo: #0D1117;
+    --cor-do-icone: #A78BFA;
+    --cor-das-sombras: #21262D;
+    --fonte-principal: "Space Grotesk", sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal); 
+}
+
+
+
+.header-topo {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0D1117;
+    z-index: 1000;
+    border-bottom: 1px solid #21262D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-family: var(--fonte-principal);
+}
+
+.logo-texto {
+    font-family: var(--fonte-principal);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--cor-texto);
+}
+
+.logo-texto strong {
+    color: #8B5CF6;
+}
+
+.icone_site {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    border-radius: 40%;
+    transition: .5s ease;
+}
+
+.icone_site:hover {
+    background: #8B5CF6;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.menu-navegacao ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-navegacao ul li.item-barra {
+    transition: .2s ease;
+    border-radius: 6px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-navegacao ul li.item-barra:hover {
+    background-color: var(--cor-das-sombras);
+}
+
+.menu-navegacao ul li.item-barra a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: var(--fonte-principal);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+
+.menu-navegacao ul li.item-barra a .txt-link {
+    font-family: var(--fonte-secundaria);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.item-barra p {
+    display: none; /* Esconde parágrafos redundantes herdados da barra lateral */
+}
+
+.icone {
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.ativo {
+    color: #A78BFA;
+}
+
+/* --- ELEMENTOS DA DIREITA --- */
+.header-direita {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.config-link {
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.config-link:hover {
+    color: var(--cor-do-icone);
+}
+
+.usuario-topo {
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #E6EDF3;
+    transition: opacity 0.3s;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 100%;
+    transform: translateX(-100%); 
+    background-color: #ffffff;
+    width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+    margin-top: 15px; 
+    border: 1px solid #ffffff;
+    font-family: var(--fonte-secundaria);
+    letter-spacing: 0.7px;
+}
+
+/* Itens do menu */
+.dropdown-menu li a {
+    color: #000000;
+    padding: 12px 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    transition: background-color 0.2s ease;
+}
+
+
+.dropdown-menu li a:hover {
+    background: #d5d4d8;
+    color: #000000;
+    border-radius: 4px;
+    
+    
+}
+
+.dropdown-menu li i{
+    font-size: 15px;
+}
+
+
+.dropdown-menu.mostrar {
+    display: block;
+    animation: popup 0.2s ease-out forwards;
+}
+
+
+@keyframes popup {
+    from { opacity: 0; transform: translate(-50%, -10px)}
+    
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
