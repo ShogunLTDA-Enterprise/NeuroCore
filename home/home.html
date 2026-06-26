@@ -11,41 +11,42 @@
 
 </head>
 <body>
-    <section>
-        <header class="cabecaralho">
-            <div class="cabesa">
-                <!-- Assunto principal do SITE -->
-                <p class="titulo_area gradient">PROJETOS</p> 
-                <!-- Nome padrão -->
-                <h1 class="titulo_proj" >NeuroCore</h1>
-
-                <a href="/templates/Criacao_Projeto.html" class="botao">Crie um Projeto</a>
-
+    <header class="header-topo">
+        <div class="header-esquerda">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="icone" id="btn-exp">
+                </a>
+                <span class="logo-texto">Neuro<strong>Core</strong></span>
             </div>
-        </header>
-    </section>
+            
+            <nav class="menu-navegacao">
+                <ul>
+                    <li class="item-barra">
+                        <a href="#">
+                            <span class="icone"><i class="bi bi-house ativo"></i></span>
+                            <span class="txt-link">Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="header-direita">
+            <div class="usuario-topo">
+                <a href="#">
+                    <i class="bi bi-person-circle icone-usuario-branco ativo" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                </a>
 
-    <section>
-        <!-- Barra lateral e icones -->
-        <nav class="barra_lateral">
-                <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="icone" id="btn-exp">
-            <ul>
-                <li class="item-barra">
-                    <a href="#">
-                        <span class="icone ativo"><i class="bi bi-house"></i></span>
-                        <span class="txt-link">Projeto</span>
-                    </a>
-                </li>
-                <li class="item-barra">
-                    <a href="#l">
-                        <span class="icone"><i class="bi bi-gear"></i></span>
-                        <span class="txt-link">Configurações</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-           
-    </section>
+                <ul class="dropdown-menu" id="menuUsuario">
+                    <li><a href="/Perfil/perfil.html"><i class="bi bi-person"></i> Meu Perfil</a></li>
+                    <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                    <li><a href="/Logout/logout.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </header>
 
     <section>
         <!-- conteudo principal do site -->
