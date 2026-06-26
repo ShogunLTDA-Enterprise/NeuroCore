@@ -47,8 +47,30 @@
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        overflow: hidden; 
+        
     }
+
+    .caixas {
+        margin: 0;
+        width: 100%;         
+        height: auto;        
+        min-height: 250px;   
+    }
+
+    .barra_lateral ul {
+        display: flex; 
+        margin-top: 0;
+    }
+
+    .barra_lateral .txt-link {
+        display: none; 
+    }
+
+    .barra_lateral .icone {
+        margin-right: 20px;  
+        font-size: 1.5rem; 
+    }
+}
 
     .barra_lateral {
         width: 100%;

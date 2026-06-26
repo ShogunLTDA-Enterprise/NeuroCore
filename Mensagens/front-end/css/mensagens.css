@@ -40,40 +40,39 @@ form{
     font-weight: 300;
     flex-direction: column;
     justify-content: space-between;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .chat_messages {
     flex-grow: 1;
-    padding: 30px 30px 130px 50px;
+    padding: 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
 }
 
 .chat_form {
-    background-color: #161B22;
-    padding: 15px 851px;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid #21262D;
+    
+    width: 100%;             
+    max-width: 900px;       
+    
+   
+    margin-left: 10;          
+    margin-right: auto;     
 }
 
+
 .chat_input {
-    border: none;
+    flex: 1;                 
+    padding: 10px 15px;
     border-radius: 8px;
-    padding: 10px 10px 10px 10px;
-    flex-grow: 1;
-    background-color: #21262D;
-    outline: none;
-    color: #E6EDF3;
-    font-size: 1rem;
+    border: 1px solid #A78BFA;
+    background-color: #1e232a;
+    color: #ffffff;
 }
 
 .chat_input:focus {
@@ -257,13 +256,14 @@ ul li.icone-usuario a:hover {
     }
 
     .chat_form{
-        width: 100%;
-        padding: 14px;
+        width: 75%;
+        
         
     }
 
     .chat_input{
         width: 25px;
+        
     }
     
     .caixa_imagem {
