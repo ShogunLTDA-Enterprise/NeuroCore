@@ -18,17 +18,6 @@
     --gradiente: linear-gradient(to bottom, #161B22, #21262D);
 }
 
-.Parte-cima {
-    background-color: var(--cor-principal);
-    justify-content: flex-end;
-    align-items: flex-end;
-    display: none;
-}
-
-.iconta {
-    background-color: #8B5CF6;
-}
-
 .cabecaralho {
     box-shadow: 1px #050814;
 }
@@ -54,67 +43,6 @@ body {
     font-weight: 200;
 }
 
-.usuario-topo {
-    position: relative;
-    
-}
-
-.dropdown-menu {
-    display: none; 
-    position: absolute;
-    top: 100%; 
-    left: 100%;
-    transform: translateX(-100%); 
-    background-color: #ffffff;
-    width: 180px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 0;
-    list-style: none;
-    z-index: 1000;
-    margin-top: 15px; 
-    border: 1px solid #ffffff;
-    font-family: var(--fonte-secundaria);
-    letter-spacing: 0.7px;
-}
-
-/* Itens do menu */
-.dropdown-menu li a {
-    color: #000000;
-    padding: 12px 5px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 10px;
-    transition: background-color 0.2s ease;
-}
-
-
-.dropdown-menu li a:hover {
-    background: #d5d4d8;
-    color: #000000;
-    border-radius: 4px;
-    
-    
-}
-
-.dropdown-menu li i{
-    font-size: 15px;
-}
-
-
-.dropdown-menu.mostrar {
-    display: block;
-    animation: popup 0.2s ease-out forwards;
-}
-
-
-@keyframes popup {
-    from { opacity: 0; transform: translate(-50%, -10px)}
-    
-    to { opacity: 1; transform: translate(-50%, 0); }
-}
 .calendario {
     max-width: 90vw;
     max-height: 80.2vh;
@@ -235,19 +163,6 @@ body {
         overflow: hidden; 
     }
 
-    .barra_lateral {
-        width: 100%;
-        height: auto;
-        
-        flex-direction: row;
-        align-items: center;
-        
-    }
-
-    .barra_lateral ul {
-        display: flex; 
-        margin-top: 0;
-    }
 
     .barra_lateral .txt-link {
         display: none; 
@@ -257,28 +172,13 @@ body {
         margin-right: 60;
         font-size: 1.5rem; 
     }
-    .config-link {
-        font-size: 1rem;
-        margin-left: 60;  
-    }
 
-    .usuario-topo {
-        font-size: 1..5rem;
-        margin-right: 80;
-    }
-    .logo-texto {
-        display: none;
-    }
-    
-    .Parte-cima {
-        display: none; 
-    }
+
 
     .calendario {
         max-width: 100%; 
         padding: 1px;
         left: -20px;
-
         
     }
 

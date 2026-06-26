@@ -1,5 +1,5 @@
 * {
-    margin: fit-content;
+    margin: 0;
     padding: 0;
 }
 
@@ -102,7 +102,7 @@ form{
     max-width: 1700px;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-top: 15px;
     line-height: 22px;
 }
 
@@ -127,7 +127,7 @@ form{
 
 img {
     margin-top: 15px;
-    max-width: 480px;
+    width: auto;
     height: auto;
 }
 
@@ -229,12 +229,49 @@ ul li.icone-usuario a:hover {
     justify-content: center;
 }
 
+.card-back p{
+    width: 40px;
+    height: 70px;
+    border-radius: 21px;
+    box-shadow: 0 0 1px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        overflow: hidden; 
+        margin: -15px;
+        font-size: 4px;
+    }
+    .barra_lateral_direita{
+        display: none;
+    }
+    .texto{
+        font-size: 11px;
+        
     }
 
+    .chat_messages{
+        margin-left: 1px;
+    }
+
+    .chat_form{
+        width: 100%;
+        padding: 14px;
+        
+    }
+
+    .chat_input{
+        width: 25px;
+    }
+    
+    .caixa_imagem {
+        width: 10px;
+        height:10px;
+        
+    }
+    
     .barra_lateral {
         width: 100%;
         height: auto;
