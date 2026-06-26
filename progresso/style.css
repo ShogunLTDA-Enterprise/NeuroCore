@@ -217,11 +217,6 @@ body {
 }
 
 
-@keyframes popup {
-    from { opacity: 0; transform: translate(-50%, -10px)}
-    
-    to { opacity: 1; transform: translate(-50%, 0); }
-}
 
 
 /* --- CONTEÚDO PRINCIPAL --- */
@@ -343,6 +338,12 @@ body {
     border: 1px dashed #A78BFA;
 }
 
+@keyframes popup {
+    from { opacity: 0; transform: translate(-50%, -10px)}
+    
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
     .header-topo {
@@ -356,5 +357,35 @@ body {
     
     .kanban-container {
         gap: 15px;
+    }
+
+    .barra_lateral {
+    width: 100%;
+    height: auto;
+    
+    flex-direction: row;
+    align-items: center;
+        
+    }
+
+    .barra_lateral ul {
+        display: flex; 
+        margin-top: 0;
+    }
+
+    
+    .barra_lateral .txt-link {
+        display: none; 
+    }
+
+    .barra_lateral .icone {
+        margin-right: 60;
+        font-size: 1.5rem; 
+    }
+    .usuario-topo {
+        font-size: 1.8rem;
+    }
+    .logo-texto {
+        display: none;
     }
 }
