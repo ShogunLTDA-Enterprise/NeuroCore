@@ -1,11 +1,12 @@
 {
   "name": "neurocore",
   "version": "1.0.0",
-  "description": "**Bem-Vindos ao NeuroCore!**",
+  "description": "Bem-Vindos ao NeuroCore!",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -14,14 +15,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/ShogunLTDA-Enterprise/NeuroCore/issues"
   },
   "homepage": "https://github.com/ShogunLTDA-Enterprise/NeuroCore#readme",
   "dependencies": {
     "@google/genai": "^2.15.0",
-    "@google/generative-ai": "^0.24.1",
     "axios": "^1.17.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
