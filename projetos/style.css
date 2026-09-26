@@ -20,16 +20,60 @@
     border: 2px solid #21262D;
     border-radius: 8px;
     background-color: #161B22;
-    width: 850px;
-    height: 80px;
+    width: 350px;
+    height: 180px;
     margin: 10px;
     transition: .3s ease;
+}
+
+.caixas h1{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    top: 55px;
+}
+
+.caixas span{
+    position: relative;
+    top: 55px;
+    left: 20px;
 }
 
 .caixas:hover {
     border-color: #A78BFA;
     box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
     transform: translateX(10px);
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+}
+
+.bolotinha{
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #A78BFA;
+}
+
+.bolotinha2{
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #ffd500;
+}
+
+.bolotinha3{
+    border-radius: 8px;
+    margin-top: 15px;
+    color: rgb(150, 191, 253);
+}
+
+.bolotinha4{
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #A78BFA;
 }
 
 .textosss {
@@ -39,7 +83,6 @@
 
 .Imagem_Conteudo {
     height: 50px;
-    object-fit: cover;
 }
 
 @media (max-width: 768px) {
