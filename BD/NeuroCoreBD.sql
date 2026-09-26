@@ -41,11 +41,3 @@ CREATE TABLE Tarefas (
 	id_projeto INT,
 	FOREIGN KEY (id_projeto) REFERENCES Projeto(id_projeto)
 );
-
-INSERT INTO Usuarios (id_usuarios, nome, email, senha) VALUES
-(1, 'Gustavo', 'Gustavo@gmail.com', 'DONO'),
-(2, 'Leonardo', 'Leonardo@gmail.com', 'Ajudante'),
-(3, 'Vinicius', 'Vinicius@gmail.com', 'Homossexual'),
-(4, 'Elon Moska', 'ElonMusk@gmail.com', 'SerjaoFoguetesAmante');
-
-SELECT * FROM Usuarios
