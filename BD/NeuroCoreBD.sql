@@ -1,14 +1,14 @@
 CREATE DATABASE Neurocore
 
 CREATE TABLE Usuarios(
-	id_usuarios INT PRIMARY KEY,
+	id_usuarios INT IDENTITY(1,1) PRIMARY KEY,
 	nome VARCHAR(100) NOT NULL,
 	email VARCHAR(100) UNIQUE NOT NULL,
 	senha VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE Projeto(
-	id_projeto INT PRIMARY KEY,
+	id_projeto INT IDENTITY(1,1) PRIMARY KEY,
 	NumVar INT NOT NULL,
 	msm varchar(200),
 	id_criador INT,
@@ -16,7 +16,7 @@ CREATE TABLE Projeto(
 );
 
 CREATE TABLE Conversa(
-	id_conversa VARCHAR(200) PRIMARY KEY,
+	id_conversa int identity(1,1) PRIMARY KEY,
 	usuarios_1_id INT,
 	usuarios_2_id INT,
 	CONSTRAINT fk_usuario_1 FOREIGN KEY(usuarios_1_id) REFERENCES Usuarios(id_usuarios),
@@ -25,12 +25,21 @@ CREATE TABLE Conversa(
 );
 
 CREATE TABLE Mensagens(
-	id_mensagens VARCHAR(900) PRIMARY KEY,
-	id_conversa VARCHAR(200),
+	id_mensagens int PRIMARY KEY,
+	id_conversa int,
 	Conteudo TEXT NOT NULL,
 	remetente_id INT,
 	CONSTRAINT conversa_id FOREIGN KEY(id_conversa) REFERENCES Conversa(id_conversa),
 	CONSTRAINT fk_remetente_id FOREIGN KEY(remetente_id) REFERENCES Usuarios(id_usuarios),
+);
+
+CREATE TABLE Tarefas (
+	id_tarefas INT IDENTITY(1,1) PRIMARY KEY,
+	titulo VARCHAR(100) NOT NULL,
+	descricao VARCHAR(500),
+	statu VARCHAR(100) NOT NULL,
+	id_projeto INT,
+	FOREIGN KEY (id_projeto) REFERENCES Projeto(id_projeto)
 );
 
 INSERT INTO Usuarios (id_usuarios, nome, email, senha) VALUES

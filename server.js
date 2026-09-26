@@ -32,7 +32,7 @@ app.post('/api/kanban/ai', async (req, res) => {
         const { prompt } = req.body;
 
         const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
+            model: 'gemini-2.5-flash',
             contents: prompt,
         });
 
