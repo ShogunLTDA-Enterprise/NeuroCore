@@ -25,12 +25,12 @@ CREATE TABLE Conversa(
 );
 
 CREATE TABLE Mensagens(
-	id_mensagens int PRIMARY KEY,
+	id_mensagens int IDENTITY(1,1) PRIMARY KEY,
 	id_conversa int,
 	Conteudo TEXT NOT NULL,
 	remetente_id INT,
 	CONSTRAINT conversa_id FOREIGN KEY(id_conversa) REFERENCES Conversa(id_conversa),
-	CONSTRAINT fk_remetente_id FOREIGN KEY(remetente_id) REFERENCES Usuarios(id_usuarios),
+	CONSTRAINT fk_remetente_id FOREIGN KEY(remetente_id) REFERENCES Usuarios(id_usuarios)
 );
 
 CREATE TABLE Tarefas (
@@ -38,6 +38,7 @@ CREATE TABLE Tarefas (
 	titulo VARCHAR(100) NOT NULL,
 	descricao VARCHAR(500),
 	statu VARCHAR(100) NOT NULL,
+	ordem INT NOT NULL,
 	id_projeto INT,
-	FOREIGN KEY (id_projeto) REFERENCES Projeto(id_projeto)
+	CONSTRAINT fk_tarefa_projeto FOREIGN KEY (id_projeto) REFERENCES Projeto(id_projeto) ON DELETE CASCADE
 );
