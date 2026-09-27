@@ -45,6 +45,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
+
 // --- INTEGRAÇÃO COM A API DO GEMINI VIA SERVIDOR EXPRESS ---
 document.addEventListener("DOMContentLoaded", () => {
     // Seleciona todos os botões do Gemini nos cards

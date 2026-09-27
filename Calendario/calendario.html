@@ -30,7 +30,7 @@
                     </li>
                     <li class="item-barra">
                         <a href="/progresso/progresso.html">
-                            <span class="icone"><i class="bi bi-table"></i></span>
+                            <span class="icone"><i class="bi bi-clock"></i></span>
                             <span class="txt-link">Kanban</span>
                         </a>
                     </li>
@@ -42,7 +42,7 @@
                     </li>
                     <li class="item-barra">
                         <a href="/Calendario/calendario.html">
-                            <span class="icone ativo"><i class="bi bi-clock"></i></span>
+                            <span class="icone ativo"><i class="bi bi-table"></i></span>
                             <span class="txt-link">Atividades</span>
                         </a>
                     </li>
@@ -57,7 +57,7 @@
                 </a>
 
                 <ul class="dropdown-menu" id="menuUsuario">
-                    <li><a href=""><i class="bi bi-person"></i> Meu Perfil</a></li>
+                    <li><a href="../"><i class="bi bi-person"></i> Meu Perfil</a></li>
                     <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
                     <li><a href="/index.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                 </ul>
@@ -70,11 +70,11 @@
         <div class="calendario" >
             <div class="setinhas">
                 <button class="anteset" id="anteset">
-                    <p>&lt;</p>
+                    <span>&lt;</span>
                 </button>
                 <div class="mesAno" id="mesAno"> <input type="month"> </div>
                 <button class="postset" id="postset">
-                    <p>&gt;</p>
+                    <span>&gt;</span>
                 </button>
             </div>
             <div class="dias_da_semana">
@@ -88,11 +88,19 @@
 
             </div>
             <div class="datas" id="datas"></div>
-
+            
         </div>
+        <hr>
+
+        <div class="datamarcada"></div>
     </div>
-        
+    
     <script src="../progresso/progresso.js"></script>
-    <script src="JS/calendario.js"> </script>    
+    <script src="JS/calendario.js"> </script>
+
+    <footer class="copyrights">
+        <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="NeuroCore Mini Logo" width="40">
+        <p>&copy; 2026 Neurocore. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
