@@ -23,60 +23,54 @@
 }
 
 body {
-    min-height: 100vh;
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
+    padding: 10px 15px;
 }
 
-.titulo_area {
-    background: linear-gradient(90deg, #A78BFA, #8B5CF6);
-    background-clip: text;
-    color: transparent;
-    font-family: var(--fonte-principal);
-}
-
-.titulo_proje {
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    font-family: var(--fonte-principal);
-    font-weight: 200;
-}
 
 .calendario {
-    max-width: 90vw;
-    max-height: 80.2vh;
-    margin: 7vh;
-    top: 100px;
-    left: 500px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    max-width: 18vw;
+    max-height: 35vh;
+    margin-top: 70px;
     background: #161B22;
     border-radius: 16px;
     box-shadow: 0 0 0 1px #30363D;
-    position: absolute;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1px
 }
 
 .setinhas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2px;
 }
 
+.setinhas span{
+    font-size: 25px;
+    text-align: center;
+}
+
+.anteset{
+    margin-right:15px;
+}
+
+.postset{
+    margin-left: 15px;
+}
 .calendario button {
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #21262D;
     border: 1px solid #30363D;
     border-radius: 50%;
-    display: flex;
+    width: 2.0vw;
+    height: 2.6vh;
     cursor: pointer;
-    width: 5vh;
-    height: 4.5vh;
-    font-size: 3.5vh;
     color: #8B949E;
     transition: 0.2s;
 }
@@ -91,11 +85,12 @@ body {
     transition: 0.2s;
     background: #A78BFA;
     color: #0D1117;
+
 }
 
 .mesAno {
     color: #E6EDF3;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
     text-transform: capitalize;
@@ -106,9 +101,8 @@ body {
 .dias_da_semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 14px;
+    font-size: 20px;
     font-family: var(--fonte-secundaria);
-    justify-items: center;
 }
 
 .dias_da_semana span {
@@ -120,23 +114,21 @@ body {
 .datas {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    justify-items: center;
 }
 
 .date {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 1px;
-    margin: 2px;
+    margin: 5px;
     cursor: pointer;
     font-weight: 500;
     width: 38px;
     height: 38px;
     border-radius: 6px;
     transition: 0.2s;
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--fonte-secundaria);
     color: #E6EDF3;
 }
@@ -156,6 +148,35 @@ body {
     background: #1C2128;
     color: #8B949E;
 }
+
+  /* Estilo para feriados */
+  .day.holiday {
+    color: #ff5555; /* Cor vermelha/rosa para destacar */
+    font-weight: bold;
+  }
+
+hr{
+    margin-top: 30px;
+    width: 348px;
+}
+
+.copyrights {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #ffffff0d;
+    padding: 40px 20px;
+    margin-top: 300px;
+    gap: 15px;
+
+}
+
+.copyrights p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
 
 @media (max-width: 768px) {
     body {

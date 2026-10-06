@@ -1,3 +1,4 @@
+
 const mesAnoElement = document.getElementById('mesAno');
 const datasElement = document.getElementById('datas');
 const antesetElement = document.getElementById('anteset');
@@ -52,3 +53,30 @@ postsetElement.addEventListener('click', () => {
 })
 
 updatecalendario();
+
+const feriados = [
+    "2026-09-07", // Independência do Brasil
+    "2026-10-12", // Nossa Sra. Aparecida
+    "2026-11-02", // Finados
+    "2026-11-15", // Proclamação da República
+    "2026-12-25"  // Natal
+  ];
+  
+  // Na função onde você gera os elementos dos dias do calendário:
+  function renderizarDia(dataAtual, diaNumero) {
+    const elementoDia = document.createElement('div');
+    elementoDia.classList.add('day');
+    elementoDia.textContent = diaNumero;
+  
+    // Formata a data atual para comparar ("2026-09-07")
+    const dataFormatada = dataAtual.toISOString().split('T')[0];
+  
+    // Se for feriado, adiciona a classe correspondente
+    if (feriados.includes(dataFormatada)) {
+      elementoDia.classList.add('holiday');
+      elementoDia.setAttribute('title', 'Feriado: Independência do Brasil'); // Tooltip ao passar o mouse
+    }
+  
+    return elementoDia;
+  }
+
