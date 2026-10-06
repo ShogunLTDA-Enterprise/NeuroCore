@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
-/* --- CONFIGURAÇÕES GERAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@
     --cor-do-icone: #A78BFA;
     --cor-das-sombras: #21262D;
     
-    /* Fontes parametrizadas */
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
     --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
@@ -27,7 +25,6 @@ body {
     font-family: var(--fonte-principal); 
 }
 
-/* --- CABEÇALHO ATUALIZADO (VERSÃO MAIS RECENTE) --- */
 .header-topo {
     width: 100%;
     height: 70px;
@@ -84,7 +81,6 @@ body {
     background: #8B5CF6;
 }
 
-/* --- MENU DE NAVEGAÇÃO -- */
 .menu-navegacao ul {
     height: 100%;
     list-style-type: none;
@@ -124,7 +120,7 @@ body {
 }
 
 .item-barra p {
-    display: none; /* Esconde parágrafos redundantes herdados da barra lateral */
+    display: none;
 }
 
 .icone {
@@ -137,13 +133,11 @@ body {
     color: #A78BFA;
 }
 
-/* --- ELEMENTOS DA DIREITA --- */
 .header-direita {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 
 .config-link {
     color: var(--cor-texto);
@@ -168,7 +162,6 @@ body {
     transition: opacity 0.3s;
 }
 
-
 .dropdown-menu {
     display: none; 
     position: absolute;
@@ -186,18 +179,15 @@ body {
     border: 1px solid #ffffff;
     font-family: var(--fonte-secundaria);
     letter-spacing: 0.7px;
-    
 }
 
-.dropdown-menu ul{
+.dropdown-menu ul {
     padding: 0px;
     margin: 0px;
     list-style: none;
     overflow: hidden;
-
 }
 
-/* Itens do menu */
 .dropdown-menu li a {
     display: flex;
     align-items: center;
@@ -209,20 +199,15 @@ body {
     transition: background-color 0.2s ease;
 }
 
-
 .dropdown-menu li a:hover {
-    background:#ffffff;
+    background: #ffffff;
     color: #000000;
     border-radius: 4px;
-    
-    
 }
 
-.dropdown-menu li i{
+.dropdown-menu li i {
     font-size: 15px;
-
 }
-
 
 .dropdown-menu.mostrar {
     display: block;
@@ -230,17 +215,12 @@ body {
     margin-right: 300px;
 }
 
-
-
-
-/* --- CONTEÚDO PRINCIPAL --- */
 .conteudo {
     margin-top: 90px; 
     padding: 20px;
     font-family: var(--fonte-principal);
 }
 
-/* --- UTILITÁRIOS --- */
 .gradient {
     background: linear-gradient(90deg, #A78BFA, #8B5CF6);
     background-clip: text;
@@ -248,7 +228,6 @@ body {
     color: transparent;
 }
 
-/* --- MODAL --- */
 #modal {
     position: fixed;
     top: 50%;
@@ -271,7 +250,6 @@ body {
     text-decoration: none;
 }
 
-/* --- ESTRUTURA DO KANBAN --- */
 .kanban-container {
     display: flex;
     justify-content: flex-start;
@@ -306,7 +284,6 @@ body {
     align-items: center;
 }
 
-/* --- CARDS KANBAN --- */
 .nada {
     height: 120px;
     width: 240px;
@@ -354,7 +331,6 @@ body {
 
 @keyframes popup {
     from { opacity: 0; transform: translate(-50%, -10px)}
-    
     to { opacity: 1; transform: translate(-50%, 0); }
 }
 
@@ -364,9 +340,8 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     gap: 15px;
-
 }
 
 .copyrights p {
@@ -374,8 +349,6 @@ body {
     font-size: 0.9rem;
 }
 
-
-/* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
     .header-topo {
         flex-direction: row;
@@ -391,12 +364,10 @@ body {
     }
 
     .barra_lateral {
-    width: 100%;
-    height: auto;
-    
-    flex-direction: row;
-    align-items: center;
-        
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
     }
 
     .barra_lateral ul {
@@ -404,18 +375,19 @@ body {
         margin-top: 0;
     }
 
-    
     .barra_lateral .txt-link {
         display: none; 
     }
 
     .barra_lateral .icone {
-        margin-right: 60;
+        margin-right: 60px;
         font-size: 1.5rem; 
     }
+    
     .usuario-topo {
         font-size: 1.8rem;
     }
+    
     .logo-texto {
         display: none;
     }
