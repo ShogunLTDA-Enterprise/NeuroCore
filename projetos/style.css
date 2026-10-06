@@ -41,7 +41,6 @@ body {
     height: 70px;
     background: rgba(13, 13, 13, 0.8);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--cor-borda);
     position: sticky;
     top: 0;
