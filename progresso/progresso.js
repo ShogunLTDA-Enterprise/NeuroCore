@@ -30,20 +30,34 @@ document.querySelectorAll('.kanban1').forEach(column => {
 });
 
 // --- MENU DE USUÁRIO (DROPDOWN) ---
-function toggleMenu(event) {
-    event.preventDefault(); 
-    const menu = document.getElementById('menuUsuario');
-    menu.classList.toggle('mostrar');
+const popups = [
+    { botao: document.getElementById('btn-usuario'), alvo: document.getElementById('menuUsuario'), classe: 'mostrar'   },
+    { botao: document.getElementById('btn-notf'),    alvo: document.getElementById('barrinha'),    classe: 'aberto' },
+].filter(p => p.botao && p.alvo);
+
+function fecharTodos(exceto) {
+    popups.forEach(p => {
+        if (p !== exceto) p.alvo.classList.remove(p.classe);
+    });
 }
 
-window.addEventListener('click', function(event) {
-    const menu = document.getElementById('menuUsuario');
-    const btn = document.getElementById('btn-usuario');
-    
-    if (btn && menu && !btn.contains(event.target) && !menu.contains(event.target)) {
-        menu.classList.remove('mostrar');
-    }
+popups.forEach(p => {
+    p.botao.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();               // impede o clique de "vazar" para o document
+        const vaiAbrir = !p.alvo.classList.contains(p.classe);
+        fecharTodos(p);                    // fecha os outros
+        p.alvo.classList.toggle(p.classe, vaiAbrir);
+    });
+
+    // clicar dentro do popup não fecha ele
+    p.alvo.addEventListener('click', (e) => e.stopPropagation());
 });
+
+// clicar fora ou apertar Esc fecha tudo
+document.addEventListener('click', () => fecharTodos());
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharTodos(); });
+
 
 
 // --- INTEGRAÇÃO COM A API DO GEMINI VIA SERVIDOR EXPRESS ---
