@@ -44,7 +44,7 @@
 .caixas:hover {
     border-color: #A78BFA;
     box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
-    transform: translateY(-10px)
+    transform: translateX(10px);
 }
 
 .conteudo{
