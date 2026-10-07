@@ -136,7 +136,17 @@ body {
 .header-direita {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+}
+
+.header-direita a{
+    text-decoration: none;
+    
+}
+
+#btn-notf{
+    margin-right: 15px;
+    color: #ffffff;
 }
 
 .config-link {
@@ -155,11 +165,18 @@ body {
 .usuario-topo {
     position: relative;
     font-size: 1.8rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
     color: #E6EDF3;
     transition: opacity 0.3s;
+}
+
+.header-direita i{
+    cursor: pointer;
+}
+
+#btn-notf{
+    font-size: 24px;
 }
 
 .dropdown-menu {
@@ -213,6 +230,25 @@ body {
     display: block;
     animation: popup 0.2s ease-out forwards;
     margin-right: 300px;
+}
+
+.menu-not{
+    position: fixed;
+    top: 77px;
+    right: 0;
+    width: 320px;
+    height: calc(60vh - 77px);
+    background: #161B22;
+    border: 1px solid #8B5CF6;
+    border-radius: 20px;
+    padding: 20px;
+    transform: translateX(320px);
+    transition: transform 0.3s ease;
+    z-index: 50;
+}
+
+.menu-not.aberto{
+    transform: translateX(0); 
 }
 
 .conteudo {

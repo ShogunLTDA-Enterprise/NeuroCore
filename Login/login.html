@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login NeuroCore</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/Login/stylelogin.css">
+    <link rel="stylesheet" href="/Cadastro/stylecadastro.css">
 </head>
 <body>
 
-    <div class="login-container">
-        <div class="logo-container">
-            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Cerebro de cor rosa">
+    <header class="header-top">
+        <div class="logo-header">
+            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Logo NeuroCore">
+            <span>NeuroCore</span>
         </div>
+    </header>
+
+    <main class="login-container">
+        <h1 class="titulo">LOGIN</h1>
+        <h4 class="subtitulo">Faça login com seu Email</h4>
+
 
         <div class="social-login">
-            <button class="btn-social btn-github">
-                <i class="fa-brands fa-github" style="color: #ffffff;"></i> Entrar com GitHub
+            <button type="button" class="btn-google">
+                <i class="fa-brands fa-google"></i> Google
             </button>
-            <button class="btn-social btn-google">
-                <i class="fa-brands fa-google" style="color: #ffffff;"></i> Entrar com Google
+            <button type="button" class="btn-google">
+                <i class="fa-brands fa-github"></i> GitHub
             </button>
         </div>
 
-        <div class="divisor">
+        <div class="divider">
             <span>OU</span>
         </div>
-
         
         <form class="login-form">
             <div class="inputs">
@@ -45,8 +51,12 @@
         <div class="footer-links">
             <a href="#" class="link-footer">Esqueceu sua senha?</a>
             <p>Não tem uma conta? <a href="../Cadastro/cadastro.html" class="link-footer">Cadastre-se</a></p>
+            <p class="termos-texto">
+                Ao me cadastrar, eu concordo com os <a href="/termos.html">Termos de serviço</a> e os <a href="/termos.html">Termos específicos do produto</a> da NeuroCore e confirmo estar ciente da <a href="/termos.html">Declaração de privacidade</a>.
+            </p>
         </div>
-    </div>
+
+    </main>
 
 </body>
 </html>
