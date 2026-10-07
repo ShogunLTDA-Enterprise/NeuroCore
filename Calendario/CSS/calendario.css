@@ -34,8 +34,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 18vw;
-    max-height: 35vh;
+    max-width: 380px;
+    max-height: 450px;
     margin-top: 70px;
     background: #161B22;
     border-radius: 16px;
@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px;
+    padding: 3px;
 }
 
 .setinhas span{
@@ -68,11 +68,12 @@ body {
     background: #21262D;
     border: 1px solid #30363D;
     border-radius: 50%;
-    width: 2.0vw;
-    height: 2.6vh;
+    width: 38px;
+    height: 29px;
     cursor: pointer;
     color: #8B949E;
     transition: 0.2s;
+    margin-top: 20px;
 }
 
 .calendario button:hover {
@@ -90,45 +91,44 @@ body {
 
 .mesAno {
     color: #E6EDF3;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
     text-align: center;
     text-transform: capitalize;
     font-family: var(--fonte-secundaria);
     letter-spacing: 2px;
+    margin-top: 16px;
 }
 
 .dias_da_semana {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 20px;
+    font-size: 1.3rem;
     font-family: var(--fonte-secundaria);
 }
 
 .dias_da_semana span {
-    text-align: center;
-    padding: 5px;
+    display: flex;
+    margin: 5px;
     color: #8B949E;
 }
 
 .datas {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    aspect-ratio: 1 / 1;
 }
 
 .date {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1px;
-    margin: 5px;
+    text-align: center;
+    margin: 7px;
     cursor: pointer;
     font-weight: 500;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 35px;
     border-radius: 6px;
     transition: 0.2s;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-family: var(--fonte-secundaria);
     color: #E6EDF3;
 }
@@ -149,16 +149,7 @@ body {
     color: #8B949E;
 }
 
-  /* Estilo para feriados */
-  .day.holiday {
-    color: #ff5555; /* Cor vermelha/rosa para destacar */
-    font-weight: bold;
-  }
 
-hr{
-    margin-top: 30px;
-    width: 348px;
-}
 
 .copyrights {
     text-align: center;
@@ -180,45 +171,46 @@ hr{
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column;
-        overflow: hidden; 
+        margin-top: 30px;
     }
 
 
     .barra_lateral .txt-link {
-        display: none; 
+        
     }
 
     .barra_lateral .icone {
-        margin-right: 60;
-        font-size: 1.5rem; 
+       
+        
     }
 
 
 
     .calendario {
-        max-width: 100%; 
-        padding: 1px;
-        left: -20px;
-        
+        width: auto;
+        height: auto;
     }
 
     .calendario button{
-        font-size: 17px;
-        box-shadow: 0 0 0 1px ;
-        color: #8B949E;
-        margin: 2px;
-        
+       font-size: 2px; 
+       width: 36px;
+       height: 30px; 
     }
 
     .mesAno{
-        font-size: 18px;
-        letter-spacing: 1.5px;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    .dias_da_semana{
+        font-size: 17px;
+        margin: 1px;
     }
 
     .date{
-        padding: 5px;
-        font-size: 15px;
-
+        font-size: 17px;
+        width: 27px;
+        height: 30px;
+        margin: 8px;
+        text-align: center;
     }
 }
