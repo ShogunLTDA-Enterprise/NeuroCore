@@ -349,6 +349,41 @@ body {
     font-size: 0.9rem;
 }
 
+.header-criacao {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+    max-width: 500px;
+}
+
+.header-criacao input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    background-color: #161B22;
+    color: #E6EDF3;
+    font-family: var(--fonte-principal);
+    outline: none;
+}
+
+.header-criacao button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #A78BFA;
+    color: #fff;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header-criacao button:hover {
+    opacity: 0.9;
+}
+
 @media (max-width: 768px) {
     .header-topo {
         flex-direction: row;

@@ -1,93 +1,96 @@
-// --- LÓGICA DE DRAG & DROP DO KANBAN ---
-document.querySelectorAll('.nada').forEach(nada => {
-    nada.addEventListener('dragstart', e => {
-        e.currentTarget.classList.add('dragging'); 
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const btnCriarCard = document.getElementById('btnCriarCard');
+    const inputCardTexto = document.getElementById('novoCardTexto');
+    const colunas = document.querySelectorAll('.coluna-kanban');
 
-    nada.addEventListener('dragend', e => {
-        e.currentTarget.classList.remove('dragging');
-    });
-});
+    window.toggleMenu = function(event) {
+        event.preventDefault();
+        const menu = document.getElementById('menuUsuario');
+        menu.classList.toggle('ativo');
+    };
 
-document.querySelectorAll('.kanban1').forEach(column => {
-    column.addEventListener('dragover', e => {
-        e.preventDefault();
-        e.currentTarget.classList.add('nada-hover');
-    });
-
-    column.addEventListener('dragleave', e => {
-        e.currentTarget.classList.remove('nada-hover');
-    });
-
-    column.addEventListener('drop', e => {
-        e.currentTarget.classList.remove('nada-hover');
-
-        const dragNada = document.querySelector('.nada.dragging');
-        if (dragNada) {
-            e.currentTarget.appendChild(dragNada);
+    document.addEventListener('click', (e) => {
+        const btnUsuario = document.getElementById('btn-usuario');
+        const menuUsuario = document.getElementById('menuUsuario');
+        
+        if (menuUsuario && btnUsuario && !btnUsuario.contains(e.target) && !menuUsuario.contains(e.target)) {
+            menuUsuario.classList.remove('ativo');
         }
     });
-});
 
-// --- MENU DE USUÁRIO (DROPDOWN) ---
-function toggleMenu(event) {
-    event.preventDefault(); 
-    const menu = document.getElementById('menuUsuario');
-    menu.classList.toggle('mostrar');
-}
+    if (btnCriarCard && inputCardTexto) {
+        btnCriarCard.addEventListener('click', criarNovoCard);
 
-window.addEventListener('click', function(event) {
-    const menu = document.getElementById('menuUsuario');
-    const btn = document.getElementById('btn-usuario');
-    
-    if (btn && menu && !btn.contains(event.target) && !menu.contains(event.target)) {
-        menu.classList.remove('mostrar');
+        inputCardTexto.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                criarNovoCard();
+            }
+        });
     }
-});
 
+    function criarNovoCard() {
+        const texto = inputCardTexto.value.trim();
+        if (!texto) return;
 
-// --- INTEGRAÇÃO COM A API DO GEMINI VIA SERVIDOR EXPRESS ---
-document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona todos os botões do Gemini nos cards
-    const botoesGemini = document.querySelectorAll("[class^='gemini-botao']");
+        const card = document.createElement('div');
+        card.className = 'nada';
+        card.draggable = true;
 
-    botoesGemini.forEach(botao => {
-        botao.addEventListener("click", async (event) => {
-            event.preventDefault(); // Evita recarregar a página pelo link (#)
+        card.innerHTML = `
+            <img class="user1" src="/imagens/user (3).png" alt="user_kanban">
+            <p>${texto}</p>
+            <div class="gemini-botao" draggable="false">
+                <a href="#">
+                    <img src="/imagens/Google_Gemini_icon_2025.svg.png" alt="Gemini">
+                </a>
+            </div>
+        `;
 
-            // 1. Encontra o card "nada" onde o botão foi clicado
-            const card = botao.closest(".nada");
-            
-            // 2. Pega o texto do parágrafo <p> que está dentro desse card específico
-            const textoTarefa = card.querySelector("p").innerText;
+        adicionarEventosDrag(card);
 
-            console.log(`🤖 Solicitando análise para: "${textoTarefa}"`);
+        const primeiraColuna = document.querySelector('.coluna-kanban .kanban1');
+        if (primeiraColuna) {
+            primeiraColuna.appendChild(card);
+        }
 
-            try {
-                // 3. Faz a requisição para o seu servidor Node.js local
-                const response = await fetch("http://localhost:3000/api/kanban/ai", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        prompt: `Faça um resumo bem curto e direto da seguinte tarefa de um Kanban: "${textoTarefa}"`
-                    })
-                });
+        inputCardTexto.value = '';
+    }
 
-                const dados = await response.json();
+    const cardsExistentes = document.querySelectorAll('.nada');
+    cardsExistentes.forEach(card => adicionarEventosDrag(card));
 
-                // 4. Exibe o resultado do Gemini
-                if (dados.resposta) {
-                    alert(`💡 Resumo do Gemini:\n\n${dados.resposta}`);
-                } else {
-                    alert("Não foi possível gerar o resumo.");
-                    console.error("Resposta inesperada do servidor:", dados);
-                }
+    function adicionarEventosDrag(card) {
+        card.addEventListener('dragstart', (e) => {
+            card.classList.add('arrastando');
+            e.dataTransfer.effectAllowed = 'move';
+        });
 
-            } catch (erro) {
-                console.error("Erro ao conectar com o servidor Node.js:", erro);
-                alert("Erro ao conectar com o servidor Express local. Certifique-se de que ele está rodando na porta 3000.");
+        card.addEventListener('dragend', () => {
+            card.classList.remove('arrastando');
+        });
+    }
+
+    colunas.forEach(coluna => {
+        const conteinerColuna = coluna.querySelector('.kanban1');
+        
+        if (!conteinerColuna) return;
+
+        coluna.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            coluna.classList.add('drag-over');
+        });
+
+        coluna.addEventListener('dragleave', () => {
+            coluna.classList.remove('drag-over');
+        });
+
+        coluna.addEventListener('drop', (e) => {
+            e.preventDefault();
+            coluna.classList.remove('drag-over');
+
+            const cardArrastando = document.querySelector('.arrastando');
+            if (cardArrastando) {
+                conteinerColuna.appendChild(cardArrastando);
             }
         });
     });
