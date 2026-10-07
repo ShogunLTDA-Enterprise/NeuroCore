@@ -168,10 +168,113 @@ body {
     font-size: 0.9rem;
 }
 
+.painel {
+    position: fixed;
+    top: 77px;                         
+    right: 8px;
+    width: 340px;
+    height: calc(100vh - 77px);
+    background: #161B22;
+    border-left: 1px solid #30363D;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateX(100%);       
+    transition: transform 0.3s ease;
+    z-index: 50;
+    border-radius: 20px;
+
+}
+
+.painel.aberto {
+    transform: translateX(0);
+}
+
+.painel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.painel-header h3 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.3rem;
+}
+
+.painel-header button {
+    background: none;
+    border: 0;
+    color: #8B949E;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.painel-header button:hover {
+    color: #A78BFA;
+}
+
+#lista-tarefas {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+#lista-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background: #21262D;
+    border-radius: 8px;
+}
+
+#lista-tarefas li button {
+    background: none;
+    border: 0;
+    color: #8B949E;
+    cursor: pointer;
+}
+
+#lista-tarefas li button:hover {
+    color: #f87171;
+}
+
+#form-tarefa {
+    display: flex;
+    gap: 8px;
+}
+
+#form-tarefa input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #30363D;
+    background: #0D1117;
+    color: #E6EDF3;
+}
+
+#form-tarefa button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: #8B5CF6;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.date.selecionado {
+    outline: 2px solid #A78BFA;
+    background: #8B5CF6;
+    color: #fff;
+}
+
 
 @media (max-width: 768px) {
     body {
-        margin-top: 30px;
+        
     }
 
 
@@ -183,7 +286,10 @@ body {
        
         
     }
-
+    .painel { 
+        width: 100%;
+        
+    }
 
 
     .calendario {
@@ -203,7 +309,7 @@ body {
     }
     .dias_da_semana{
         font-size: 17px;
-        margin: 1px;
+        margin: 2px;
     }
 
     .date{

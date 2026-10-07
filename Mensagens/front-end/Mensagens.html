@@ -50,9 +50,11 @@
         </div>
         
         <div class="header-direita">
+            <i class="bi bi-bell-fill" id="btn-notf"></i>
+
             <div class="usuario-topo">
                 <a href="#">
-                    <i class="bi bi-person-circle icone-usuario-branco ativo" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                    <i class="bi bi-person-circle icone-usuario-branco ativo" id="btn-usuario"></i>
                 </a>
 
                 <ul class="dropdown-menu" id="menuUsuario">
@@ -60,8 +62,12 @@
                     <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
                     <li><a href="/index.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                 </ul>
-                
             </div>
+        </div>    
+        
+        <div class="menu-not" id="barrinha">
+            <h3></h3>
+            <ul id="lista-notificacoes"></ul> 
         </div>
     </header>
 
