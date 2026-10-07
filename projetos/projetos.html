@@ -3,85 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../progresso/style.css">
+    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="/projetos/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="imagens/58e34500-eae7-460e-8223-71d9a443fb6e.ico" type="image/x-icon">
-    <title>Projetos - NeuroCore</title>
+    <title>Projetos</title>
+
 </head>
 <body>
-    <header class="cabecaralho">
-        <div class="cabecaralho-logo">
-            <a href="../index.html" class="logo-container">
-                <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="NeuroCore Logo">
-                <span class="textologo">Neuro<strong>Core</strong></span>
-            </a>
+    <header class="header-topo">
+        <div class="header-esquerda">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="icone" id="btn-exp">
+                </a>
+                <span class="logo-texto">Neuro<strong>Core</strong></span>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <ul>
+                    <li class="item-barra">
+                        <a href="/projetos/projetos.html">
+                            <span class="icone ativo"><i class="bi bi-house"></i></span>
+                            <span class="txt-link">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/progresso/progresso.html">
+                            <span class="icone"><i class="bi bi-clock"></i></span>
+                            <span class="txt-link">Kanban</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Mensagens/front-end/Mensagens.html">
+                            <span class="icone"><i class="bi bi-envelope"></i></span>
+                            <span class="txt-link">Mensagens</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Calendario/calendario.html">
+                            <span class="icone"><i class="bi bi-table"></i></span>
+                            <span class="txt-link">Atividades</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         
-        <nav class="cabecaralho-links">
-            <a href="/projetos/projetos.html" class="ativo"><i class="bi bi-house"></i> Projetos</a>
-            <a href="/progresso/progresso.html"><i class="bi bi-clock"></i> Kanban</a>
-            <a href="/Mensagens/front-end/Mensagens.html"><i class="bi bi-envelope"></i> Mensagens</a>
-            <a href="/Calendario/calendario.html"><i class="bi bi-table"></i> Atividades</a>
-        </nav>
-        
-        <div class="cabecaralho-acoes">
+        <div class="header-direita">
             <div class="usuario-topo">
-                <i class="bi bi-person-circle icone-usuario-branco" id="btn-usuario"></i>
-                <ul class="menu" id="menuUsuario">
+                <a href="#">
+                    <i class="bi bi-person-circle icone-usuario-branco ativo" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                </a>
+
+                <ul class="dropdown-menu" id="menuUsuario">
                     <li><a href="/Perfil/perfil.html"><i class="bi bi-person"></i> Meu Perfil</a></li>
                     <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
                     <li><a href="/index.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                 </ul>
+                
             </div>
         </div>
     </header>
+    
+    <section>
+         <div class="conteudo">
+                <h1 class="nome_aleatorio">Projeto TCC - Projetos</h1>
+                
+                <div class="kanban caixas">
+                   <h1 class="textosss">Kanban</h1>
+                   <span>Organize as tarefas por status e arraste entre colunas.</span>
+                   <div class="bolotinha">
+                        <span>12 tarefas</span>
+                   </div>
+                </div>
 
-    <main class="secao-projetos">
-        <div class="cabecaralho-projetos">
-            <span class="tag-contato">Painel Geral</span>
-            <h1 class="nome-aleatorio">Projeto TCC - Projetos</h1>
-            <p>Gerencie suas atividades, prazos e notificações em um único lugar.</p>
+                <div class="notific caixas">
+                  <h1 class="textosss">Notificações</h1>
+                  <span>Acompanhe atualizações e avisos recentes do projeto.</span>
+                  <div class="bolotinha2">
+                        <span>3 Novas</span>
+                   </div>
+                </div>
+
+                <div class="prog caixas">
+                    <h1 class="textosss">Progresso</h1>
+                    <span>Veja o andamento geral em relação ao prazo do Prjeto.</span>
+                    <div class="bolotinha3">
+                        <span>67%</span>
+                   </div>
+                </div>
+
+                <div class="tarefas caixas"> 
+                    <h1 class="textosss">Tarefas</h1>
+                    <span>Lista completa de tarefas com responsáveis e prazos.</span>
+                    <div class="bolotinha4">
+                        <span>5 Pendentes</span>
+                   </div>
+                </div>
         </div>
 
-        <div class="cards-tudo">
-            <a href="/progresso/progresso.html" class="card-item">
-                <div class="card-cabecaralho">
-                    <i class="bi bi-kanban icone-card"></i>
-                    <span class="coisa coisa-roxo">12 tarefas</span>
-                </div>
-                <h3>Kanban</h3>
-                <p>Organize as tarefas por status e arraste entre colunas.</p>
-            </a>
+    </section>
 
-            <div class="card-item">
-                <div class="card-cabecaralho">
-                    <i class="bi bi-bell icone-card"></i>
-                    <span class="coisa coisa-amarelo">3 Novas</span>
-                </div>
-                <h3>Notificações</h3>
-                <p>Acompanhe atualizações e avisos recentes do projeto.</p>
-            </div>
-
-            <div class="card-item">
-                <div class="card-cabecaralho">
-                    <i class="bi bi-graph-up-arrow icone-card"></i>
-                    <span class="coisa coisa-azul">67%</span>
-                </div>
-                <h3>Progresso</h3>
-                <p>Veja o andamento geral em relação ao prazo do Projeto.</p>
-            </div>
-
-            <div class="card-item">
-                <div class="card-cabecaralho">
-                    <i class="bi bi-list-check icone-card"></i>
-                    <span class="coisa coisa-roxo">5 Pendentes</span>
-                </div>
-                <h3>Tarefas</h3>
-                <p>Lista completa de tarefas com responsáveis e prazos.</p>
-            </div>
-        </div>
-    </main>
-
+    <footer class="copyrights">
+        <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="NeuroCore Mini Logo" width="40">
+        <p>&copy; 2026 Neurocore. Todos os direitos reservados.</p>
+    </footer>
     <script src="../progresso/progresso.js"></script>
 </body>
 </html>

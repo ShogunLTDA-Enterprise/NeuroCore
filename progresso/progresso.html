@@ -6,33 +6,61 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="imagens/58e34500-eae7-460e-8223-71d9a443fb6e.ico" type="image/x-icon">
-    <title>Progresso - NeuroCore</title>
+    <title>Progresso</title>
 </head>
 <body>
     
     <header class="header-topo">
-        <div class="navbar-logo">
-            <a href="../index.html" class="logo-container">
-                <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="NeuroCore Logo">
-                <span class="textologo">Neuro<strong>Core</strong></span>
-            </a>
+        <div class="header-esquerda">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img class="icone_site" src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="icone" id="btn-exp">
+                </a>
+                <span class="logo-texto">Neuro<strong>Core</strong></span>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <ul>
+                    <li class="item-barra">
+                        <a href="/projetos/projetos.html">
+                            <span class="icone"><i class="bi bi-house"></i></span>
+                            <span class="txt-link">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="progresso.html">
+                            <span class="icone ativo"><i class="bi bi-clock"></i></span>
+                            <span class="txt-link">Kanban</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Mensagens/front-end/Mensagens.html">
+                            <span class="icone"><i class="bi bi-envelope"></i></span>
+                            <span class="txt-link">Mensagens</span>
+                        </a>
+                    </li>
+                    <li class="item-barra">
+                        <a href="/Calendario/calendario.html">
+                            <span class="icone"><i class="bi bi-table"></i></span>
+                            <span class="txt-link">Atividades</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         
-        <nav class="navbar-links">
-            <a href="/projetos/projetos.html"><i class="bi bi-house"></i> Projetos</a>
-            <a href="/progresso/progresso.html" class="ativo"><i class="bi bi-clock"></i> Kanban</a>
-            <a href="/Mensagens/front-end/Mensagens.html"><i class="bi bi-envelope"></i> Mensagens</a>
-            <a href="/Calendario/calendario.html"><i class="bi bi-table"></i> Atividades</a>
-        </nav>
-        
-        <div class="navbar-acoes">
+        <div class="header-direita">
             <div class="usuario-topo">
-                <i class="bi bi-person-circle icone-usuario-branco" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                <a href="#">
+                    <i class="bi bi-person-circle icone-usuario-branco ativo" id="btn-usuario" onclick="toggleMenu(event)"></i>
+                </a>
+
                 <ul class="dropdown-menu" id="menuUsuario">
                     <li><a href="/Perfil/perfil.html"><i class="bi bi-person"></i> Meu Perfil</a></li>
                     <li><a href="../configurações/Conta.html"><i class="bi bi-gear"></i> Configurações</a></li>
                     <li><a href="/index.html"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
                 </ul>
+                
             </div>
         </div>
     </header>
@@ -119,7 +147,10 @@
             </div>
          </div>
     </section>
-
+    <footer class="copyrights">
+        <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="NeuroCore Mini Logo" width="40">
+        <p>&copy; 2026 Neurocore. Todos os direitos reservados.</p>
+    </footer>
     <script src="../progresso/progresso.js"></script>
 </body>
 </html>
