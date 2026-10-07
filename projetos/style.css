@@ -24,6 +24,8 @@
     height: 180px;
     margin: 10px;
     transition: .3s ease;
+    box-sizing: border-box;
+    padding: 4px;
 }
 
 .caixas h1{
