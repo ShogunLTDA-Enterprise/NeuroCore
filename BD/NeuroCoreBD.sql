@@ -20,7 +20,7 @@ CREATE TABLE Conversa(
 	usuarios_1_id INT,
 	usuarios_2_id INT,
 	CONSTRAINT fk_usuario_1 FOREIGN KEY(usuarios_1_id) REFERENCES Usuarios(id_usuarios) ON DELETE CASCADE,
-	CONSTRAINT fk_usuario_2 FOREIGN KEY(usuarios_2_id) REFERENCES Usuarios(id_usuarios) ON DELETE CASCADE,
+	CONSTRAINT fk_usuario_2 FOREIGN KEY(usuarios_2_id) REFERENCES Usuarios(id_usuarios),
 	criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE Mensagens(
 	Conteudo TEXT NOT NULL,
 	remetente_id INT,
 	CONSTRAINT conversa_id FOREIGN KEY(id_conversa) REFERENCES Conversa(id_conversa) ON DELETE CASCADE,
-	CONSTRAINT fk_remetente_id FOREIGN KEY(remetente_id) REFERENCES Usuarios(id_usuarios) ON DELETE CASCADE
+	CONSTRAINT fk_remetente_id FOREIGN KEY(remetente_id) REFERENCES Usuarios(id_usuarios)
 );
 
 CREATE TABLE Tarefas(

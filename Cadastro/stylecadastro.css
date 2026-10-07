@@ -103,14 +103,6 @@ body {
   border-color: var(--cor-roxo-btn);
 }
 
-.google-icon {
-  color: #ea4335;
-}
-
-.microsoft-icon {
-  color: #00a4ef;
-}
-
 .divider {
   display: flex;
   align-items: center;
