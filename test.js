@@ -8,7 +8,7 @@ async function testarConexao() {
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash', // Usando o modelo listado na sua chave
+      model: 'gemini-2.5-flash',
       contents: 'Responda apenas: "A API do Gemini está funcionando perfeitamente!"',
     });
 

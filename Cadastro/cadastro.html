@@ -9,27 +9,49 @@
 </head>
 <body>
 
-    <div class="login-container">
+    <header class="header-top">
+        <div class="logo-header">
+            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Logo NeuroCore">
+            <span>NeuroCore</span>
+        </div>
+    </header>
+
+    <main class="login-container">
         <h1 class="titulo">CADASTRO</h1>
         <h4 class="subtitulo">Cadastre-se com seu Email</h4>
-        <div class="logo-container">
-            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Cerebro de cor rosa">
+
+        <div class="social-login">
+            <button type="button" class="btn-google">
+                <i class="fa-brands fa-google google-icon"></i> Google
+            </button>
+            <button type="button" class="btn-google">
+                <i class="fa-brands fa-microsoft microsoft-icon"></i> Microsoft
+            </button>
         </div>
+
+        <div class="divider">
+            <span>OU</span>
+        </div>
+
         <form class="login-form">
             <div class="inputs">
-                <input type="text" id="user" required placeholder="Escreva seu nome">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" required placeholder="Escreva seu nome">
             </div>
 
             <div class="inputs">
-                <input type="email" id="user" required placeholder="Email">
+                <label for="email">E-mail de trabalho</label>
+                <input type="email" id="email" required placeholder="Email">
             </div>
 
             <div class="inputs">
+                <label for="senha">Senha</label>
                 <input type="password" id="senha" required placeholder="Senha">
             </div>
 
             <div class="inputs">
-                <input type="password" id="senha" required placeholder="Confirme a Senha">
+                <label for="confirma-senha">Confirme a Senha</label>
+                <input type="password" id="confirma-senha" required placeholder="Confirme a Senha">
             </div>
 
             <button type="submit" class="btn-enviar">Cadastrar</button>
@@ -37,8 +59,11 @@
 
         <div class="footer-links">
             <p>Já tem uma conta? <a href="../Login/login.html" class="link-footer">Login aqui!</a></p>
+            <p class="termos-texto">
+                Ao me cadastrar, eu concordo com os <a href="/termos.html">Termos de serviço</a> e os <a href="/termos.html">Termos específicos do produto</a> da NeuroCore e confirmo estar ciente da <a href="/termos.html">Declaração de privacidade</a>.
+            </p>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
