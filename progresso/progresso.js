@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-<<<<<<< HEAD
+
 // --- MENU DE USUÁRIO (DROPDOWN) ---
 const popups = [
     { botao: document.getElementById('btn-usuario'), alvo: document.getElementById('menuUsuario'), classe: 'mostrar'   },
@@ -49,7 +49,6 @@ document.addEventListener('click', () => fecharTodos());
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharTodos(); });
 
 
-=======
     if (btnCriarCard && inputCardTexto) {
         btnCriarCard.addEventListener('click', criarNovoCard);
 
@@ -63,7 +62,6 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharTodo
     function criarNovoCard() {
         const texto = inputCardTexto.value.trim();
         if (!texto) return;
->>>>>>> e045dd4f53fbcc5ff60e756095f1a5087def53fb
 
         const card = document.createElement('div');
         card.className = 'nada';
