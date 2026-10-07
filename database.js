@@ -5,7 +5,7 @@ const config = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     server: process.env.DB_SERVER || 'localhost', 
-    port: 1433, // Porta padrão do SQL Server
+    port: 1433,
     database: process.env.DB_DATABASE,
     options: {
         encrypt: false,
