@@ -49,6 +49,18 @@
     transform: translateX(10px);
 }
 
+.caixa-roxa{
+    border-top: 5px solid #A78BFA;
+}
+
+.caixa-amarela{
+    border-top: 5px solid #ffd500;
+}
+
+.caixa-azul{
+    border-top: 5px solid #96bffd;
+}
+
 .conteudo{
     display: flex;
     flex-direction: row;
@@ -70,7 +82,7 @@
 .bolotinha3{
     border-radius: 8px;
     margin-top: 15px;
-    color: rgb(150, 191, 253);
+    color: #96bffd;
 }
 
 .bolotinha4{
