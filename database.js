@@ -16,10 +16,10 @@ const config = {
 async function conectarBanco() {
     try {
         let pool = await sql.connect(config);
-        console.log("✅ Conectado ao SQL Server com sucesso!");
+        console.log("Conectado ao SQL Server com sucesso!");
         return pool;
     } catch (err) {
-        console.error("❌ Erro ao conectar ao banco de dados:", err);
+        console.error("Erro ao conectar ao banco de dados:", err);
     }
 }
 
