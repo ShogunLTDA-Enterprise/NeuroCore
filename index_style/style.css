@@ -236,6 +236,9 @@ body {
 .blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
 .blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
+hr{
+    width: 800px;
+}
 
 .projeto {
     padding: 100px 8%;
@@ -550,6 +553,7 @@ body {
     font-size: 0.9rem;
 }
 
+
 /* --- ANIMAÇÕES --- */
 @keyframes angle {
     from { transform: rotate(0deg); }
@@ -559,4 +563,84 @@ body {
 @keyframes moving {
     from { transform: translate(-50%, -50%) translateY(-120px); }
     to { transform: translate(-50%, -50%) translateY(120px); }
+}
+
+@media (max-width: 768px) {
+
+    /* navbar */
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+    .menu-toggle { display: flex; }
+
+    .navbar-links,
+    .navbar-acoes {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+        padding-top: 12px;
+    }
+    .navbar.aberto .navbar-links,
+    .navbar.aberto .navbar-acoes { display: flex; }
+
+    .blobs{
+        display: none;
+    }
+    
+    .Inicio {
+        padding: 0 20px;
+        text-align: center;
+    }
+    .Inicio h1 { font-size: clamp(2.2rem, 11vw, 3rem); }
+    .Inicio span { font-size: 1rem; }
+    .Inicio-botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    
+    .projeto,
+    .Gemini,
+    .contato,
+    .sobre,
+    .cards-container,
+    .integrantes {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .projeto-texto,
+    .ex,
+    .gemini-info,
+    .gemini-video,
+    .contato-info,
+    .contato-form,
+    .info-projeto,
+    .qd,
+    .nos {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ex input { width: 100%; }
+
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+
+    .info-contato-links span,
+    .info-contato-links a { word-break: break-word; }
+
+    .btn-enviar { width: 100%; }
+
+    .copyrights { padding: 30px 20px; }
 }
