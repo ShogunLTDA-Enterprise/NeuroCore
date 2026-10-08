@@ -18,36 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const popups = [
+        { botao: document.getElementById('btn-usuario'), alvo: document.getElementById('menuUsuario'), classe: 'mostrar' },
+        { botao: document.getElementById('btn-notf'),    alvo: document.getElementById('barrinha'),    classe: 'aberto' },
+    ].filter(p => p.botao && p.alvo);
 
-// --- MENU DE USUÁRIO (DROPDOWN) ---
-const popups = [
-    { botao: document.getElementById('btn-usuario'), alvo: document.getElementById('menuUsuario'), classe: 'mostrar'   },
-    { botao: document.getElementById('btn-notf'),    alvo: document.getElementById('barrinha'),    classe: 'aberto' },
-].filter(p => p.botao && p.alvo);
+    function fecharTodos(exceto) {
+        popups.forEach(p => {
+            if (p !== exceto) p.alvo.classList.remove(p.classe);
+        });
+    }
 
-function fecharTodos(exceto) {
     popups.forEach(p => {
-        if (p !== exceto) p.alvo.classList.remove(p.classe);
-    });
-}
+        p.botao.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const vaiAbrir = !p.alvo.classList.contains(p.classe);
+            fecharTodos(p);
+            p.alvo.classList.toggle(p.classe, vaiAbrir);
+        });
 
-popups.forEach(p => {
-    p.botao.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();               // impede o clique de "vazar" para o document
-        const vaiAbrir = !p.alvo.classList.contains(p.classe);
-        fecharTodos(p);                    // fecha os outros
-        p.alvo.classList.toggle(p.classe, vaiAbrir);
+        p.alvo.addEventListener('click', (e) => e.stopPropagation());
     });
 
-    // clicar dentro do popup não fecha ele
-    p.alvo.addEventListener('click', (e) => e.stopPropagation());
-});
-
-// clicar fora ou apertar Esc fecha tudo
-document.addEventListener('click', () => fecharTodos());
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharTodos(); });
-
+    document.addEventListener('click', () => fecharTodos());
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharTodos(); });
 
     if (btnCriarCard && inputCardTexto) {
         btnCriarCard.addEventListener('click', criarNovoCard);
