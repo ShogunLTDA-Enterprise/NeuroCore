@@ -25,7 +25,7 @@
     margin: 10px;
     transition: .3s ease;
     box-sizing: border-box;
-    padding: 4px;
+    padding: 8px;
 }
 
 .caixas h1{
@@ -43,12 +43,6 @@
     left: 20px;
 }
 
-.caixas:hover {
-    border-color: #A78BFA;
-    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
-    transform: translateX(10px);
-}
-
 .caixa-roxa{
     border-top: 5px solid #A78BFA;
 }
@@ -57,9 +51,28 @@
     border-top: 5px solid #ffd500;
 }
 
-.caixa-azul{
+.caixa-azul {
     border-top: 5px solid #96bffd;
 }
+
+.caixa-roxa:hover {
+    border-top: 5px solid #A78BFA;
+    box-shadow: 0 0 15px #A78BFA;
+    transform: translateX(10px);
+}
+
+.caixa-amarela:hover {
+    border-top: 5px solid #ffd500;
+    box-shadow: 0 0 15px #ffd500;
+    transform: translateX(10px);
+}
+
+.caixa-azul:hover {
+    border-top: 5px solid #96bffd;
+    box-shadow: 0 0 15px #96bffd;
+    transform: translateX(10px);
+}
+
 
 .conteudo{
     display: flex;

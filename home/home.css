@@ -1,15 +1,19 @@
 .caixa_proj {
-    border: 1px 0 solid;
-    width: 400px;
+    border: 2px solid #21262D;
+    width: 500px;
     height: auto;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #161B22;
     
     transition: 0.2s;
 }
 
+.caixa_proj {
+    border-left: 5px solid #A78BFA;
+}
+
 .text_proj {
-    color: #000;
+    color: #E6EDF3;
     padding: 10px;
 }
 
