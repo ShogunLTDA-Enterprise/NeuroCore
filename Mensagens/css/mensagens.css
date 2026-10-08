@@ -45,10 +45,12 @@ form{
 
 .chat_messages {
     flex-grow: 1;
-    padding: 10px 15px;
+    padding: 10px 12px;
+    max-width: 1250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    overflow: hidden;
     
 }
 
@@ -108,7 +110,7 @@ form{
 .message-self {
     background-color: #8B5CF6;
     color: #FFFFFF;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 10px 10px 0px 10px;
 }
 
 .message-other {
@@ -240,7 +242,7 @@ ul li.icone-usuario a:hover {
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        margin: -15px;
+        margin: 15px;
         font-size: 4px;
     }
     .barra_lateral_direita{
@@ -251,9 +253,7 @@ ul li.icone-usuario a:hover {
         
     }
 
-    .chat_messages{
-        margin-left: 1px;
-    }
+
 
     .chat_form{
         width: 75%;
@@ -275,7 +275,6 @@ ul li.icone-usuario a:hover {
     .barra_lateral {
         width: 100%;
         height: auto;
-        
         flex-direction: row;
         align-items: center;
         
