@@ -36,7 +36,27 @@ body {
   max-width: 1200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
+}
+
+.btn-sair {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--cor-border);
+  border-radius: 6px;
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-sair:hover,
+.btn-sair:focus-visible {
+  background-color: var(--cor-input-bg);
+  border-color: var(--cor-roxo-btn);
 }
 
 .logo-header {
@@ -51,6 +71,10 @@ body {
   width: 32px;
   height: 32px;
   object-fit: contain;
+}
+
+.roxo {
+  color: #A78BFA;
 }
 
 .login-container {
