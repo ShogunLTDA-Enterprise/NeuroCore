@@ -4,7 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1d1d1d;
+  background-color: #0d0d12;
 }
 
 .navbar {
@@ -16,7 +16,7 @@ body {
     background: rgba(13, 13, 13, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid #7c3aed33;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -37,7 +37,7 @@ body {
 .textologo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #7c3aed;
+    color: #a78bfa;
     text-decoration: none;
     font-family: 'Archivo Black', sans-serif;
     letter-spacing: 1px;
@@ -52,13 +52,13 @@ body {
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Nunito', sans-serif;
-    color: #a0a0a0;
+    color: #9ca3af;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-    color: #7c3aed;
+    color: #a78bfa;
 }
 
 .navbar-acoes {
@@ -70,7 +70,7 @@ body {
 
 .btn-entrar {
     font-size: 1rem;
-    color: #fff;
+    color: #f3f4f6;
     text-decoration: none;
     transition: opacity 0.3s;
 }
@@ -81,7 +81,7 @@ body {
 
 .btn-criar {
     padding: 0.6rem 1.4rem;
-    background: #7c3aed;
+    background: #8b5cf6;
     border-radius: 8px;
     color: #fff;
     font-size: 1rem;
@@ -90,7 +90,7 @@ body {
 }
 
 .btn-criar:hover { 
-    background: #6d28d9; 
+    background: #7c3aed; 
     transform: translateY(-1px);
 }
 
@@ -99,14 +99,13 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    border: 1px solid #444;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 40px;
     max-width: 650px;
     margin: 60px auto;
-    background-color: #252323;
+    background-color: #14141d;
     border-radius: 12%;
     overflow: hidden;
-    
 }
 
 form{
@@ -118,21 +117,21 @@ form{
 input:not([type="radio"]), textarea, select {
   width: 100%;
   font-size: 14px;
-  background-color: #2a2a2a;
-  color: white;
+  background-color: #1e1e2a;
+  color: #ffffff;
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid #555;
+  border: 1px solid #2e2e3e;
   font-family: 'Inter', sans-serif;
 }
 
 label{
   font-size: 13px;
-  color: #aaa;
+  color: #9ca3af;
 }
 
 h2 {
-    color: white;
+    color: #ffffff;
     margin-bottom: 24px;
 }
 
@@ -146,7 +145,7 @@ h2 {
 }
 
 .cores input[type="radio"]:checked + label {
-    border-color: white;
+    border-color: #ffffff;
 }
 
 .botao{
@@ -180,6 +179,6 @@ a{
 }
 
 input[type="radio"]:checked + .bolinha-cor {
-    border-color: white; 
+    border-color: #ffffff; 
     transform: scale(1.1);
 }

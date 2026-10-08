@@ -31,7 +31,6 @@ body {
     color: #fff;
 }
 
-/* --- NAVBAR CUSTOMIZADA --- */
 .navbar {
     display: flex;
     align-items: center;
@@ -121,7 +120,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* --- HERO SECTION --- */
 .secao-neurocore {
     position: relative; 
     min-height: 100vh;
@@ -200,7 +198,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- BLOBS BACKGROUND --- */
 .blobs {
     position: absolute;
     width: 100%;
@@ -234,7 +231,7 @@ body {
 .blob:nth-child(4) { --angle-delay: -9s; --moving-delay: -6s; --color: #220a42; }
 .blob:nth-child(5) { --angle-delay: -12s; --moving-delay: -8s; --color: #692dd8; }
 
-/* --- SEÇÃO PROJETO --- */
+
 .projeto {
     padding: 100px 8%;
     width: 100%;
