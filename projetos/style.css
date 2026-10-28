@@ -132,28 +132,28 @@
 
 @media (max-width: 768px) {
 
-    /* cabeçalho: só os ícones do menu */
-    .logo-texto { font-size: 1.1rem; }
-    .menu-navegacao .txt-link { display: none; }
-    .menu-navegacao ul { gap: 14px; }
-    .menu-navegacao .icone { font-size: 1.4rem; }
-
-    /* painel de notificações ocupa a tela toda */
-    .menu-not { width: 100%; }
-
-    .conteudo {
-        padding: 16px;
-        gap: 14px;
+    .body{
+        display: flex;
+        flex-direction: column;
+        
     }
 
-    .nome_aleatorio { font-size: 1.5rem; }
-
-    /* hover lateral estoura a tela no celular, troca por subida leve */
-    .caixa-roxa:hover,
-    .caixa-amarela:hover,
-    .caixa-azul:hover {
-        transform: translateY(-4px);
+    .nome_aleatorio{
+        white-space: nowrap;
+        font-size: 28px;
+    }
+    
+    .conteudo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    
     }
 
-    .copyrights { padding: 30px 20px; }
+    .caixas{
+        
+    }
+
 }

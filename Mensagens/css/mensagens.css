@@ -71,16 +71,19 @@ form{
 
 
 .chat_input {
-    flex: 1;                 
+    flex: 1;              
     padding: 10px 15px;
     border-radius: 8px;
     border: 1px solid #A78BFA;
     background-color: #1e232a;
     color: #ffffff;
+    line-height: auto;
 }
 
+
+
 .chat_input:focus {
-    border: 1px solid #A78BFA;
+    
 }
 
 .chat_button {
@@ -95,6 +98,8 @@ form{
     color: #A78BFA;
 }
 
+
+
 .chat_button > i {
     font-size: 1.8rem;
 }
@@ -106,7 +111,7 @@ form{
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 15px;
-    line-height: 22px;
+    height: auto;
 }
 
 .message-self {
@@ -119,6 +124,7 @@ form{
     background-color: #21262D;
     color: #E6EDF3;
     border-radius: 10px 10px 10px 0px;
+    
 }
 
 .message-sender {
@@ -286,18 +292,17 @@ ul li.icone-usuario a:hover {
     }
     .barra_lateral_direita{
         display: none;
+
     }
     .texto{
         font-size: 11px;
         
     }
 
-
-
     .chat_form{
-        width: 75%;
-        
-        
+        width: 90%;
+        margin-left: 12px;
+        height: auto;
     }
 
     .chat_input{
@@ -307,29 +312,9 @@ ul li.icone-usuario a:hover {
     
     .caixa_imagem {
         width: 10px;
-        height:10px;
+        height: auto;
         
     }
     
-    .barra_lateral {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        align-items: center;
-        
-    }
 
-    .barra_lateral ul {
-        display: flex; 
-        margin-top: 0;
-    }
-
-    .barra_lateral .txt-link {
-        display: none; 
-    }
-
-    .barra_lateral .icone {
-        margin-right: 60;
-        font-size: 1.5rem; 
-    }
 }
