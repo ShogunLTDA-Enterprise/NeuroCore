@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Mensagens/css/mensagens.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="imagens/58e34500-eae7-460e-8223-71d9a443fb6e.ico" type="image/x-icon">
+    
     <title>Mensagens</title>
 </head>
 <body>
@@ -71,127 +72,91 @@
         </div>
     </header>
 
-    <section>
-        <nav class="barra_lateral_direita">
-             <ul>
-                <li class="icone-usuario online mestre">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/43920402.png" alt="RandomPerson"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                <li class="icone-usuario online mestre">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/2351.webp" alt="Gustavo"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="icone-usuario online">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/unnamed.jpg" alt="Vinicius13"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                 <li class="icone-usuario offline">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/Sem título.jpg" alt="LulaDroid"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="icone-usuario offline">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/Sonic.png" alt="Sonic???"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="icone-usuario offline">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/61bYI0O1+fL._AC_UF1000,1000_QL80_.jpg" alt="Elon Musk uma vez disse"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="icone-usuario offline">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/Foto_oficial_de_Luiz_Inácio_Lula_da_Silva_(estreita).jpg.webp" alt="O povo quer goza"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="icone-usuario offline">
-                    <a>
-                        <div class="card-content">
-                            <div class="card-back">
-                                <span class="icone"><img class="imagem" src="/imagens/0dceb32eb0bb13fd4f8c50dcc2395444.webp" alt="Ninguém vai roubar meu telefone"></span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-           
-    </section>
+    <aside class="barra_lateral_esquerda">
+        <div class="card-back">
+            <img class="imagem" src="/imagens/43920402.png" alt="RandomPerson">
+            <span class="icone"></span>
+        </div>
 
-    <section class="chat" id="chat">
-        <section class="chat_messages">
+        <div class="card-back">
+            <img class="imagem" src="/imagens/2351.webp" alt="Gustavo">
+            <span class="icone"></span>
+        </div>
 
-            <div class="message-self">Olá, Mundo!</div>
-         
-            <div class="message-other">
-                <span class="message-sender">RandomPerson</span>
-                <p class="texto">Olá, Seja bem vindo a NeuroCore! O Nosso Projeto de TCC do 3° Ano do Ensino Médio que ajuda no planejamento e na organização de projetos pessoais e empresariais.</p>
-            </div>
-            <div class="message-other">
-                <span class="message-sender">RandomPerson</span>
-                <p class="texto">Esse é um teste de caixa de texto com Imagem!</p>
-                <div class="caixa_imagem">
-                    <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="cerebro.png">
+        <div class="card-back">
+            <img class="imagem" src="/imagens/unnamed.jpg" alt="Vinicius13">
+            <span class="icone"></span>
+        </div>
+
+        <div class="card-back">
+            <img class="imagem" src="/imagens/Sem título.jpg" alt="LulaDroid">
+            <span class="icone"></span>
+        </div>
+
+        <div class="card-back">
+            <img class="imagem" src="/imagens/Sonic.png" alt="Sonic???">
+            <span class="icone"></span>
+        </div>
+
+        <div class="card-back">
+            <img class="imagem" src="/imagens/61bYI0O1+fL._AC_UF1000,1000_QL80_.jpg" alt="Elon Musk">
+            <span class="icone"></span>
+        </div>
+
+        <div class="card-back">
+            <img class="imagem" src="/imagens/Foto_oficial_de_Luiz_Inácio_Lula_da_Silva_(estreita).jpg.webp" alt="Lula">
+            <span class="icone"></span>
+        </div>
+
+        <div class="card-back">
+            <img class="imagem" src="/imagens/0dceb32eb0bb13fd4f8c50dcc2395444.webp" alt="Avatar">
+            <span class="icone"></span>
+        </div>
+    </aside>
+
+
+    <div class="container-geral"></div>
+        <main class="chat-area">
+            <div class="container-msg">
+            
+            
+                <div class="card-msg">
+                    <span class="perfil-msg">RandomPerson</span>
+                    <p class="text-msg">Esse é um teste de caixa de texto com Imagem!</p>
+                    <img src="../imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="">
                 </div>
-            </div>
-            <div class="message-other">
-                <span class="message-sender">RandomPerson</span>
-                <p class="texto">Esse é um teste de caixa de texto com Arquivo!</p>
-                <div class="caixa_arquivo">
-                    <div class="textos">
-                        <p>Nome do Arquivo</p>
-                        <p class="text_arquivo">X.XX gb</p>
-                        <a class="download" href="#">
-                            <i class="bi bi-download"></i>
-                        </a>
+        
+                
+                <div class="card-msg">
+                    <span class="perfil-msg">RandomPerson</span>
+                    <p class="text-msg">Esse é um teste de caixa de texto com Arquivo!</p>
+                    <div class="anexo">
+                    <div class="info">
+                        <span class="nome">Arquivo.pdf</span>
+                        <span class="tamanho">2.4 MB</span>
+                    </div>
+                    <button class="btn-download" ><img src="../imagens/downloadamarelo.png"></button>
                     </div>
                 </div>
+        
+                
+                <div class="card-msg self">
+                    <p class="text-msg">Mensagem enviada com sucesso!</p>
+                </div>
+        
+                </div>
+                <div class="chat-input-container">
+                    <button class="btn-arquivo">+</button>
+                    <input type="text" class="chat-input" placeholder="Digite uma mensagem...">
+                    <button class="btn-envio">➔</button>
+                    
+                </div>
             </div>
+        </main>
 
-            <div class="message-writer"> </div>
 
-        </section>
-
-        <form class="chat_form">
-            <input id="chat_input" type="text" class="chat_input" placeholder="Digite uma mensagem" required>
-            <button type="submit" class="chat_button">
-                <i class="bi bi-send"></i>
-            </button>
-        </form>
-
-    </section>
+    </div>
+    
 
     
     

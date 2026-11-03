@@ -13,17 +13,23 @@ const colors = [
 ]
 
 const getRandomColor = () => {
-    const randomIndex = Math.random()
+    const randomIndex = (Math.floor(Math.random()) = colors.length)
+    return colors (randomIndex)
 }
 
 const user = { id: "", name: "", password: "", color: "" }
+
+let websocket
 
 const handleSubmit = (event) => {
     event.preventDefault()
 
     user.id = crypto.randomUUID()
     user.name = loginInput.value
+    user.color = getRandomColor
     user.password = loginPass.value
+
+    websocket = new WebSocket("ws://localhost:8080")
 
     console.log(user)
 }
@@ -32,6 +38,8 @@ loginForm.addEventListener("submit", handleSubmit)
 
 const container = document.querySelectorAll('.card')
 const card = document.getElementById('card1')
+
+
 
 container.forEach((card, indice) => {
     cadastro.addEventListener('click', () => {

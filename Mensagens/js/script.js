@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const chatForm = document.querySelector(".chat_form");
-    const messageField = document.querySelector(".chat_input");
+    const chatForm = document.querySelector("chat-input-container");
+    const messageField = document.querySelector(".chat-input");
     const messagesContainer = document.querySelector(".chat_messages");
 
     function sendMessage() {
