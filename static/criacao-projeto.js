@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const emailsMembros = document.getElementById('membros').value
+            .split(',')
+            .map((email) => email.trim())
+            .filter(Boolean);
+        const emailsUnicos = [...new Map(
+            emailsMembros.map((email) => [email.toLowerCase(), email])
+        ).values()];
+
         try {
             const projetosSalvos = JSON.parse(localStorage.getItem(CHAVE_PROJETOS) || '[]');
             if (!Array.isArray(projetosSalvos)) {
@@ -55,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projetosSalvos.push({
                 nome: document.getElementById('nome').value.trim(),
                 descricao: document.getElementById('descricao').value.trim(),
-                emailMembro: document.getElementById('membros').value.trim(),
+                emailsMembros: emailsUnicos,
                 inicio: document.getElementById('inicio').value,
                 prazo: document.getElementById('prazo').value,
                 template: document.getElementById('Template').value,

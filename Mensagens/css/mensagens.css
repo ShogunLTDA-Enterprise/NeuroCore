@@ -105,19 +105,16 @@ body{
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px;
-    margin-bottom: 28px;
-    border-radius: 10px;
+    padding: 10px 12px;
+    margin: -4px 0 24px;
     color: var(--cor-texto);
-    text-decoration: none;
 }
 
 .perfil-lateral i {
     color: var(--cor-do-icone);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
-.perfil-lateral:hover,
 .membro-lateral:hover {
     background-color: #21262D;
 }

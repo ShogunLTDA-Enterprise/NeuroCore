@@ -38,27 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const emailsVistos = new Set();
     projetos.forEach((projeto) => {
-        if (!projeto || typeof projeto.emailMembro !== 'string') return;
+        if (!projeto) return;
 
-        const email = projeto.emailMembro.trim();
-        if (!email) return;
+        const emailsMembros = Array.isArray(projeto.emailsMembros)
+            ? projeto.emailsMembros
+            : typeof projeto.emailMembro === 'string' ? [projeto.emailMembro] : [];
 
-        const chaveEmail = email.toLowerCase();
-        if (emailsVistos.has(chaveEmail)) return;
-        emailsVistos.add(chaveEmail);
+        emailsMembros.forEach((emailMembro) => {
+            if (typeof emailMembro !== 'string') return;
 
-        const item = document.createElement('li');
-        item.className = 'membro-lateral';
+            const email = emailMembro.trim();
+            if (!email) return;
 
-        const icone = document.createElement('i');
-        icone.className = 'bi bi-person-circle';
-        icone.setAttribute('aria-hidden', 'true');
+            const chaveEmail = email.toLowerCase();
+            if (emailsVistos.has(chaveEmail)) return;
+            emailsVistos.add(chaveEmail);
 
-        const nome = document.createElement('span');
-        nome.textContent = email.split('@')[0];
+            const item = document.createElement('li');
+            item.className = 'membro-lateral';
 
-        item.append(icone, nome);
-        listaMembros.appendChild(item);
+            const icone = document.createElement('i');
+            icone.className = 'bi bi-person-circle';
+            icone.setAttribute('aria-hidden', 'true');
+
+            const nome = document.createElement('span');
+            nome.textContent = email.split('@')[0];
+
+            item.append(icone, nome);
+            listaMembros.appendChild(item);
+        });
     });
 
     estadoMembros.textContent = emailsVistos.size

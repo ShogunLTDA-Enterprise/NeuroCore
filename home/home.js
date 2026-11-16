@@ -41,7 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
             : projeto.nome;
         texto.appendChild(nome);
 
-        const quantidadeMembros = 1 + (projeto.emailMembro ? 1 : 0);
+        const emailsMembros = Array.isArray(projeto.emailsMembros)
+            ? projeto.emailsMembros
+            : typeof projeto.emailMembro === 'string' ? [projeto.emailMembro] : [];
+        const convidados = new Set(
+            emailsMembros
+                .filter((email) => typeof email === 'string' && email.trim())
+                .map((email) => email.trim().toLowerCase())
+        );
+        const quantidadeMembros = 1 + convidados.size;
         const membros = document.createElement('p');
         membros.className = 'membros_proj';
         membros.textContent = `${quantidadeMembros} membros`;
