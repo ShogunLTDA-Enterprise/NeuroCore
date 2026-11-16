@@ -1,54 +1,68 @@
-const login = document.querySelector(".login")
-const loginForm = login.querySelector(".login_form")
-const loginInput = login.querySelector(".login_input")
-const loginPass = login.querySelector(".login_pass")
+// Acesso de administrador (acesso local, sem banco de dados).
+const ADMIN = { email: 'elonmusk@gmail.com', senha: 'Bolsolula' };
 
-const colors = [
-    "cadetblue",
-    "darkgoldenrod",
-    "cornflowerblue",
-    "darkkhaki",
-    "hotpink",
-    "gold"
-]
+const form = document.querySelector('.login-form');
+const emailInput = document.getElementById('email');
+const senhaInput = document.getElementById('senha');
+const mensagem = document.getElementById('mensagem-login');
+const botao = form.querySelector('.btn-enviar');
 
-const getRandomColor = () => {
-    const randomIndex = (Math.floor(Math.random()) = colors.length)
-    return colors (randomIndex)
+function mostrarErro(texto) {
+    mensagem.textContent = texto;
+    mensagem.hidden = false;
 }
 
-const user = { id: "", name: "", password: "", color: "" }
-
-let websocket
-
-const handleSubmit = (event) => {
-    event.preventDefault()
-
-    user.id = crypto.randomUUID()
-    user.name = loginInput.value
-    user.color = getRandomColor
-    user.password = loginPass.value
-
-    websocket = new WebSocket("ws://localhost:8080")
-
-    console.log(user)
+async function registrarErro(origem, erro) {
+    try {
+        await fetch('/api/erros', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ origem, mensagem: erro.message }),
+        });
+    } catch {
+        /* sem conexão: nada a fazer */
+    }
 }
 
-loginForm.addEventListener("submit", handleSubmit)
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    mensagem.hidden = true;
 
-const container = document.querySelectorAll('.card')
-const card = document.getElementById('card1')
+    const email = emailInput.value.trim();
+    const senha = senhaInput.value;
 
+    if (!email || !senha) {
+        mostrarErro('Preencha e-mail e senha.');
+        return;
+    }
 
+    if (email.toLowerCase() === ADMIN.email && senha === ADMIN.senha) {
+        sessionStorage.setItem('neurocore.admin', '1');
+        window.location.href = '/admin/admin.html';
+        return;
+    }
 
-container.forEach((card, indice) => {
-    cadastro.addEventListener('click', () => {
-        const botaoSelecionado = document.querySelector(".botao.selecionado");
-        botaoSelecionado.classList.remove("selecionado");
-        botao.classList.add("selecionado");
+    botao.disabled = true;
+    try {
+        const resposta = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, senha }),
+        });
+        const dados = await resposta.json();
 
-        const personagemSelecionado = document.querySelector(".personagem.selecionado");
-        personagemSelecionado.classList.remove("selecionado");
-        personagens[indice].classList.add("selecionado");
-    });
-})
+        if (!resposta.ok) {
+            mostrarErro(dados.erro || 'Não consegui entrar.');
+            return;
+        }
+
+        localStorage.setItem('neurocore.usuario', JSON.stringify({ id: dados.id, nome: dados.nome, email: dados.email }));
+        window.location.href = '/home/home.html';
+    } catch (erro) {
+        console.error(erro);
+        mostrarErro('Não consegui falar com o servidor. Tente de novo.');
+        registrarErro('login', erro);
+    } finally {
+        botao.disabled = false;
+    }
+});

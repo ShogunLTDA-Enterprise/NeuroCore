@@ -1,0 +1,137 @@
+/* Painel administrativo — usa a mesma paleta do restante do site */
+
+.admin-main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px 0 40px;
+}
+
+.logo-header small {
+  font-family: var(--fonte-secundaria);
+  font-size: 0.75rem;
+  color: #a4a6b5;
+  margin-left: 6px;
+}
+
+.cards-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.card-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background-color: var(--cor-barra);
+  border: 1px solid var(--cor-border);
+  border-radius: 8px;
+}
+
+.card-resumo span {
+  font-size: 0.85rem;
+  color: #a4a6b5;
+}
+
+.card-resumo strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.card-resumo.alerta strong {
+  color: #f0a4a4;
+}
+
+.painel {
+  background-color: var(--cor-barra);
+  border: 1px solid var(--cor-border);
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.painel h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.painel-titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.painel input[type="search"] {
+  min-width: 240px;
+  padding: 8px 12px;
+  background-color: var(--cor-input-bg);
+  border: 1px solid var(--cor-border);
+  border-radius: 8px;
+  color: var(--cor-texto);
+  font: inherit;
+}
+
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-border);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+th {
+  color: #a4a6b5;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td.vazio {
+  text-align: center;
+  color: #a4a6b5;
+  padding: 24px;
+}
+
+.btn-sair {
+  cursor: pointer;
+  background: transparent;
+  color: var(--cor-texto);
+  font: inherit;
+  font-weight: 700;
+}
+
+/* Acabamento: foco visível para teclado e movimento reduzido */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #A78BFA;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

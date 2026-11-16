@@ -1,0 +1,220 @@
+/* Layout comum das páginas de configurações (Conta e Perfil) */
+
+.header-topo .dropdown-menu {
+    display: none;
+}
+
+.header-topo .dropdown-menu.mostrar {
+    display: block;
+}
+
+.config-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 110px 24px 48px;
+    min-height: 100vh;
+}
+
+.config-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-self: start;
+    position: sticky;
+    top: 100px;
+}
+
+.config-menu h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #8B949E;
+    margin-bottom: 8px;
+}
+
+.config-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.config-menu a:hover {
+    background-color: var(--cor-barra);
+}
+
+.config-menu a[aria-current="page"] {
+    background-color: var(--cor-barra);
+    color: var(--cor-do-icone);
+    border-left: 3px solid var(--cor-do-icone);
+}
+
+.config-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.config-conteudo > h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.config-sub {
+    color: #8B949E;
+    margin-top: -14px;
+}
+
+.config-card {
+    background-color: var(--cor-barra);
+    border: 1px solid var(--cor-das-sombras);
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.config-card h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.config-card p {
+    color: #8B949E;
+    font-size: 0.92rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.88rem;
+    color: #C9D1D9;
+}
+
+.campo input {
+    padding: 10px 12px;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-das-sombras);
+    border-radius: 8px;
+    color: var(--cor-texto);
+    font: inherit;
+}
+
+.campo input:read-only {
+    color: #8B949E;
+    cursor: not-allowed;
+}
+
+.campo input:focus {
+    border-color: var(--cor-do-icone);
+    outline: none;
+}
+
+.campo input:focus-visible {
+    outline: 2px solid #A78BFA;
+    outline-offset: 2px;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-config {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #7C3AED;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-config:hover {
+    background-color: #6D28D9;
+}
+
+.btn-config:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.btn-config.secundario {
+    background: transparent;
+    border-color: var(--cor-das-sombras);
+    color: var(--cor-texto);
+}
+
+.btn-config.secundario:hover {
+    background-color: var(--cor-das-sombras);
+}
+
+.feedback {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.feedback.erro {
+    background-color: rgba(248, 113, 113, 0.12);
+    border-color: #f87171;
+    color: #fecaca;
+}
+
+.feedback.sucesso {
+    background-color: rgba(52, 211, 153, 0.12);
+    border-color: #34d399;
+    color: #a7f3d0;
+}
+
+.info-lista {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 20px;
+    font-size: 0.95rem;
+}
+
+.info-lista dt {
+    color: #8B949E;
+}
+
+.info-lista dd {
+    color: var(--cor-texto);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .config-layout {
+        grid-template-columns: 1fr;
+        padding-top: 90px;
+    }
+
+    .config-menu {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .config-menu h2 {
+        width: 100%;
+    }
+}
