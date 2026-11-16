@@ -24,25 +24,157 @@ html{
 }
 
 body{
-    padding-top: 120px;
+    padding-top: 70px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
-    margin: 12px;
+    margin: 0;
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.barra_lateral_esquerda{
-    display: none;
+.btn-menu-lateral {
+    position: relative;
+    align-self: flex-end;
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #2d2f3d;
+    border-radius: 10px;
+    background-color: #1a1b23;
+    color: var(--cor-do-icone);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.btn-menu-lateral:hover {
+    background-color: #251d38;
+}
+
+.barra_lateral_esquerda {
+    position: fixed;
+    z-index: 1100;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    width: min(280px, 85vw);
+    padding: 68px 18px 20px;
+    overflow-y: auto;
+    background-color: var(--cor-barra);
+    border-left: 1px solid var(--cor-das-sombras);
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0.25s ease;
+}
+
+.barra_lateral_esquerda.aberta {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.barra-lateral-aberta .btn-menu-lateral {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.btn-fechar-lateral {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #2d2f3d;
+    border-radius: 10px;
+    background-color: #1a1b23;
+    color: var(--cor-do-icone);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.btn-fechar-lateral:hover {
+    background-color: #251d38;
+}
+
+.perfil-lateral {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 28px;
+    border-radius: 10px;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.perfil-lateral i {
+    color: var(--cor-do-icone);
+    font-size: 1.8rem;
+}
+
+.perfil-lateral:hover,
+.membro-lateral:hover {
+    background-color: #21262D;
+}
+
+.titulo-membros-lateral {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+.titulo-membros-lateral i {
+    color: var(--cor-do-icone);
+}
+
+.lista-membros-lateral {
+    display: grid;
+    gap: 6px;
+    list-style: none;
+}
+
+.membro-lateral {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: var(--cor-texto);
+    overflow-wrap: anywhere;
+}
+
+.membro-lateral i {
+    flex: 0 0 auto;
+    color: var(--cor-do-icone);
+    font-size: 1.5rem;
+}
+
+.estado-membros-lateral {
+    margin-top: 8px;
+    padding: 0 12px;
+    color: #94a3b8;
+    font-size: 0.9rem;
 }
 
 .container-geral {
     display: flex;
     flex: 1;
+    min-height: 0;
     overflow: hidden;
 }
 
 .chat-area {
     flex: 1;
+    min-width: 0;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -210,8 +342,7 @@ body{
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        margin: 15px;
-        font-size: 4px;
+        font-size: 14px;
     }
     .barra_lateral_direita{
         display: none;

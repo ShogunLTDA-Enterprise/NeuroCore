@@ -1,25 +1,42 @@
-.caixa_proj {
-    border: 2px solid #21262D;
-    width: 500px;
-    height: auto;
-    border-radius: 5px;
-    background-color: #161B22;
-    
-    transition: 0.2s;
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .caixa_proj {
-    border-left: 5px solid #A78BFA;
+    border-left: 5px solid var(--cor-projeto, #A78BFA);
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 220px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #161B22;
+    display: flex;
+    transition: 0.2s;
 }
 
 .text_proj {
     color: #E6EDF3;
     padding: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
 .nome_proj {
     font-weight: bold;
     font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.membros_proj {
+    margin: 0 0 18px;
+}
+
+.descricao_proj {
+    margin: 0 0 16px;
 }
 
 .abrir_proj {
@@ -28,10 +45,10 @@
     border-radius: 5px;
     display: block;
     width: fit-content;
-    margin-left: auto;
+    margin: auto 0 0 auto;
     height: auto;
     text-decoration: none;
-    background-color: #A78BFA;
+    background-color: var(--cor-projeto, #A78BFA);
     color: #000;
     transition: 0.2s;
 }
@@ -39,4 +56,22 @@
 .abrir_proj:hover {
     transform: scale(1.1);
     transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .conteudo {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
 }
