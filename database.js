@@ -1,26 +1,13 @@
-import 'dotenv/config';
-import sql from 'mssql';
+import { DatabaseSync } from 'node:sqlite';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const config = {
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    server: process.env.DB_SERVER || 'localhost', 
-    port: 1433,
-    database: process.env.DB_DATABASE,
-    options: {
-        encrypt: false,
-        trustServerCertificate: true
-    }
-};
+const raiz = path.dirname(fileURLToPath(import.meta.url));
+const pastaDados = path.join(raiz, 'data');
+fs.mkdirSync(pastaDados, { recursive: true });
 
-async function conectarBanco() {
-    try {
-        let pool = await sql.connect(config);
-        console.log("Conectado ao SQL Server com sucesso!");
-        return pool;
-    } catch (err) {
-        console.error("Erro ao conectar ao banco de dados:", err);
-    }
-}
-
-export { conectarBanco, sql };
+// node:sqlite vem embutido no Node.js (22.5+), sem compilação nem Visual Studio.
+export const db = new DatabaseSync(path.join(pastaDados, 'neurocore.db'));
+db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;');
+db.exec(fs.readFileSync(path.join(raiz, 'BD', 'schema.sql'), 'utf8'));

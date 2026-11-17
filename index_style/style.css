@@ -644,3 +644,42 @@ hr{
 
     .copyrights { padding: 30px 20px; }
 }
+
+/* Feedback do formulário de contato */
+.contato-form .mensagem-erro,
+.contato-form .mensagem-sucesso {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  background-color: rgba(248, 113, 113, 0.12);
+  border: 1px solid #f87171;
+  color: #fecaca;
+}
+
+.contato-form .mensagem-sucesso {
+  background-color: rgba(52, 211, 153, 0.12);
+  border-color: #34d399;
+  color: #a7f3d0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Acabamento: foco visível para teclado e movimento reduzido */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #A78BFA;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

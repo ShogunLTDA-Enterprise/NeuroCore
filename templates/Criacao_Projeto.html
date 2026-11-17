@@ -31,15 +31,15 @@
     <main class="cabecaralho">
         <div class="container">
             <h2>INICIE SEU PROJETO</h2>
-            <form>
+            <form id="form-projeto">
                 <label for="nome">Nome do projeto</label>
                 <input type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
                 
                 <label for="descricao">Descrição</label>
                 <textarea name="descricao" id="descricao" placeholder="O que seu projeto envolve? Qual o objetivo principal"></textarea>
                 
-                <label for="membros">Convidar membros</label>
-                <input type="email" id="membros" placeholder="email@exemplo.com">
+                <label for="membros">Convidar membros (separe os e-mails por vírgula)</label>
+                <input type="email" id="membros" multiple placeholder="email1@exemplo.com, email2@exemplo.com">
                 
                 <label for="inicio">Data de inicio</label>
                 <input type="date" id="inicio" placeholder="dd/mm/aaaa">
@@ -54,20 +54,12 @@
                 </select>
 
                 <label>Cores do projeto</label>
-                <div class="cores">
-                    {% for cor in cores %}
-                        <input type="radio" name="cor" value="{{ cor.valor }}" id="cor-{{ loop.index }}"
-                            style="position: absolute; opacity: 0; width: 0; height: 0;">
-                        <label for="cor-{{ loop.index }}" class="bolinha-cor" style="background-color: {{ cor.valor }};" title="{{ cor.nome }}"></label>
-                    {% endfor %}
-                </div>
+                <div class="cores" id="cores-projeto"></div>
+                <p id="erro-projeto" role="alert" hidden></p>
+                <button class="botao" type="submit">Crie o projeto</button>
             </form>
-
-            <a href="/home/home.html">
-                <button class="botao">Crie o projeto</button>
-            </a>
-
         </div>
     </main>
+    <script src="/static/criacao-projeto.js"></script>
 </body>
 </html>

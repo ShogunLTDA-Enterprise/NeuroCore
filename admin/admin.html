@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel administrativo | NeuroCore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Cadastro/stylecadastro.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+
+    <header class="header-top">
+        <div class="logo-header">
+            <img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1) 1.png" alt="Logo NeuroCore">
+            <span>Neuro<span class="roxo">Core</span> <small>Admin</small></span>
+        </div>
+        <button type="button" class="btn-sair" id="btn-sair">
+            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Sair
+        </button>
+    </header>
+
+    <main class="admin-main">
+        <section class="cards-resumo" aria-label="Resumo geral">
+            <article class="card-resumo"><span>Cadastrados</span><strong id="total-usuarios">–</strong></article>
+            <article class="card-resumo"><span>Ativos nos últimos 30 dias</span><strong id="total-ativos">–</strong></article>
+            <article class="card-resumo"><span>Projetos</span><strong id="total-projetos">–</strong></article>
+            <article class="card-resumo"><span>Tarefas</span><strong id="total-tarefas">–</strong></article>
+            <article class="card-resumo"><span>Contatos</span><strong id="total-contatos">–</strong></article>
+            <article class="card-resumo alerta"><span>Erros</span><strong id="total-erros">–</strong></article>
+        </section>
+
+        <p id="mensagem-admin" class="mensagem-erro" role="alert" hidden></p>
+
+        <section class="painel" aria-labelledby="titulo-usuarios">
+            <div class="painel-titulo">
+                <h2 id="titulo-usuarios">Usuários</h2>
+                <input type="search" id="filtro-usuarios" placeholder="Buscar por nome ou e-mail">
+            </div>
+            <div class="tabela-wrapper">
+                <table>
+                    <thead><tr><th>Nome</th><th>E-mail</th><th>Cadastro</th><th>Último login</th></tr></thead>
+                    <tbody id="corpo-usuarios"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-contatos">
+            <h2 id="titulo-contatos">Contatos recebidos</h2>
+            <div class="tabela-wrapper">
+                <table>
+                    <thead><tr><th>Data</th><th>E-mail</th><th>Assunto</th><th>Mensagem</th></tr></thead>
+                    <tbody id="corpo-contatos"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-erros">
+            <h2 id="titulo-erros">Erros</h2>
+            <div class="tabela-wrapper">
+                <table>
+                    <thead><tr><th>Data</th><th>Origem</th><th>Mensagem</th></tr></thead>
+                    <tbody id="corpo-erros"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js" defer></script>
+</body>
+</html>

@@ -73,61 +73,51 @@
         </div>
     </header>
 
-    <aside class="barra_lateral_esquerda">
-        <div class="card-back">
-            <img class="imagem" src="/imagens/43920402.png" alt="RandomPerson">
-            <span class="icone"></span>
+    <aside
+        class="barra_lateral_esquerda"
+        id="barra-lateral-esquerda"
+        aria-label="Administradores e membros"
+        aria-hidden="true">
+        <button class="btn-fechar-lateral" id="btn-fechar-lateral" type="button" aria-label="Fechar barra lateral">
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </button>
+        <h2 class="titulo-membros-lateral">
+            <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+            Administradores
+        </h2>
+        <div class="perfil-lateral">
+            <i class="bi bi-person-circle" aria-hidden="true"></i>
+            <span>Você!</span>
         </div>
 
-        <div class="card-back">
-            <img class="imagem" src="/imagens/2351.webp" alt="Gustavo">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/unnamed.jpg" alt="Vinicius13">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/Sem título.jpg" alt="LulaDroid">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/Sonic.png" alt="Sonic???">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/61bYI0O1+fL._AC_UF1000,1000_QL80_.jpg" alt="Elon Musk">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/Foto_oficial_de_Luiz_Inácio_Lula_da_Silva_(estreita).jpg.webp" alt="Lula">
-            <span class="icone"></span>
-        </div>
-
-        <div class="card-back">
-            <img class="imagem" src="/imagens/0dceb32eb0bb13fd4f8c50dcc2395444.webp" alt="Avatar">
-            <span class="icone"></span>
-        </div>
+        <h2 class="titulo-membros-lateral">
+            <i class="bi bi-people-fill" aria-hidden="true"></i>
+            Membros
+        </h2>
+        <ul class="lista-membros-lateral" id="lista-membros-lateral"></ul>
+        <p class="estado-membros-lateral" id="estado-membros-lateral" aria-live="polite">
+            Carregando membros...
+        </p>
     </aside>
 
-
-    <div class="container-geral"></div>
+    <div class="container-geral">
         <main class="chat-area">
-            <div class="container-msg">
-            
-            
+            <button
+                class="btn-menu-lateral"
+                id="btn-menu-lateral"
+                type="button"
+                aria-label="Abrir barra lateral"
+                aria-controls="barra-lateral-esquerda"
+                aria-expanded="false">
+                <i class="bi bi-arrow-left" aria-hidden="true"></i>
+            </button>
+            <div class="container-msg" aria-live="polite">
                 <div class="card-msg">
                     <span class="perfil-msg">RandomPerson</span>
                     <p class="text-msg">Esse é um teste de caixa de texto com Imagem!</p>
                     <img src="../imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="">
                 </div>
         
-                
                 <div class="card-msg">
                     <span class="perfil-msg">RandomPerson</span>
                     <p class="text-msg">Esse é um teste de caixa de texto com Arquivo!</p>
@@ -140,26 +130,26 @@
                     </div>
                 </div>
         
-                
                 <div class="card-msg self">
                     <p class="text-msg">Mensagem enviada com sucesso!</p>
                 </div>
-        
-                </div>
-                <div class="chat-input-container">
-                    <button class="btn-arquivo">+</button>
-                    <input type="text" class="chat-input" placeholder="Digite uma mensagem...">
-                    <button class="btn-envio">➔</button>
-                    
-                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <button class="btn-arquivo" type="button" aria-label="Anexar arquivo">+</button>
+                <input type="text" class="chat-input" placeholder="Digite uma mensagem...">
+                <button class="btn-envio" type="button" aria-label="Enviar mensagem">➔</button>
             </div>
         </main>
-
-
     </div>
+<<<<<<< HEAD
     
     <script src="../Perfil/conta.js"></script>
+=======
+
+>>>>>>> f804d1bd561358a1a6755c3eb5cb35f44192dbb7
     <script src="/progresso/progresso.js"></script>
     <script src="/Mensagens/js/script.js"></script>
+    <script src="/Mensagens/js/barra-lateral.js"></script>
 </body>
 </html>

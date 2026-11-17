@@ -1,30 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const campoMensagem = document.querySelector('.chat-input');
+    const botaoEnviar = document.querySelector('.btn-envio');
+    const containerMensagens = document.querySelector('.container-msg');
 
-    const chatForm = document.querySelector("chat-input-container");
-    const messageField = document.querySelector(".chat-input");
-    const messagesContainer = document.querySelector(".chat_messages");
-
-    function sendMessage() {
-
-        const text = messageField.value.trim();
-
-        if (text === "") return;
-
-        const newMessage = document.createElement("div");
-        newMessage.classList.add("message-self");
-
-        newMessage.textContent = text;
-
-        messagesContainer.appendChild(newMessage);
-
-        messageField.value = "";
-
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    if (!campoMensagem || !botaoEnviar || !containerMensagens) {
+        console.error('Não foi possível inicializar o envio de mensagens.');
+        return;
     }
 
-    chatForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        sendMessage();
-    });
+    function enviarMensagem() {
+        const texto = campoMensagem.value.trim();
+        if (!texto) return;
 
+        const mensagem = document.createElement('div');
+        mensagem.className = 'card-msg self';
+
+        const conteudo = document.createElement('p');
+        conteudo.className = 'text-msg';
+        conteudo.textContent = texto;
+
+        mensagem.appendChild(conteudo);
+        containerMensagens.appendChild(mensagem);
+        campoMensagem.value = '';
+        containerMensagens.scrollTop = containerMensagens.scrollHeight;
+        campoMensagem.focus();
+    }
+
+    botaoEnviar.addEventListener('click', enviarMensagem);
+    campoMensagem.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            enviarMensagem();
+        }
+    });
 });
