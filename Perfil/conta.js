@@ -28,7 +28,8 @@
 
   function pintarTopo() {
     const foto = ler('perfil').foto;
-    // #btn-usuario = ícone das suas outras páginas | .usuario i = ícone das páginas de conta
+    
+    
     document.querySelectorAll('#btn-usuario, .usuario i').forEach(el => {
       el.classList.toggle('com-foto', !!foto);
       el.style.backgroundImage = foto ? `url(${foto})` : '';
@@ -76,7 +77,7 @@
     function pintarAvatar() {
       pintarTopo();           
       if (!av) return;
-      
+
       if (!av) return;
       const p = ler('perfil');
       if (p.foto) { av.style.backgroundImage = `url(${p.foto})`; av.textContent = ''; }
