@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade | NeuroCore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@400;600&family=Nunito:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="conta.css">
+  <script src="conta.js"></script>
+</head>
+
+<body>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <header class="topo">
+    <a class="logo" href="/index.html"><img src="/imagens/cérebro-cor-de-rosa-e-roxo-80348150 (1).png" alt="" width="32"
+        height="32"><span>Neuro<b>Core</b></span></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li>
+          <a href="/projetos/projetos.html"><i class="bi bi-house" aria-hidden="true"></i><span>Projetos</span></a>
+        </li>
+
+        <li>
+          <a href="/progresso/progresso.html"><i class="bi bi-clock" aria-hidden="true"></i><span>Kanban</span></a>
+        </li>
+
+        <li>
+          <a href="/Mensagens/Mensagens.html"><i class="bi bi-envelope"aria-hidden="true"></i><span>Mensagens</span></a>
+        </li>
+
+        <li>
+          <a href="/Calendario/calendario.html"><i class="bi bi-table"aria-hidden="true"></i><span>Atividades</span></a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <a class="usuario" href="/Perfil/perfil.html" aria-label="Meu perfil"><i class="bi bi-person-circle"aria-hidden="true"></i></a>
+    
+  </header>
+  <main id="principal">
+
+    <h1>Acessibilidade</h1>
+    <p class="sub-t">Ajuste a plataforma ao seu jeito de ler e navegar. As mudanças valem na hora.</p>
+
+    <div class="layout">
+
+      <nav class="sub" aria-label="Conta">
+        <a href="perfil.html"><i class="bi bi-person" aria-hidden="true"></i>Perfil</a>
+        <a href="Conta.html"><i class="bi bi-gear" aria-hidden="true"></i>Configurações</a>
+        <a href="acessibilidade.html" aria-current="page"><i class="bi bi-universal-access" aria-hidden="true"></i>Acessibilidade</a>
+      </nav>
+
+      <div class="conteudo">
+        <section class="card" aria-labelledby="t-texto">
+
+          <h2 id="t-texto">Texto e leitura</h2>
+          <p>Deixe o texto mais confortável.</p>
+
+          <div class="campo">
+            <label for="fs">Tamanho do texto: <span id="fs-valor">100%</span></label>
+            <input type="range" id="fs" min="0.85" max="1.4" step="0.05" value="1">
+          </div>
+
+          <div class="linha">
+            <div>
+              <label for="a-leg">Fonte de fácil leitura</label>
+              <small>Usa a Lexend, com letras maisdistintas.</small>
+            </div>
+            <input type="checkbox" role="switch" id="a-leg" data-acess="legivel">
+          </div>
+
+          <div class="linha">
+            <div>
+              <label for="a-esp">Mais espaço entre linhas e letras</label>
+              <small>Ajuda a acompanhar parágrafos longos.</small>
+            </div>
+            <input type="checkbox" role="switch" id="a-esp" data-acess="espaco">
+          </div>
+
+          <div class="previa" aria-hidden="true"><strong>Pré-visualização</strong><br>O NeuroCore reúne planejamento, cronogramas e IA para tirar projetos do papel.</div>
+          
+        </section>
+        <section class="card" aria-labelledby="t-visual">
+          <h2 id="t-visual">Visual</h2>
+          <p>Mais contraste e destaque para o que você usa.</p>
+          <div class="linha">
+            <div><label for="a-con">Alto contraste</label><small>Preto e amarelo, com bordas brancas.</small></div>
+            <input type="checkbox" role="switch" id="a-con" data-acess="contraste">
+          </div>
+
+          <div class="linha">
+            <div><label for="a-lnk">Sublinhar links</label><small>Links ficam sempre sublinhados.</small></div><input
+              type="checkbox" role="switch" id="a-lnk" data-acess="links">
+          </div>
+
+          <div class="linha">
+            <div><label for="a-foc">Foco do teclado reforçado</label><small>Contorno amarelo grosso ao navegar com
+                Tab.</small></div><input type="checkbox" role="switch" id="a-foc" data-acess="foco">
+          </div>
+          
+        </section>
+        <section class="card" aria-labelledby="t-mov">
+          <h2 id="t-mov">Movimento</h2>
+          <p>Já respeitamos a preferência do seu sistema.</p>
+          <div class="linha">
+            <div><label for="a-ani">Reduzir animações</label><small>Remove transições e efeitos de movimento.</small>
+            </div><input type="checkbox" role="switch" id="a-ani" data-acess="animacao">
+          </div>
+          <div class="acoes"><button class="btn sec" type="button" id="restaurar">Restaurar padrões</button></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <div id="aviso" role="status" aria-live="polite"></div>
+  <footer class="copyrights">&copy; 2026 NeuroCore. Todos os direitos reservados.</footer>
+</body>
+
+</html>
