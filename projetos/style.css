@@ -11,6 +11,8 @@
     --fonte-secundaria: "Kanit", sans-serif;
 }
 
+
+
 .titulo_aleatorio {
     font-weight: bold;
     color: #E6EDF3;
@@ -127,6 +129,13 @@
 .copyrights p {
     color: #666;
     font-size: 0.9rem;
+}
+
+@media (min-width: 1620px) {
+    .copyrights{
+        margin-top: 600px;
+        
+    }
 }
 
 

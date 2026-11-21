@@ -1,3 +1,5 @@
+
+
 .conteudo {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -8,21 +10,32 @@
     border-left: 5px solid var(--cor-projeto, #A78BFA);
     box-sizing: border-box;
     width: 100%;
-    min-width: 0;
-    min-height: 220px;
+    min-width: none;
     height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 10px;
-    background-color: #161B22;
     display: flex;
     transition: 0.2s;
+    overflow-wrap: break-word;
+    padding: 2px;
+    
+}
+
+.caixa_proj::-webkit-scrollbar{
+    display: none;
 }
 
 .text_proj {
+    min-width: 0;
     color: #E6EDF3;
     padding: 10px;
     display: flex;
     flex: 1;
     flex-direction: column;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .nome_proj {
@@ -59,7 +72,7 @@
 }
 
 @media (max-width: 1200px) {
-    .conteudo {
+    .conteudo{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
