@@ -242,7 +242,7 @@ body {
 }
 
 .alto-contraste .blob::after{
-    background-color: var(--cor-das-sombras);
+    background-color: #49450e;
 }
 
 .blob:nth-child(1) { --angle-delay: 0s; --moving-delay: 0s; --color: #4b1e5e; }
