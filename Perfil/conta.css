@@ -374,7 +374,7 @@ input[type=range] {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, #A78BFA, #ec4899) center/cover;
+    background: linear-gradient(135deg, --cor-do-icone, #ec4899) center/cover;
     font-family: var(--fonte-secundaria);
     font-size: 1.8rem
 }
@@ -435,7 +435,7 @@ input[type=range] {
     color: var(--cor-cinza);
     font-size: .85rem;
     padding: 2rem 1rem;
-    border-top: 1px solid rgba(255, 255, 255, .06)
+    border-top: 1px solid var(--cor-cinza);
 }
 
 @media(max-width:800px) {

@@ -1,3 +1,26 @@
+:root {
+    --cor-principal: #131318;
+    --cor-barra: #2a2a33;
+    --cor-texto: #E6EDF3;
+    --cor-de-fundo: #0D1117;
+    --cor-cinza: #a1a1aa;
+    --cor-do-icone: #A78BFA;
+    --cor-do-nome: #8B5CF6;
+    --cor-roxa-forte: #7c3aed;
+    --cor-das-sombras: #21262D;
+    --header-bottom:#7c3aed40;
+    --sombra-clara: #1a1b23;
+    --texto-branco: #ffffff;
+    --texto-preto: #000000;
+    --amarelo: #ffd500;
+    --azulzinho: #96bffd;
+    --fonte-principal: "Space Grotesk", sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+ 
+}
+
+
 
 
 .conteudo {
@@ -23,19 +46,23 @@
     
 }
 
+.alto-contraste .caixa_proj {
+    border-left: 5px solid var(--cor-do-icone);
+}
+
 .caixa_proj::-webkit-scrollbar{
     display: none;
 }
 
 .text_proj {
     min-width: 0;
-    color: #E6EDF3;
+    color: var(--cor-texto);
     padding: 10px;
     display: flex;
     flex: 1;
     flex-direction: column;
     overflow-wrap: break-word;
-    word-break: break-all;
+    word-break: keep-all;
 }
 
 .nome_proj {
@@ -50,6 +77,10 @@
 
 .descricao_proj {
     margin: 0 0 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;      
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .abrir_proj {
@@ -64,6 +95,11 @@
     background-color: var(--cor-projeto, #A78BFA);
     color: #000;
     transition: 0.2s;
+    padding: 3px;
+}
+
+.alto-contraste .abrir_proj{
+    background-color: var(--cor-do-nome);
 }
 
 .abrir_proj:hover {

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie Seu Projeto</title>
+    <link rel="shortcut icon" href="../imagens/58e34500-eae7-460e-8223-71d9a443fb6e.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+    <script src="../Perfil/conta.js"></script>
+    <title>Crie Seu Projeto</title> 
 </head>
 <body>
 
@@ -33,27 +37,27 @@
             <h2>INICIE SEU PROJETO</h2>
             <form id="form-projeto">
                 <label for="nome">Nome do projeto</label>
-                <input type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
+                <input class="campo" type="text" id="nome" placeholder="Ex: Redesign do app mobile" required>
                 
                 <label for="descricao">Descrição</label>
-                <textarea name="descricao" id="descricao" placeholder="O que seu projeto envolve? Qual o objetivo principal"></textarea>
+                <textarea class="campo" name="descricao" id="descricao" placeholder="O que seu projeto envolve? Qual o objetivo principal"></textarea>
                 
                 <label for="membros">Convidar membros (separe os e-mails por vírgula)</label>
-                <input type="email" id="membros" multiple placeholder="email1@exemplo.com, email2@exemplo.com">
+                <input class="campo" type="email" id="membros" multiple placeholder="email1@exemplo.com, email2@exemplo.com">
                 
                 <label for="inicio">Data de inicio</label>
-                <input type="date" id="inicio" placeholder="dd/mm/aaaa">
+                <input class="campo" type="date" id="inicio" placeholder="dd/mm/aaaa">
 
                 <label for="prazo">Prazo</label>
-                <input type="date" id="prazo" placeholder="dd/mm/aaaa">
+                <input class="campo" type="date" id="prazo" placeholder="dd/mm/aaaa">
 
                 <label>Template</label>
-                <select id="Template">
+                <select id="Template" class="campo">
                     <option value="Kanban">Kanban</option>
                     <option value="Lista">Lista</option>
                 </select>
 
-                <label>Cores do projeto</label>
+                <label class="corprojeto">Cores do projeto</label>
                 <div class="cores" id="cores-projeto"></div>
                 <p id="erro-projeto" role="alert" hidden></p>
                 <button class="botao" type="submit">Crie o projeto</button>

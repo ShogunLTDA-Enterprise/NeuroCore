@@ -1,0 +1,104 @@
+
+:root {
+    --cor-principal: #131318;
+    --cor-barra: #2a2a33;
+    --cor-texto: #E6EDF3;
+    --cor-de-fundo: #0D1117;
+    --cor-cinza: #a1a1aa;
+    --cor-do-icone: #A78BFA;
+    --cor-do-nome: #8B5CF6;
+    --cor-roxa-forte: #7c3aed;
+    --cor-das-sombras: #21262D;
+    --header-bottom:#7c3aed40;
+    --sombra-clara: #1a1b23;
+    --texto-branco: #ffffff;
+    
+    --texto-preto: #000000;
+    --amarelo: #ffd500;
+    --azulzinho: #96bffd;
+    --fonte-principal: "Space Grotesk", sans-serif;
+    --fonte-secundaria: "Kanit", sans-serif;
+    --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    
+}
+
+
+
+
+.com-foto {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--cor-do-icone);
+    vertical-align: middle;
+}
+
+.com-foto.bi::before {
+    content: none;
+}
+
+.alto-contraste {
+    --cor-de-fundo: #000;
+    --cor-principal: #000;
+    --texto-branco: #000;
+    --texto-preto: #fff;
+    --cor-barra: #fff;
+    --cor-cinza: #fff;
+    --cor-texto: #fff;
+    --amarelo: #39f2ff;
+    --azulzinho: #ff9a26;
+    --header-bottom: #fff424;
+    --cor-do-nome: #F5EA5B;
+    --cor-roxa-forte: #eeda27;
+    --cor-do-icone: #f7ef5d;
+    --header-bottom: #f7ef5d;
+    --sombra-clara: #000000;
+    
+}
+
+.alto-contraste body {
+    background: #000
+}
+
+.alto-contraste h1 {
+    color: #fff;
+}
+
+.alto-contraste .btn,
+.alto-contraste .sub a[aria-current=page],
+.alto-contraste #aviso,
+.alto-contraste .pular {
+    color: #ffffff
+}
+
+
+.fonte-legivel {
+    --fonte-principal: 'Lexend', Verdana, sans-serif;
+    --fonte-secundaria: 'Lexend', Verdana, sans-serif
+}
+
+.espacado body {
+    line-height: 1.9;
+    letter-spacing: .04em;
+    word-spacing: .12em
+}
+
+.foco-forte :focus-visible {
+    outline: 4px solid #ffe600;
+    outline-offset: 3px
+}
+
+.links-sublinhados a {
+    text-decoration: underline
+}
+
+.sem-animacao *,
+.sem-animacao *::before,
+.sem-animacao *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important
+}

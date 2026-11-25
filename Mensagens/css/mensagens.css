@@ -10,17 +10,25 @@ html{
 }
 
 
-
 :root {
-    --cor-principal: #0D1117;
-    --cor-barra: #161B22;
+    --cor-principal: #131318;
+    --cor-barra: #2a2a33;
     --cor-texto: #E6EDF3;
     --cor-de-fundo: #0D1117;
+    --cor-cinza: #a1a1aa;
     --cor-do-icone: #A78BFA;
+    --cor-do-nome: #8B5CF6;
+    --cor-roxa-forte: #7c3aed;
     --cor-das-sombras: #21262D;
+    --header-bottom:#7c3aed40;
+    --sombra-clara: #1a1b23;
+    --texto-branco: #ffffff;
+    --amarelo: #ffd500;
+    --azulzinho: #96bffd;
     --fonte-principal: "Space Grotesk", sans-serif;
     --fonte-secundaria: "Kanit", sans-serif;
     --gradiente: linear-gradient(to bottom, #1D0543, #492486, #9959FF);
+    
 }
 
 body{
@@ -32,6 +40,7 @@ body{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    font-family: var(--fonte-principal);
 }
 
 .btn-menu-lateral {
@@ -41,31 +50,32 @@ body{
     width: 42px;
     height: 42px;
     display: grid;
-    place-items: center;
-    border: 1px solid #2d2f3d;
-    border-radius: 10px;
-    background-color: #1a1b23;
+    border: 1px solid #464849;
     color: var(--cor-do-icone);
+    place-items: center;
+    border-radius: 10px;
+    background-color: var(--cor-principal);
     cursor: pointer;
     font-size: 1.2rem;
+    
 }
 
-.btn-menu-lateral:hover {
-    background-color: #251d38;
+.btn-menu-lateral:hover{
+    border: 1px solid var(--cor-do-icone);
 }
+
 
 .barra_lateral_esquerda {
     position: fixed;
-    z-index: 1100;
+    z-index: 2;
     top: 70px;
     bottom: 0;
     right: 0;
     width: min(280px, 85vw);
-    padding: 68px 18px 20px;
+    padding: 68px 18px 40px;
     overflow-y: auto;
-    background-color: var(--cor-barra);
+    background-color: var(--sombra-clara);
     border-left: 1px solid var(--cor-das-sombras);
-    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
     visibility: hidden;
     transition: transform 0.25s ease, visibility 0.25s ease;
@@ -74,6 +84,7 @@ body{
 .barra_lateral_esquerda.aberta {
     transform: translateX(0);
     visibility: visible;
+    border-color:  var(--cor-cinza);
 }
 
 .barra-lateral-aberta .btn-menu-lateral {
@@ -89,16 +100,16 @@ body{
     height: 40px;
     display: grid;
     place-items: center;
-    border: 1px solid #2d2f3d;
+    border: 1px solid #464849;
     border-radius: 10px;
-    background-color: #1a1b23;
+    background-color: var(--cor-de-fundo);
     color: var(--cor-do-icone);
     cursor: pointer;
     font-size: 1.2rem;
 }
 
-.btn-fechar-lateral:hover {
-    background-color: #251d38;
+.btn-fechar-lateral:hover{
+    border: 1px solid var(--cor-do-icone);
 }
 
 .perfil-lateral {
@@ -116,7 +127,7 @@ body{
 }
 
 .membro-lateral:hover {
-    background-color: #21262D;
+    background-color: var(--cor-das-sombras);
 }
 
 .titulo-membros-lateral {
@@ -157,7 +168,7 @@ body{
 .estado-membros-lateral {
     margin-top: 8px;
     padding: 0 12px;
-    color: #94a3b8;
+    color: var(--cor-cinza);
     font-size: 0.9rem;
 }
 
@@ -192,13 +203,15 @@ body{
 
 .card-msg {
     max-width: 600px;
-    background-color: #1a1b23;
+    background-color: var(--sombra-clara);
     padding: 14px 18px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    align-self: flex-start; 
+    align-self: flex-start;
+    border: 1px solid var(--cor-cinza);
+    
     
 }
 
@@ -209,17 +222,18 @@ body{
 
 .card-msg.self {
     align-self: flex-end; 
-    background-color: #251d38;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    max-width: 500px; 
-          
+    background-color: var(--cor-roxa-forte);
+    border: 1px solid var(--cor-texto);
+    max-width: 500px;
+    color: var(--texto-branco);
+
 
 }
 
 .perfil-msg {
     font-weight: 600;
     font-size: 0.85rem;
-    color: #8b5cf6;
+    color: var(--cor-do-nome);
 }
 
 .text-msg {
@@ -231,18 +245,32 @@ body{
     white-space: pre-wrap;
 }
 
+.btn-download {
+    background-color: var(--cor-de-fundo);
+}
+
 
 .anexo {
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid #2d2f3d;
-    padding: 10px 14px;
+    background: var(--cor-de-fundo);
+    border: 1px solid;
+    padding: 10px 10px;
     border-radius: 8px;
     margin-top: 6px;
     width: fit-content;
     min-width: 220px;
+    justify-content: center;
+    gap: 200px;
+
 }
+
+.anexo i{
+    color: var(--cor-do-icone);
+    cursor: pointer;
+}
+
+
 
 .info{
     display: flex;
@@ -270,15 +298,15 @@ body{
 .btn-download img{
     width: 20px;
     height: 20px;
-    background: #ffe500;
+    background: var(--amarelo);
 }
 
 .chat-input-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1a1b23;
-    border: 1px solid #2d2f3d;
+    background-color: var(--cor-de-fundo);
+    border: 1px solid #fff;
     border-radius: 10px;
     padding: 6px 12px;
     gap: 8px;
@@ -288,7 +316,7 @@ body{
 }
 
 .chat-input-container:focus-within{
-    border-color: #8b5cf6;
+    border-color: var(--cor-do-icone);
 }
 
 
@@ -307,7 +335,7 @@ body{
 .btn-arquivo {
     background: none;
     border: none;
-    color: #69707a;
+    color: var(--cor-cinza);
     cursor: pointer;
     padding: 1px;
     border-radius: 6px;
@@ -318,12 +346,12 @@ body{
 }
 
 .btn-arquivo:hover {
-    color: #ffffff;
+    color: var(--cor-do-icone);
 }
 
 .btn-envio {
-    background-color: #9959FF;
-    color: #fff;
+    background-color: var(--cor-roxa-forte);
+    color: var(--texto-branco);
     border: none;
     border-radius: 8px;
     padding: 8px 14px;
@@ -399,3 +427,5 @@ body{
     scroll-behavior: auto !important;
   }
 }
+
+

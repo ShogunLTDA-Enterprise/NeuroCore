@@ -185,4 +185,4 @@ app.use((erro, req, res, next) => {
     res.status(500).json({ erro: 'Erro interno do servidor.' });
 });
 
-app.listen(PORT, () => console.log(`NeuroCore rodando em http://localhost:${PORT}`));
+server.listen(3000, () => console.log('Rodando em http://localhost:3000'));
